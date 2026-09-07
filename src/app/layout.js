@@ -29,8 +29,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-AU" className={inter.variable}>
-      <body className="font-sans">
+    <html lang="en-AU" className={inter.variable} suppressHydrationWarning>
+      <body className="font-sans" suppressHydrationWarning>
         <JsonLd data={getOrganizationSchema()} />
         <JsonLd data={getWebsiteSchema()} />
         <SiteLayout>{children}</SiteLayout>
