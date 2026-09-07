@@ -125,6 +125,15 @@ CREATE POLICY "Public read published reviews"
   USING (is_published = TRUE);
 
 -- ────────────────────────────────────────────────────────────
+-- API GRANTS (required for anon key / website reads)
+-- ────────────────────────────────────────────────────────────
+GRANT USAGE ON SCHEMA public TO anon, authenticated;
+GRANT SELECT ON products TO anon, authenticated;
+GRANT SELECT ON blog_posts TO anon, authenticated;
+GRANT SELECT ON trusted_customers TO anon, authenticated;
+GRANT SELECT ON google_reviews TO anon, authenticated;
+
+-- ────────────────────────────────────────────────────────────
 -- SEED: PRODUCTS
 -- ────────────────────────────────────────────────────────────
 INSERT INTO products (slug, name, description, application, image_url, category, sort_order, meta_title, meta_description) VALUES
