@@ -151,10 +151,11 @@
 }
 
 @utility section-padding {
-  padding-inline: 1.25rem;
-  padding-block: 5rem;
+  padding-inline: 1rem;
+  padding-block: 3.5rem;
   @media (min-width: 640px) {
     padding-inline: 1.5rem;
+    padding-block: 5rem;
   }
   @media (min-width: 1024px) {
     padding-inline: 2rem;

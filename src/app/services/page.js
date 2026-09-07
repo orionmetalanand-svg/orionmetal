@@ -31,8 +31,8 @@ export default function ServicesPage() {
         title="Sheet Metal Fabrication Services"
         accentWord="Fabrication"
         description="Precision laser cutting, sheet metal bending, metal fabrication, powder coating and custom assembly for commercial and industrial clients in Moorabbin and across Melbourne."
-        image="/images/services/laser-cutting-decorative.jpeg"
-        imageAlt="Precision laser cut decorative metal panel"
+        image="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Industrial laser cutting sparks on a metal sheet"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
         primaryCta={{ label: "Request a Quote", href: "/contact" }}
       />
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                 <div className="relative">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
                     <Image
-                      src={service.image}
+                      src={service.localImage || service.image}
                       alt={`${service.name} — Orion Metal Industries Moorabbin`}
                       fill
                       className="object-cover"

@@ -57,7 +57,7 @@ export default function ProjectGallery({ projects }) {
       </div>
 
       {/* Masonry-ish grid */}
-      <div className="mt-10 grid auto-rows-[16rem] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid auto-rows-[12rem] grid-cols-1 gap-3 sm:mt-10 sm:auto-rows-[16rem] sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
         {filtered.map((project, i) => (
           <button
             key={project.id}

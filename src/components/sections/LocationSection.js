@@ -71,7 +71,7 @@ export default function LocationSection() {
         <div className="mt-14 grid gap-6 lg:grid-cols-5">
           {/* Map */}
           <Reveal className="lg:col-span-3">
-            <div className="group relative h-full min-h-[22rem] overflow-hidden rounded-2xl border border-white/10">
+            <div className="group relative h-full min-h-[18rem] overflow-hidden rounded-2xl border border-white/10 sm:min-h-[22rem]">
               <iframe
                 src={company.location.embedUrl}
                 title={`${company.name} location — Moorabbin VIC 3189`}

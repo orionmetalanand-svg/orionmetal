@@ -26,8 +26,8 @@ export default async function ProductsPage() {
         title="Products & Capabilities"
         accentWord="Capabilities"
         description="Custom-fabricated metal products for commercial, industrial and architectural applications — kiosk housings, electronic enclosures, decorative metalwork and bespoke components."
-        image="/images/products/digital-kiosk-wayfinder.jpeg"
-        imageAlt="Custom fabricated digital wayfinding kiosk housing"
+        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Modern commercial architecture"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products" }]}
         primaryCta={{ label: "Enquire About a Product", href: "/contact" }}
       />

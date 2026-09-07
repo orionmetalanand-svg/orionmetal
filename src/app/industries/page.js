@@ -24,8 +24,8 @@ export default function IndustriesPage() {
         title="Industries We Serve"
         accentWord="Serve"
         description="Precision sheet metal fabrication for commercial, industrial, manufacturing, construction and engineering sectors. These represent our target application areas across Melbourne and Victoria."
-        image="/images/projects/palletized-fabrication-shipping.jpeg"
-        imageAlt="Palletised industrial fabrication ready for dispatch"
+        image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Industrial manufacturing facility"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries" }]}
         primaryCta={{ label: "Discuss Your Project", href: "/contact" }}
       />

@@ -12,6 +12,7 @@ function mapProduct(row) {
     description: row.description,
     application: row.application || "",
     image: row.image_url,
+    coverImage: row.cover_image_url || null,
     category: row.category,
     metaTitle: row.meta_title,
     metaDescription: row.meta_description,

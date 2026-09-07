@@ -27,7 +27,7 @@ export default function PageHero({
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand-black pt-14 pb-16 lg:pt-20 lg:pb-24">
+    <section className="relative isolate overflow-hidden bg-brand-black pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-20 lg:pb-24">
       <div className="absolute inset-0 -z-10">
         {image && (
           <>
@@ -78,7 +78,7 @@ export default function PageHero({
           )}
 
           <h1
-            className="mt-6 text-[2.25rem] font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.6rem] animate-fade-up"
+            className="mt-5 text-[1.9rem] font-bold leading-[1.08] tracking-tight sm:mt-6 sm:text-5xl lg:text-[3.6rem] animate-fade-up"
             style={{ animationDelay: "70ms" }}
           >
             {renderTitle()}

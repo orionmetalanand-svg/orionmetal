@@ -15,7 +15,7 @@ export default function IndustryCard({ industry, index = 0 }) {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/85 to-brand-black/25" />
         <div className="absolute inset-0 bg-gradient-to-br from-brand-red/0 to-brand-red/0 transition-all duration-500 group-hover:from-brand-red/12 group-hover:to-transparent" />
 
-        <div className="relative flex min-h-[26rem] flex-col justify-end p-6">
+        <div className="relative flex min-h-[20rem] flex-col justify-end p-5 sm:min-h-[26rem] sm:p-6">
           <span className="accent-rule mb-5 rounded-full transition-all duration-500 group-hover:w-20" />
           <h3 className="text-2xl font-bold text-white">{industry.name}</h3>
           <p className="mt-3 text-sm leading-relaxed text-brand-muted">

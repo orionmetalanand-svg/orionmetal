@@ -1,3 +1,5 @@
+import { stock } from "@/config/images";
+
 export const industries = [
   {
     id: "commercial",
@@ -10,7 +12,7 @@ export const industries = [
       "Commercial fit-out components",
       "Decorative architectural features",
     ],
-    image: "/images/products/digital-kiosk-wayfinder.jpeg",
+    image: stock.architecture.src,
   },
   {
     id: "industrial",
@@ -23,7 +25,7 @@ export const industries = [
       "Machinery panels and covers",
       "Custom industrial components",
     ],
-    image: "/images/projects/palletized-fabrication-shipping.jpeg",
+    image: stock.machining.src,
   },
   {
     id: "manufacturing",
@@ -36,7 +38,7 @@ export const industries = [
       "Machine guards and panels",
       "Custom OEM components",
     ],
-    image: "/images/services/metal-fabrication-assembly.jpeg",
+    image: stock.factoryFloor.src,
   },
   {
     id: "construction",
@@ -49,7 +51,7 @@ export const industries = [
       "Building facade components",
       "Custom construction metalwork",
     ],
-    image: "/images/projects/architectural-decorative-screen.jpeg",
+    image: stock.construction.src,
   },
   {
     id: "engineering",
@@ -62,6 +64,6 @@ export const industries = [
       "Precision component fabrication",
       "Assembly integration",
     ],
-    image: "/images/products/electronic-enclosure-assembly.jpeg",
+    image: stock.engineering.src,
   },
 ];

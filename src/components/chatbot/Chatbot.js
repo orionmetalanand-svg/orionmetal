@@ -66,7 +66,7 @@ export default function Chatbot() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-brand-red text-white shadow-[0_12px_44px_-8px_rgba(225,29,46,0.85)] transition-all duration-300 hover:scale-110 hover:bg-brand-red-bright focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red-bright sm:right-6"
+        className="fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-brand-red text-white shadow-[0_12px_44px_-8px_rgba(225,29,46,0.85)] transition-all duration-300 hover:scale-110 hover:bg-brand-red-bright focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red-bright sm:bottom-5 sm:right-6 sm:h-14 sm:w-14"
         aria-label={open ? "Close chat assistant" : "Open chat assistant"}
         aria-expanded={open}
       >
@@ -83,7 +83,7 @@ export default function Chatbot() {
 
       {open && (
         <div
-          className="fixed bottom-24 right-4 z-40 flex h-[min(560px,72vh)] w-[min(390px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-white/12 bg-brand-black/95 shadow-[0_30px_90px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl sm:right-6"
+          className="fixed bottom-[4.5rem] right-3 z-40 flex h-[min(520px,70vh)] w-[min(390px,calc(100vw-1.5rem))] flex-col overflow-hidden rounded-2xl border border-white/12 bg-brand-black/95 shadow-[0_30px_90px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl sm:bottom-24 sm:right-6"
           role="dialog"
           aria-label="Orion Metal Industries chat assistant"
         >

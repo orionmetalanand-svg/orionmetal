@@ -51,8 +51,8 @@ export default function AboutPage() {
         title="Precision Metal Engineering in Moorabbin"
         accentWord="Moorabbin"
         description={company.description}
-        image="/images/services/laser-cutting-precision.jpeg"
-        imageAlt="Precision laser cut sheet metal components at Orion Metal Industries"
+        image="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Industrial laser cutting sparks on metal sheet"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
         primaryCta={{ label: "Request a Quote", href: "/contact" }}
       />
@@ -141,8 +141,8 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
               <Image
-                src="/images/services/powder-coating-line.jpeg"
-                alt="Powder coating production line at Orion Metal Industries Moorabbin"
+                src="https://images.unsplash.com/photo-1565514020176-efe69048881b?auto=format&fit=crop&w=1600&q=80"
+                alt="Precision metal finishing and CNC manufacturing"
                 fill
                 className="object-cover"
                 sizes="(max-width:1024px) 92vw, 46vw"

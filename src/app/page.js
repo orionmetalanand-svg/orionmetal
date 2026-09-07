@@ -100,8 +100,8 @@ export default async function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
                 <Image
-                  src="/images/company/orion-company-flyer.jpeg"
-                  alt="Orion Metal Industries capability overview — precision, strength, quality"
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80"
+                  alt="CNC industrial machinery — precision manufacturing capability"
                   fill
                   className="object-cover"
                   sizes="(max-width:1024px) 92vw, 46vw"
@@ -172,7 +172,7 @@ export default async function HomePage() {
           <div className="mt-14">
             <Carousel
               ariaLabel="Featured products"
-              itemClassName="min-w-[86%] sm:min-w-[48%] lg:min-w-[32.4%]"
+              itemClassName="min-w-[88%] sm:min-w-[46%] lg:min-w-[32%]"
             >
               {products.map((product, i) => (
                 <ProductCard key={product.id} product={product} index={i} />
@@ -249,8 +249,8 @@ export default async function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
                 <Image
-                  src="/images/services/powder-coating-frame.jpeg"
-                  alt="Powder coated metal frame on the finishing line at Orion Metal Industries"
+                  src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1600&q=80"
+                  alt="Metal fabrication welding sparks in an industrial workshop"
                   fill
                   className="object-cover"
                   sizes="(max-width:1024px) 92vw, 46vw"

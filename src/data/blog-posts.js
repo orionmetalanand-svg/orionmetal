@@ -22,7 +22,8 @@ Provide clear drawings (PDF, DWG, DXF, or STEP), material specifications, quanti
 ## Orion Metal Industries
 
 Based at 1A Bibby Ct, Moorabbin VIC 3189, Orion Metal Industries provides precision laser cutting, sheet metal bending, fabrication, powder coating, and custom assembly for commercial and industrial clients across Melbourne and Victoria.`,
-    coverImage: "/images/services/laser-cutting-decorative.jpeg",
+    coverImage:
+      "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1600&q=80",
     author: "Orion Metal Industries",
     tags: ["sheet metal fabrication", "Moorabbin", "Melbourne"],
     metaTitle: "Sheet Metal Fabrication Moorabbin Guide | Orion Metal Industries",
@@ -50,7 +51,8 @@ Clean edge quality, minimal heat-affected zones, and efficient nesting for batch
 ## Getting a Quote
 
 Contact Orion Metal Industries with your drawings and specifications. We provide precision laser cutting as part of our full fabrication service in Moorabbin, Melbourne.`,
-    coverImage: "/images/services/laser-cutting-precision.jpeg",
+    coverImage:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80",
     author: "Orion Metal Industries",
     tags: ["laser cutting", "Melbourne", "industrial"],
     metaTitle: "Laser Cutting Melbourne | Industrial Applications",
@@ -78,7 +80,8 @@ Choosing a fabricator with in-house powder coating simplifies your supply chain 
 ## Orion Metal Industries
 
 Our Moorabbin facility provides integrated fabrication and powder coating for commercial and industrial clients across Melbourne and Victoria.`,
-    coverImage: "/images/services/powder-coating-line.jpeg",
+    coverImage:
+      "https://images.unsplash.com/photo-1565514020176-efe69048881b?auto=format&fit=crop&w=1600&q=80",
     author: "Orion Metal Industries",
     tags: ["powder coating", "Melbourne", "metal fabrication"],
     metaTitle: "Powder Coating Melbourne | Commercial Metal Fabrication",

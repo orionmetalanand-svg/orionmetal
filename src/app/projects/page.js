@@ -23,8 +23,8 @@ export default function ProjectsPage() {
         title="Fabrication Project Gallery"
         accentWord="Project"
         description="A visual showcase of our laser cutting, fabrication, powder coating and assembly work. Filter by category to explore each capability."
-        image="/images/projects/architectural-decorative-screen.jpeg"
-        imageAlt="Architectural laser cut decorative metal screen"
+        image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Commercial construction and structural steelwork"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Projects" }]}
       />
 
