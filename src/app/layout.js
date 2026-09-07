@@ -1,0 +1,40 @@
+import { Inter } from "next/font/google";
+import "./globals.css";
+import SiteLayout from "@/components/layout/SiteLayout";
+import { siteConfig, getPageMetadata } from "@/data/seo";
+import { JsonLd, getOrganizationSchema, getWebsiteSchema } from "@/lib/structured-data";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+export const metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.defaultTitle,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.defaultDescription,
+  keywords: siteConfig.keywords,
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    siteName: siteConfig.name,
+  },
+  ...getPageMetadata("home"),
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en-AU" className={inter.variable}>
+      <body className="font-sans">
+        <JsonLd data={getOrganizationSchema()} />
+        <JsonLd data={getWebsiteSchema()} />
+        <SiteLayout>{children}</SiteLayout>
+      </body>
+    </html>
+  );
+}
