@@ -1,9 +1,8 @@
-import { local, stock } from "@/config/images";
+import { stock } from "@/config/images";
 
 /**
- * Product catalogue — real Orion product photos as primary images,
- * with premium stock fallbacks for polish where needed.
- * Managed locally; Supabase can override image_url later.
+ * Product catalogue — Unsplash stock for kiosk/pylon (no WhatsApp renders).
+ * Other items use real Orion workshop photos where available.
  */
 export const products = [
   {
@@ -12,8 +11,7 @@ export const products = [
     description:
       "Custom-fabricated metal housings for digital wayfinding and information kiosks with precision-cut panels and powder-coated finishes.",
     application: "Commercial buildings, retail centres, public spaces",
-    image: local.products.kiosk,
-    coverImage: stock.enclosure.src,
+    image: stock.commercialLobby.src,
     category: "Commercial Enclosures",
   },
   {
@@ -22,8 +20,7 @@ export const products = [
     description:
       "Fully assembled metal enclosures with power distribution, cable routing, and hinged access panels for commercial equipment.",
     application: "Industrial and commercial electronics",
-    image: local.products.enclosure,
-    coverImage: stock.electronics.src,
+    image: "/images/products/electronic-enclosure-assembly.jpeg",
     category: "Industrial Enclosures",
   },
   {
@@ -32,8 +29,7 @@ export const products = [
     description:
       "Laser-cut and powder-coated channel housings for architectural lighting with custom cutouts and mounting features.",
     application: "Commercial and architectural lighting",
-    image: local.products.lighting,
-    coverImage: stock.lighting.src,
+    image: "/images/products/architectural-lighting-enclosure.jpeg",
     category: "Architectural Metalwork",
   },
   {
@@ -42,8 +38,7 @@ export const products = [
     description:
       "Fabricated metal cabinets with laser-cut decorative door panels, powder-coated finish, and integrated hardware.",
     application: "Commercial storage and display",
-    image: local.products.cabinet,
-    coverImage: stock.cabinet.src,
+    image: "/images/products/custom-cabinet-laser-cut-doors.jpeg",
     category: "Custom Fabrication",
   },
   {
@@ -52,8 +47,7 @@ export const products = [
     description:
       "Heavy-duty fabricated metal trough with precision laser-cut ventilation slots and interlocking tab-and-slot assembly.",
     application: "Industrial and commercial applications",
-    image: local.products.trough,
-    coverImage: stock.metalSheets.src,
+    image: "/images/products/custom-fabricated-trough.jpeg",
     category: "Industrial Fabrication",
   },
   {
@@ -62,8 +56,7 @@ export const products = [
     description:
       "Slim-profile metal pylon housing for digital wayfinding displays with angled top design and powder-coated finish.",
     application: "Shopping centres, commercial precincts",
-    image: local.products.pylon,
-    coverImage: stock.architecture.src,
+    image: stock.retailInterior.src,
     category: "Commercial Enclosures",
   },
 ];

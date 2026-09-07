@@ -80,6 +80,14 @@ export const stock = {
     src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
     alt: "Electronic components and circuit hardware",
   },
+  commercialLobby: {
+    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+    alt: "Modern commercial lobby with integrated digital displays",
+  },
+  retailInterior: {
+    src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
+    alt: "Commercial retail interior with modern signage and displays",
+  },
 };
 
 /** Local Orion assets — unique product / brand photography */
@@ -88,12 +96,10 @@ export const local = {
   flyer: "/images/company/orion-company-flyer.jpeg",
   heroFacility: "/images/hero/powder-coating-facility-hero.jpeg",
   products: {
-    kiosk: "/images/products/digital-kiosk-wayfinder.jpeg",
     enclosure: "/images/products/electronic-enclosure-assembly.jpeg",
     lighting: "/images/products/architectural-lighting-enclosure.jpeg",
     cabinet: "/images/products/custom-cabinet-laser-cut-doors.jpeg",
     trough: "/images/products/custom-fabricated-trough.jpeg",
-    pylon: "/images/products/digital-kiosk-pylon-front.jpeg",
   },
 };
 

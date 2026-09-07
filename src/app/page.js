@@ -9,10 +9,9 @@ import LocationSection from "@/components/sections/LocationSection";
 import CTASection from "@/components/sections/CTASection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
-import Carousel from "@/components/ui/Carousel";
 import Button from "@/components/ui/Button";
+import { ProductGrid } from "@/components/ui/ProductCard";
 import { ServiceGrid } from "@/components/ui/ServiceCard";
-import ProductCard from "@/components/ui/ProductCard";
 import IndustryCard from "@/components/ui/IndustryCard";
 import { BlogGrid } from "@/components/ui/BlogCard";
 import { company } from "@/data/company";
@@ -150,12 +149,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── Featured Products (carousel) ───────────── */}
+      {/* ── Featured Products ──────────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 bg-grid opacity-30" />
 
         <div className="section-padding container-wide relative">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
               eyebrow="Products"
               title="Custom Fabricated Products"
@@ -163,21 +162,14 @@ export default async function HomePage() {
               description="Digital kiosk housings, electronic enclosures, architectural metalwork and bespoke industrial components."
             />
             <Reveal delay={120}>
-              <Button href="/products" variant="secondary" size="md">
+              <Button href="/products" variant="secondary" size="md" className="w-full sm:w-auto">
                 View Catalogue
               </Button>
             </Reveal>
           </div>
 
-          <div className="mt-14">
-            <Carousel
-              ariaLabel="Featured products"
-              itemClassName="min-w-[88%] sm:min-w-[46%] lg:min-w-[32%]"
-            >
-              {products.map((product, i) => (
-                <ProductCard key={product.id} product={product} index={i} />
-              ))}
-            </Carousel>
+          <div className="mt-8 sm:mt-14">
+            <ProductGrid products={products} />
           </div>
         </div>
       </section>
