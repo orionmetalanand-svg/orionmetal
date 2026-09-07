@@ -1,15 +1,16 @@
 import SectionHeading from "@/components/ui/SectionHeading";
+import Carousel from "@/components/ui/Carousel";
+import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { getAverageRating } from "@/data/google-reviews";
-import { company } from "@/data/company";
 
-function StarRating({ rating }) {
+function Stars({ rating, size = "h-4 w-4" }) {
   return (
     <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
       {[1, 2, 3, 4, 5].map((star) => (
         <svg
           key={star}
-          className={`h-4 w-4 ${star <= rating ? "text-yellow-400" : "text-gray-600"}`}
+          className={`${size} ${star <= rating ? "text-brand-red" : "text-white/15"}`}
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -18,6 +19,32 @@ function StarRating({ rating }) {
         </svg>
       ))}
     </div>
+  );
+}
+
+function GoogleGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+      <path
+        fill="#ffffff"
+        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"
+      />
+      <path
+        fill="#ffffff"
+        fillOpacity="0.75"
+        d="M12 23c2.97 0 5.46-.98 7.28-2.65l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0012 23z"
+      />
+      <path
+        fill="#ffffff"
+        fillOpacity="0.5"
+        d="M5.84 14.11a6.6 6.6 0 010-4.22V7.05H2.18a11 11 0 000 9.9l3.66-2.84z"
+      />
+      <path
+        fill="#ffffff"
+        fillOpacity="0.85"
+        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 002.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"
+      />
+    </svg>
   );
 }
 
@@ -32,77 +59,125 @@ function formatDate(dateStr) {
 export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
   if (!reviews?.length) return null;
 
-  const averageRating = getAverageRating(reviews);
+  const average = getAverageRating(reviews);
 
   return (
-    <section className="section-padding bg-brand-dark">
-      <div className="container-wide">
-        <SectionHeading
-          eyebrow="Reviews"
-          title="Google Reviews"
-          description="Placeholder review content for layout preview. Replace with verified Google review links in Supabase before publishing structured review data."
-          align="center"
-        />
+    <section className="relative overflow-hidden bg-brand-black">
+      <div className="absolute inset-0 bg-grid opacity-40" />
+      <div className="absolute -right-32 top-1/3 h-[400px] w-[400px] rounded-full bg-brand-red/12 blur-[130px]" />
 
-        <div className="mx-auto mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
-          <div className="flex items-center gap-3">
-            <span className="text-4xl font-bold text-white">{averageRating}</span>
-            <div>
-              <StarRating rating={Math.round(averageRating)} />
-              <p className="text-sm text-brand-muted">{reviews.length} reviews</p>
-            </div>
-          </div>
-          {googleBusinessUrl && (
-            <Button href={googleBusinessUrl} variant="outline" size="sm" external className="ml-0 sm:ml-6">
-              View on Google
-            </Button>
-          )}
-        </div>
+      <div className="section-padding container-wide relative">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <SectionHeading
+            eyebrow="Reviews"
+            title="What Clients Say About Our Work"
+            accentWord="Clients"
+            description="Placeholder review content shown for layout. Verified Google reviews and links can be connected in Supabase before launch."
+          />
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((review) => (
-            <article
-              key={review.id}
-              className="flex flex-col border border-white/10 bg-brand-black p-6"
-            >
-              <div className="flex items-center justify-between">
-                <StarRating rating={review.rating} />
-                {review.reviewDate && (
-                  <time dateTime={review.reviewDate} className="text-xs text-brand-muted">
-                    {formatDate(review.reviewDate)}
-                  </time>
+          {/* Rating summary card */}
+          <Reveal delay={120}>
+            <div className="glass-strong w-full rounded-2xl p-7 lg:w-80">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
+                  <GoogleGlyph />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Google Reviews</p>
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-brand-faint">
+                    Placeholder data
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 flex items-end gap-4">
+                <span className="text-5xl font-bold leading-none text-white">{average}</span>
+                <div className="pb-1">
+                  <Stars rating={Math.round(average)} size="h-4 w-4" />
+                  <p className="mt-1.5 text-xs text-brand-muted">
+                    {reviews.length} reviews
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                {googleBusinessUrl ? (
+                  <Button href={googleBusinessUrl} variant="outline" size="sm" external className="w-full">
+                    View on Google
+                  </Button>
+                ) : (
+                  <p className="rounded-xl border border-dashed border-white/15 px-4 py-3 text-center text-[11px] uppercase tracking-[0.14em] text-brand-faint">
+                    Google link — coming soon
+                  </p>
                 )}
               </div>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-brand-muted">
-                &ldquo;{review.reviewText}&rdquo;
-              </p>
-              <p className="mt-4 text-sm font-semibold text-white">— {review.reviewerName}</p>
-              {review.googleReviewUrl ? (
-                <a
-                  href={review.googleReviewUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 text-xs font-semibold text-brand-red hover:underline"
-                >
-                  View on Google →
-                </a>
-              ) : (
-                <span className="mt-3 text-xs text-brand-muted italic">Google link — coming soon</span>
-              )}
-            </article>
-          ))}
+            </div>
+          </Reveal>
         </div>
 
-        <p className="mt-8 text-center text-xs text-brand-muted">
-          Had a great experience with {company.shortName}?{" "}
-          {googleBusinessUrl ? (
-            <a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline">
-              Leave us a review on Google
-            </a>
-          ) : (
-            <span>Google Business link — add to Supabase / env when ready</span>
-          )}
-        </p>
+        {/* Reviews carousel */}
+        <div className="mt-14">
+          <Carousel
+            ariaLabel="Customer reviews"
+            itemClassName="min-w-[88%] sm:min-w-[52%] lg:min-w-[33.5%]"
+            autoPlay
+            interval={6000}
+          >
+            {reviews.map((review) => (
+              <article
+                key={review.id}
+                className="glass hover-lift flex h-full min-h-[17rem] flex-col rounded-2xl p-7 hover:border-brand-red/35"
+              >
+                <div className="flex items-start justify-between">
+                  <Stars rating={review.rating} />
+                  <span className="opacity-40">
+                    <GoogleGlyph />
+                  </span>
+                </div>
+
+                <svg
+                  className="mt-5 h-7 w-7 text-brand-red/40"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M9.983 3v7.391C9.983 16.095 6.298 19.65 1 20.995l-.995-2.161c2.632-.811 3.983-2.549 4.062-4.834H0V3h9.983zM24 3v7.391c0 5.704-3.685 9.259-8.983 10.604l-.995-2.161c2.632-.811 3.983-2.549 4.062-4.834H14V3h10z" />
+                </svg>
+
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-white/80">
+                  {review.reviewText}
+                </p>
+
+                <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-red/15 text-sm font-bold text-brand-red-bright">
+                    {review.reviewerName.charAt(0)}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-bold text-white">
+                      {review.reviewerName}
+                    </p>
+                    <p className="text-[11px] text-brand-faint">
+                      {formatDate(review.reviewDate)}
+                      {review.googleReviewUrl ? (
+                        <>
+                          {" · "}
+                          <a
+                            href={review.googleReviewUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-brand-red hover:underline"
+                          >
+                            View
+                          </a>
+                        </>
+                      ) : null}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </Carousel>
+        </div>
       </div>
     </section>
   );

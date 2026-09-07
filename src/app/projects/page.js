@@ -1,3 +1,4 @@
+import PageHero from "@/components/sections/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProjectGallery from "@/components/ui/ProjectGallery";
 import CTASection from "@/components/sections/CTASection";
@@ -17,24 +18,39 @@ export default function ProjectsPage() {
         ])}
       />
 
-      <section className="section-padding bg-brand-black">
-        <div className="container-wide">
+      <PageHero
+        eyebrow="Gallery"
+        title="Fabrication Project Gallery"
+        accentWord="Project"
+        description="A visual showcase of our laser cutting, fabrication, powder coating and assembly work. Filter by category to explore each capability."
+        image="/images/projects/architectural-decorative-screen.jpeg"
+        imageAlt="Architectural laser cut decorative metal screen"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Projects" }]}
+      />
+
+      <section className="relative overflow-hidden bg-brand-dark">
+        <div className="absolute inset-0 bg-grid opacity-30" />
+        <div className="absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-brand-red/10 blur-[150px]" />
+
+        <div className="section-padding container-wide relative">
           <SectionHeading
-            eyebrow="Projects"
-            title="Fabrication Gallery"
-            description="A visual showcase of our laser cutting, fabrication, powder coating, and assembly work. Filter by category to explore our capabilities."
+            eyebrow="Our Work"
+            title="Selected Fabrication Work"
+            accentWord="Fabrication"
+            description="Click any image to view it larger. Use arrow keys to browse the gallery."
             align="center"
           />
+
+          <div className="mt-12">
+            <ProjectGallery projects={projects} />
+          </div>
         </div>
       </section>
 
-      <section className="section-padding bg-brand-dark">
-        <div className="container-wide">
-          <ProjectGallery projects={projects} />
-        </div>
-      </section>
-
-      <CTASection />
+      <CTASection
+        title="Have a Similar Project?"
+        description="Send us your drawings or describe your requirements and we will advise on the best fabrication approach."
+      />
     </>
   );
 }
