@@ -7,24 +7,38 @@ import { company } from "@/data/company";
  * transactional provider (Resend, SendGrid, SES, etc.) without code changes.
  *
  * Required env:
- *   CONTACT_EMAIL   — where enquiries are delivered
+ *   CONTACT_EMAIL   — one or more inboxes (comma-separated)
+ *   CONTACT_EMAIL_CC — optional extra recipients (comma-separated)
  *   SMTP_USER       — Gmail address (or SMTP username)
  *   SMTP_PASSWORD   — Gmail App Password (16 chars), not your login password
  * Optional:
  *   SMTP_HOST       — defaults to smtp.gmail.com
  *   SMTP_PORT       — defaults to 587
  */
+export function getContactRecipients() {
+  const sources = [process.env.CONTACT_EMAIL, process.env.CONTACT_EMAIL_CC].filter(
+    Boolean
+  );
+
+  const emails = sources
+    .flatMap((value) => value.split(","))
+    .map((email) => email.trim())
+    .filter(Boolean);
+
+  return [...new Set(emails)];
+}
+
 export async function sendContactEmail({ formData, files = [] }) {
-  const contactEmail = process.env.CONTACT_EMAIL;
+  const recipients = getContactRecipients();
   const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
   const smtpPort = parseInt(process.env.SMTP_PORT || "587", 10);
   const smtpUser = process.env.SMTP_USER || process.env.GMAIL_USER;
   const smtpPassword =
     process.env.SMTP_PASSWORD || process.env.GMAIL_APP_PASSWORD;
 
-  if (!contactEmail || !smtpUser || !smtpPassword) {
+  if (!recipients.length || !smtpUser || !smtpPassword) {
     throw new Error(
-      "Email configuration incomplete. Set CONTACT_EMAIL, SMTP_USER, and SMTP_PASSWORD (Gmail App Password)."
+      "Email configuration incomplete. Set CONTACT_EMAIL (and SMTP_USER / SMTP_PASSWORD)."
     );
   }
 
@@ -68,7 +82,7 @@ export async function sendContactEmail({ formData, files = [] }) {
 
   await transporter.sendMail({
     from: `"${company.name}" <${smtpUser}>`,
-    to: contactEmail,
+    to: recipients.join(", "),
     replyTo: formData.email,
     subject: `Website Enquiry — ${formData.firstName} ${formData.lastName}${formData.company ? ` (${formData.company})` : ""}`,
     html,

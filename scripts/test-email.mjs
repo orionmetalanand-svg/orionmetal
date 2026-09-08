@@ -17,7 +17,10 @@ loadEnvLocal();
 
 const user = process.env.SMTP_USER;
 const pass = (process.env.SMTP_PASSWORD || "").replace(/\s/g, "");
-const to = process.env.CONTACT_EMAIL;
+const recipients = (process.env.CONTACT_EMAIL || "")
+  .split(",")
+  .map((email) => email.trim())
+  .filter(Boolean);
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.gmail.com",
@@ -30,11 +33,11 @@ try {
   await transporter.verify();
   await transporter.sendMail({
     from: `"Orion Metal Industries" <${user}>`,
-    to,
+    to: recipients.join(", "),
     subject: "Orion website — contact form test",
-    html: "<p>SMTP is configured correctly. Contact form emails will arrive here.</p>",
+    html: "<p>SMTP is configured correctly. Contact form emails will arrive at all CONTACT_EMAIL addresses.</p>",
   });
-  console.log("SUCCESS: Test email sent to", to);
+  console.log("SUCCESS: Test email sent to", recipients.join(", "));
 } catch (error) {
   console.error("FAILED:", error.message);
   process.exit(1);
