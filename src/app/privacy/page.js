@@ -35,7 +35,8 @@ export default function PrivacyPage() {
       />
 
       <section className="relative overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-grid-light opacity-50" />
+        <div className="absolute inset-0 bg-grid-light opacity-60" />
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-red via-brand-red/40 to-transparent" />
 
         <div className="section-padding container-wide relative max-w-3xl">
           <p className="text-[15px] leading-[1.8] text-gray-600">
@@ -47,18 +48,18 @@ export default function PrivacyPage() {
           <div className="mt-10 space-y-9">
             {sections.map((section) => (
               <div key={section.heading}>
-                <h2 className="text-xl font-bold text-brand-black">
+                <h2 className="text-lg font-bold text-ink sm:text-xl">
                   <span className="mr-3 inline-block h-5 w-1 translate-y-0.5 rounded-full bg-brand-red align-middle" />
                   {section.heading}
                 </h2>
-                <p className="mt-3 text-[15px] leading-[1.8] text-gray-600">{section.body}</p>
+                <p className="mt-3 text-[15px] leading-[1.8] text-ink-4/70">{section.body}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-black/8 bg-brand-black/[0.02] p-7">
-            <h2 className="text-lg font-bold text-brand-black">Contact Us</h2>
-            <p className="mt-3 text-sm leading-relaxed text-gray-600">
+          <div className="mt-12 rounded-2xl border border-ink/[0.08] bg-ink/[0.02] p-5 shadow-[0_1px_2px_rgba(6,6,8,0.03)] sm:p-7">
+            <h2 className="text-[17px] font-bold text-ink">Contact Us</h2>
+            <p className="mt-3 text-[13.5px] leading-[1.75] text-ink-4/70">
               For privacy-related enquiries, contact us at{" "}
               <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="font-semibold text-brand-red hover:underline">
                 {company.phone}

@@ -38,6 +38,21 @@ const qualityPoints = [
   "Protective packaging and palletised dispatch",
 ];
 
+/** Floating glass caption used over feature imagery. */
+function FloatingStat({ label, value, detail, className = "" }) {
+  return (
+    <div
+      className={`glass-strong absolute hidden rounded-2xl px-5 py-4 animate-float-slow sm:block ${className}`}
+    >
+      <p className="text-[9.5px] font-bold uppercase tracking-[0.22em] text-brand-red-bright">
+        {label}
+      </p>
+      <p className="mt-2 text-[17px] font-bold leading-tight text-white">{value}</p>
+      <p className="mt-1 text-[11.5px] text-brand-muted">{detail}</p>
+    </div>
+  );
+}
+
 export default async function HomePage() {
   const [products, blogPosts, customers, reviews, schemaReviews] = await Promise.all([
     getProducts(),
@@ -59,11 +74,12 @@ export default async function HomePage() {
       <CapabilityBand />
 
       {/* ── Company Introduction ───────────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute -right-40 top-0 h-[420px] w-[420px] rounded-full bg-brand-red/10 blur-[130px]" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+        <div className="absolute -right-40 top-0 h-[420px] w-[420px] rounded-full bg-brand-red/[0.07] blur-[140px]" />
 
-        <div className="section-padding container-wide relative grid items-center gap-14 lg:grid-cols-2">
+        <div className="section-padding container-wide relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHeading
               eyebrow="About Orion"
@@ -77,17 +93,17 @@ export default async function HomePage() {
                 {company.values.slice(0, 4).map((value) => (
                   <div
                     key={value.title}
-                    className="glass hover-lift rounded-xl p-4 hover:border-brand-red/35"
+                    className="glass hover-lift rounded-xl p-4 hover:border-white/16"
                   >
-                    <p className="text-sm font-bold text-white">{value.title}</p>
-                    <p className="mt-1.5 text-xs leading-relaxed text-brand-muted">
+                    <p className="text-[13.5px] font-bold text-white">{value.title}</p>
+                    <p className="mt-2 text-[12px] leading-[1.65] text-brand-muted">
                       {value.description}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-9">
+              <div className="mt-10">
                 <Button href="/about" variant="primary" size="md">
                   About Our Company
                 </Button>
@@ -97,7 +113,7 @@ export default async function HomePage() {
 
           <Reveal delay={100}>
             <div className="relative">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
                 <Image
                   src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80"
                   alt="CNC industrial machinery — precision manufacturing capability"
@@ -105,28 +121,26 @@ export default async function HomePage() {
                   className="object-cover"
                   sizes="(max-width:1024px) 92vw, 46vw"
                 />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent" />
+                <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
               </div>
 
-              {/* Floating glass stat */}
-              <div className="glass-strong absolute -bottom-6 -left-4 hidden rounded-2xl p-5 sm:block animate-float-slow">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red">
-                  Located In
-                </p>
-                <p className="mt-1.5 text-lg font-bold text-white">
-                  {company.address.suburb}, {company.address.state}
-                </p>
-                <p className="text-xs text-brand-muted">Serving Melbourne & Victoria</p>
-              </div>
+              <FloatingStat
+                label="Located In"
+                value={`${company.address.suburb}, ${company.address.state}`}
+                detail="Serving Melbourne & Victoria"
+                className="-bottom-7 -left-5"
+              />
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* ── Services ───────────────────────────────── */}
-      <section className="relative overflow-hidden bg-brand-black">
-        <div className="absolute inset-0 bg-grid opacity-40" />
-        <div className="absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-brand-red/12 blur-[150px]" />
+      <section className="relative overflow-hidden bg-ink">
+        <div className="absolute inset-0 bg-grid opacity-80" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+        <div className="absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-brand-red/[0.1] blur-[150px]" />
 
         <div className="section-padding container-wide relative">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -137,21 +151,23 @@ export default async function HomePage() {
               description="Laser cutting, bending, fabrication, powder coating and custom assembly — delivered under one roof for commercial and industrial clients."
             />
             <Reveal delay={120}>
-              <Button href="/services" variant="secondary" size="md">
+              <Button href="/services" variant="secondary" size="md" className="w-full sm:w-auto">
                 All Services
               </Button>
             </Reveal>
           </div>
 
-          <div className="mt-14">
+          <div className="mt-12 sm:mt-16">
             <ServiceGrid services={services} detailed />
           </div>
         </div>
       </section>
 
       {/* ── Featured Products ──────────────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
 
         <div className="section-padding container-wide relative">
           <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -168,7 +184,7 @@ export default async function HomePage() {
             </Reveal>
           </div>
 
-          <div className="mt-8 sm:mt-14">
+          <div className="mt-10 sm:mt-16">
             <ProductGrid products={products} />
           </div>
         </div>
@@ -177,8 +193,10 @@ export default async function HomePage() {
       <ProcessSection />
 
       {/* ── Projects gallery preview ───────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
 
         <div className="section-padding container-wide relative">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -189,13 +207,13 @@ export default async function HomePage() {
               description="Laser-cut architectural screens, powder-coated frames, custom enclosures and industrial assemblies."
             />
             <Reveal delay={120}>
-              <Button href="/projects" variant="secondary" size="md">
+              <Button href="/projects" variant="secondary" size="md" className="w-full sm:w-auto">
                 Full Gallery
               </Button>
             </Reveal>
           </div>
 
-          <div className="mt-14 grid auto-rows-[13rem] grid-cols-2 gap-4 lg:grid-cols-4">
+          <div className="mt-10 grid auto-rows-[10.5rem] grid-cols-2 gap-3 sm:auto-rows-[13rem] sm:gap-4 lg:mt-16 lg:grid-cols-4">
             {projects.slice(0, 6).map((project, i) => (
               <Reveal
                 key={project.id}
@@ -204,21 +222,23 @@ export default async function HomePage() {
               >
                 <Link
                   href="/projects"
-                  className="group relative block h-full overflow-hidden rounded-2xl border border-white/10 transition-all duration-500 hover:border-brand-red/45"
+                  className="group relative block h-full overflow-hidden rounded-2xl border border-white/[0.09] transition-all duration-500 hover:border-white/20 hover:shadow-lift"
                 >
                   <Image
                     src={project.image}
                     alt={`${project.title} — Orion Metal Industries`}
                     fill
-                    className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
-                    sizes="(max-width:1024px) 46vw, 24vw"
+                    className="object-cover grayscale-[40%] transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.07] group-hover:grayscale-0"
+                    sizes="(max-width:1024px) 48vw, 24vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/25 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-4">
-                    <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-brand-red">
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+                  <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/18 to-transparent" />
+
+                  <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-4">
+                    <span className="text-[8.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright sm:text-[9px]">
                       {project.category}
                     </span>
-                    <h3 className="mt-1 text-sm font-bold leading-snug text-white">
+                    <h3 className="mt-1.5 line-clamp-2 text-[12.5px] font-bold leading-snug text-white sm:text-sm">
                       {project.title}
                     </h3>
                   </div>
@@ -232,14 +252,15 @@ export default async function HomePage() {
       <TrustedCustomers customers={customers} />
 
       {/* ── Quality / Why Orion ────────────────────── */}
-      <section className="relative overflow-hidden bg-brand-black">
-        <div className="absolute inset-0 bg-grid opacity-40" />
-        <div className="absolute -left-40 top-1/3 h-[420px] w-[420px] rounded-full bg-brand-red/12 blur-[130px]" />
+      <section className="relative overflow-hidden bg-ink">
+        <div className="absolute inset-0 bg-grid opacity-80" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+        <div className="absolute -left-40 top-1/3 h-[420px] w-[420px] rounded-full bg-brand-red/[0.09] blur-[140px]" />
 
-        <div className="section-padding container-wide relative grid items-center gap-14 lg:grid-cols-2">
+        <div className="section-padding container-wide relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <div className="relative">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
                 <Image
                   src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1600&q=80"
                   alt="Metal fabrication welding sparks in an industrial workshop"
@@ -247,16 +268,16 @@ export default async function HomePage() {
                   className="object-cover"
                   sizes="(max-width:1024px) 92vw, 46vw"
                 />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent" />
+                <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
               </div>
 
-              <div className="glass-strong absolute -right-4 -top-6 hidden rounded-2xl p-5 sm:block animate-float-slow">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red">
-                  Finishing
-                </p>
-                <p className="mt-1.5 text-lg font-bold text-white">In-House Coating</p>
-                <p className="text-xs text-brand-muted">Integrated production line</p>
-              </div>
+              <FloatingStat
+                label="Finishing"
+                value="In-House Coating"
+                detail="Integrated production line"
+                className="-top-7 -right-5"
+              />
             </div>
           </Reveal>
 
@@ -269,33 +290,45 @@ export default async function HomePage() {
             />
 
             <Reveal delay={140}>
-              <ul className="mt-9 space-y-3">
+              <ul className="mt-9 space-y-2.5">
                 {qualityPoints.map((point) => (
                   <li
                     key={point}
-                    className="glass flex items-start gap-3.5 rounded-xl p-4 transition-colors hover:border-brand-red/35"
+                    className="glass flex items-start gap-3.5 rounded-xl p-4 transition-colors duration-300 hover:border-white/16"
                   >
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-red/15 text-brand-red">
-                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
+                    <span className="mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand-red/25 bg-brand-red/12 text-brand-red-bright">
+                      <svg
+                        className="h-3 w-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={3.5}
+                        aria-hidden="true"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <span className="text-sm leading-relaxed text-white/85">{point}</span>
+                    <span className="text-[13.5px] leading-[1.7] text-white/85">{point}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="mt-8 text-sm font-bold uppercase tracking-[0.2em] text-brand-red">
-                {company.secondaryTagline}
-              </p>
+              <div className="mt-9 flex items-center gap-3.5">
+                <span className="h-px w-8 bg-brand-red" />
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/70">
+                  {company.secondaryTagline}
+                </p>
+              </div>
             </Reveal>
           </div>
         </div>
       </section>
 
       {/* ── Industries ─────────────────────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
 
         <div className="section-padding container-wide relative">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -306,13 +339,13 @@ export default async function HomePage() {
               description="Target application areas across commercial, industrial, manufacturing, construction and engineering sectors."
             />
             <Reveal delay={120}>
-              <Button href="/industries" variant="secondary" size="md">
+              <Button href="/industries" variant="secondary" size="md" className="w-full sm:w-auto">
                 All Industries
               </Button>
             </Reveal>
           </div>
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-6">
             {industries.slice(0, 3).map((industry, i) => (
               <IndustryCard key={industry.id} industry={industry} index={i} />
             ))}
@@ -322,10 +355,11 @@ export default async function HomePage() {
 
       <GoogleReviews reviews={reviews} googleBusinessUrl={googleBusinessUrl} />
 
-      {/* ── Blog ───────────────────────────────────── */}
+      {/* ── Blog — deliberate light band for contrast ─ */}
       {blogPosts.length > 0 && (
         <section className="relative overflow-hidden bg-white">
-          <div className="absolute inset-0 bg-grid-light opacity-60" />
+          <div className="absolute inset-0 bg-grid-light opacity-70" />
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-red via-brand-red/40 to-transparent" />
 
           <div className="section-padding container-wide relative">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -336,13 +370,13 @@ export default async function HomePage() {
                 light
               />
               <Reveal delay={120}>
-                <Button href="/blog" variant="outline" size="md">
+                <Button href="/blog" variant="outline" size="md" className="w-full sm:w-auto">
                   All Articles
                 </Button>
               </Reveal>
             </div>
 
-            <div className="mt-14">
+            <div className="mt-10 sm:mt-16">
               <BlogGrid posts={blogPosts} />
             </div>
           </div>

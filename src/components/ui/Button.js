@@ -2,22 +2,28 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const variants = {
-  primary:
-    "bg-brand-red text-white border border-brand-red/60 hover:bg-brand-red-bright hover:border-brand-red-bright shadow-[0_10px_40px_-14px_rgba(225,29,46,0.85)] hover:shadow-[0_14px_50px_-10px_rgba(255,51,72,0.95)]",
-  secondary:
-    "glass text-white hover:border-brand-red/60 hover:bg-white/10",
+  primary: [
+    "text-white border border-brand-red/70",
+    "bg-[linear-gradient(180deg,#f0263a_0%,#e11d2e_55%,#c0142a_100%)]",
+    "shadow-red hover:shadow-red-lift",
+    "hover:border-brand-red-bright",
+    "hover:bg-[linear-gradient(180deg,#ff3d50_0%,#ec1f34_55%,#c9152d_100%)]",
+  ].join(" "),
+  secondary: "glass text-white hover:border-white/20 hover:bg-white/[0.07]",
+  /** Legible on both light and dark surfaces — red on transparent. */
   outline:
-    "bg-transparent text-brand-red border border-brand-red/50 hover:bg-brand-red hover:text-white hover:border-brand-red",
-  ghost: "bg-transparent text-white/80 hover:text-brand-red-bright",
+    "bg-transparent text-brand-red border border-brand-red/45 hover:border-brand-red hover:bg-brand-red hover:text-white",
+  ghost:
+    "bg-transparent text-white/60 border border-transparent hover:text-white hover:border-white/12",
   white:
-    "bg-white text-brand-black border border-white hover:bg-white/90 shadow-[0_10px_40px_-14px_rgba(255,255,255,0.5)]",
-  dark: "bg-brand-black text-white border border-white/15 hover:border-brand-red/60",
+    "bg-white text-ink border border-white hover:bg-white/92 shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset,0_14px_40px_-16px_rgba(255,255,255,0.35)]",
+  dark: "bg-ink-3 text-white border border-white/10 hover:border-brand-red/50 hover:bg-ink-4",
 };
 
 const sizes = {
-  sm: "px-4 py-2.5 text-xs",
-  md: "px-6 py-3.5 text-sm",
-  lg: "px-8 py-4 text-sm",
+  sm: "h-11 px-5 text-[11px] tracking-[0.13em]",
+  md: "h-12 px-6 text-[12px] tracking-[0.13em]",
+  lg: "h-[3.375rem] px-8 text-[12px] tracking-[0.14em]",
 };
 
 export default function Button({
@@ -31,7 +37,10 @@ export default function Button({
   ...props
 }) {
   const classes = cn(
-    "group relative inline-flex items-center justify-center gap-2 rounded-full font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red-bright",
+    "sheen group relative inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full font-bold uppercase leading-none",
+    "transition-[transform,background-color,border-color,box-shadow,color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+    "hover:-translate-y-0.5 active:translate-y-0",
+    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red-bright",
     variants[variant],
     sizes[size],
     className
@@ -39,17 +48,17 @@ export default function Button({
 
   const content = (
     <>
-      <span>{children}</span>
+      <span className="relative z-10 flex items-center gap-2.5">{children}</span>
       {icon && (
         <svg
-          className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+          className="relative z-10 h-3 w-3 shrink-0 transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          strokeWidth={2.5}
+          strokeWidth={3}
           aria-hidden="true"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h15m0 0l-5.5-5.5M19 12l-5.5 5.5" />
         </svg>
       )}
     </>

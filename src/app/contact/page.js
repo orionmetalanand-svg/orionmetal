@@ -61,22 +61,29 @@ export default function ContactPage() {
       />
 
       {/* Quick actions */}
-      <section className="relative border-y border-white/5 bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="container-wide relative grid gap-4 px-5 py-10 sm:grid-cols-3 sm:px-6 lg:px-8">
+      <section className="bg-steel relative overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-noise opacity-[0.045]" />
+
+        <div className="container-wide container-gutter relative grid gap-3.5 py-9 sm:grid-cols-3 sm:gap-4 sm:py-11">
           {quickActions.map((action, i) => (
             <Reveal key={action.label} delay={i * 80}>
               <a
                 href={action.href}
                 target={action.external ? "_blank" : undefined}
                 rel={action.external ? "noopener noreferrer" : undefined}
-                className={`hover-lift flex items-center gap-4 rounded-2xl p-5 hover:-translate-y-1 ${
-                  action.filled ? "glass-red hover:border-brand-red/60" : "glass hover:border-brand-red/40"
+                className={`hover-lift flex h-full items-center gap-4 rounded-2xl p-4 hover:-translate-y-1 sm:p-5 ${
+                  action.filled
+                    ? "glass-red hover:border-brand-red/55"
+                    : "glass hover:border-white/18"
                 }`}
               >
                 <span
                   className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
-                    action.filled ? "bg-brand-red text-white" : "bg-brand-red/15 text-brand-red"
+                    action.filled
+                      ? "border border-brand-red/70 bg-[linear-gradient(180deg,#f0263a_0%,#c0142a_100%)] text-white shadow-red"
+                      : "border border-brand-red/20 bg-brand-red/10 text-brand-red-bright"
                   }`}
                 >
                   <svg
@@ -92,9 +99,11 @@ export default function ContactPage() {
                     {action.icon}
                   </svg>
                 </span>
-                <span>
-                  <span className="block text-sm font-bold text-white">{action.label}</span>
-                  <span className="mt-0.5 block text-xs text-brand-muted">{action.detail}</span>
+                <span className="min-w-0">
+                  <span className="block text-[14.5px] font-bold text-white">{action.label}</span>
+                  <span className="mt-1 block text-[12px] leading-snug text-brand-muted">
+                    {action.detail}
+                  </span>
                 </span>
               </a>
             </Reveal>
@@ -103,34 +112,35 @@ export default function ContactPage() {
       </section>
 
       {/* Form + details */}
-      <section className="relative overflow-hidden bg-brand-black">
-        <div className="absolute inset-0 bg-grid opacity-40" />
-        <div className="absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-brand-red/12 blur-[150px]" />
+      <section className="relative overflow-hidden bg-ink">
+        <div className="absolute inset-0 bg-grid opacity-80" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+        <div className="absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-brand-red/[0.1] blur-[150px]" />
 
-        <div className="section-padding container-wide relative grid gap-8 lg:grid-cols-5">
+        <div className="section-padding container-wide relative grid gap-6 lg:grid-cols-5 lg:gap-8">
           <div className="lg:col-span-3">
             <ContactForm />
           </div>
 
-          <div className="space-y-6 lg:col-span-2">
+          <div className="space-y-5 lg:col-span-2">
             <Reveal>
-              <div className="glass rounded-2xl p-7">
-                <h2 className="text-xl font-bold text-white">Contact Details</h2>
+              <div className="glass rounded-2xl p-5 sm:p-7">
+                <h2 className="text-lg font-bold text-white sm:text-xl">Contact Details</h2>
 
                 <dl className="mt-6 space-y-5">
                   <div>
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-red">
+                    <dt className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
                       Company
                     </dt>
-                    <dd className="mt-1.5 text-sm text-white/85">{company.name}</dd>
+                    <dd className="mt-2 text-[13.5px] text-white/85">{company.name}</dd>
                   </div>
 
                   <div>
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-red">
+                    <dt className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
                       Address
                     </dt>
                     <dd className="mt-1.5">
-                      <address className="not-italic text-sm leading-relaxed text-white/85">
+                      <address className="not-italic text-[13.5px] leading-[1.7] text-white/85">
                         {company.address.street}
                         <br />
                         {company.address.suburb} {company.address.state}{" "}
@@ -142,7 +152,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-red">
+                    <dt className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
                       Phone
                     </dt>
                     <dd className="mt-1.5">
@@ -156,10 +166,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-red">
+                    <dt className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
                       Contact Person
                     </dt>
-                    <dd className="mt-1.5 text-sm text-white/85">{company.contactPerson}</dd>
+                    <dd className="mt-2 text-[13.5px] text-white/85">{company.contactPerson}</dd>
                   </div>
                 </dl>
 

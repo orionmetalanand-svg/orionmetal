@@ -16,11 +16,12 @@ const initialForm = {
   website: "",
 };
 
+/** 16px text avoids iOS Safari zoom-on-focus; min-h keeps touch targets comfortable. */
 const fieldClass =
-  "w-full rounded-xl border border-white/12 bg-white/[0.04] px-4 py-3.5 text-sm text-white placeholder:text-brand-faint transition-colors focus:border-brand-red/60 focus:bg-white/[0.06] focus:outline-none";
+  "w-full min-h-12 rounded-xl border border-white/[0.11] bg-white/[0.035] px-4 py-3.5 text-base text-white shadow-[0_1px_0_0_rgba(255,255,255,0.04)_inset] placeholder:text-brand-faint transition-all duration-300 focus:border-brand-red/60 focus:bg-white/[0.06] focus:shadow-[0_0_0_3px_rgba(225,29,46,0.14)] focus:outline-none sm:text-sm";
 
 const labelClass =
-  "mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-white/70";
+  "mb-2.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-white/60";
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialForm);
@@ -75,19 +76,23 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="glass-strong rounded-2xl p-10 text-center" role="status">
-        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-red/15 text-brand-red">
+      <div
+        className="panel relative overflow-hidden rounded-3xl px-6 py-12 text-center sm:px-10 sm:py-14"
+        role="status"
+      >
+        <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-red to-transparent" />
+        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-brand-red/25 bg-brand-red/12 text-brand-red-bright">
           <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <h3 className="mt-6 text-2xl font-bold text-white">Enquiry Sent</h3>
-        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-brand-muted">
+        <h3 className="mt-7 text-xl font-extrabold text-white sm:text-2xl">Enquiry Sent</h3>
+        <p className="mx-auto mt-3 max-w-md text-[13.5px] leading-[1.75] text-brand-muted sm:text-sm">
           {successMessage}
         </p>
         <button
           type="button"
-          className="mt-7 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-red hover:text-brand-red-bright"
+          className="mt-8 text-[10.5px] font-bold uppercase tracking-[0.2em] text-brand-red transition-colors hover:text-brand-red-bright"
           onClick={() => {
             setStatus("idle");
             setProgress(0);
@@ -100,16 +105,25 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="glass-strong space-y-6 rounded-2xl p-6 sm:p-8" noValidate>
+    <form
+      onSubmit={handleSubmit}
+      className="panel relative space-y-6 overflow-hidden rounded-3xl p-5 sm:p-8"
+      noValidate
+    >
+      <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/18 to-transparent" />
+
       <div>
-        <h2 className="text-2xl font-bold text-white">Send an Enquiry</h2>
-        <p className="mt-2 text-sm text-brand-muted">
+        <h2 className="text-xl font-extrabold text-white sm:text-2xl">Send an Enquiry</h2>
+        <p className="mt-2.5 text-[13px] text-brand-muted">
           Fields marked <span className="text-brand-red">*</span> are required.
         </p>
       </div>
 
       {errors.form && (
-        <div className="rounded-xl border border-red-500/25 bg-red-500/10 px-4 py-3.5 text-sm text-red-300" role="alert">
+        <div
+          className="rounded-xl border border-red-500/25 bg-red-500/10 px-4 py-3.5 text-[13.5px] text-red-300"
+          role="alert"
+        >
           {errors.form}
         </div>
       )}
@@ -272,13 +286,13 @@ export default function ContactForm() {
 
       {status === "submitting" && progress > 0 && (
         <div role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+          <div className="h-1 w-full overflow-hidden rounded-full bg-white/[0.08]">
             <div
               className="h-full rounded-full bg-gradient-to-r from-brand-red to-brand-red-bright transition-all duration-300"
               style={{ width: `${progress}%` }}
             />
           </div>
-          <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-brand-faint">
+          <p className="mt-2.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-faint">
             Uploading… {progress}%
           </p>
         </div>

@@ -6,6 +6,7 @@ import CapabilityBand from "@/components/sections/CapabilityBand";
 import LocationSection from "@/components/sections/LocationSection";
 import CTASection from "@/components/sections/CTASection";
 import Button from "@/components/ui/Button";
+import Logo from "@/components/ui/Logo";
 import { company } from "@/data/company";
 import { services } from "@/data/services";
 import { getPageMetadata } from "@/data/seo";
@@ -60,9 +61,11 @@ export default function AboutPage() {
       <CapabilityBand />
 
       {/* Who we are */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute -right-40 top-0 h-[420px] w-[420px] rounded-full bg-brand-red/10 blur-[130px]" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+        <div className="absolute -right-40 top-0 h-[420px] w-[420px] rounded-full bg-brand-red/[0.08] blur-[140px]" />
 
         <div className="section-padding container-wide relative grid items-center gap-14 lg:grid-cols-2">
           <div>
@@ -80,9 +83,11 @@ export default function AboutPage() {
                 clients who require quality workmanship and dependable delivery.
               </p>
 
-              <div className="glass-red mt-8 rounded-2xl p-6">
-                <p className="text-2xl font-bold text-white">{company.tagline}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.2em] text-brand-red-bright">
+              <div className="glass-red mt-8 rounded-2xl p-5 sm:p-6">
+                <p className="text-xl font-extrabold leading-tight text-white sm:text-2xl">
+                  {company.tagline}
+                </p>
+                <p className="mt-2.5 text-[10px] font-bold uppercase tracking-[0.22em] text-brand-red-bright sm:text-[11px]">
                   {company.secondaryTagline}
                 </p>
               </div>
@@ -90,23 +95,30 @@ export default function AboutPage() {
           </div>
 
           <Reveal delay={100}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white">
-              <Image
-                src="/images/company/orion-logo.jpeg"
-                alt="Orion Metal Industries Pty Ltd brand logo"
-                fill
-                className="object-contain p-10"
-                sizes="(max-width:1024px) 92vw, 46vw"
-              />
+            <div className="bg-steel relative overflow-hidden rounded-3xl border border-white/[0.08] shadow-lift">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-red/60 to-transparent" />
+              <div className="absolute inset-0 bg-noise opacity-[0.05]" />
+              <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-red/12 blur-[90px]" />
+
+              <div className="relative flex flex-col items-center justify-center px-6 py-14 sm:px-12 sm:py-20">
+                <Logo href={null} variant="light" size="xl" />
+
+                <div className="mt-10 h-px w-24 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+
+                <p className="mt-6 text-center text-[11px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  Est. Moorabbin · Victoria · Australia
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* Pillars */}
-      <section className="relative overflow-hidden bg-brand-black">
-        <div className="absolute inset-0 bg-grid opacity-40" />
-        <div className="absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-brand-red/12 blur-[150px]" />
+      <section className="relative overflow-hidden bg-ink">
+        <div className="absolute inset-0 bg-grid opacity-80" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+        <div className="absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-brand-red/[0.1] blur-[150px]" />
 
         <div className="section-padding container-wide relative">
           <SectionHeading
@@ -117,13 +129,14 @@ export default function AboutPage() {
             align="center"
           />
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-6">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.title} delay={i * 80}>
-                <div className="glass hover-lift h-full rounded-2xl p-6 hover:-translate-y-1.5 hover:border-brand-red/40">
-                  <span className="accent-rule rounded-full" />
-                  <h3 className="mt-5 text-lg font-bold text-white">{pillar.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                <div className="panel hover-lift group relative h-full overflow-hidden rounded-2xl p-5 hover:-translate-y-1.5 hover:border-white/16 hover:shadow-lift sm:p-6">
+                  <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/18 to-transparent" />
+                  <span className="accent-rule transition-all duration-500 group-hover:w-16" />
+                  <h3 className="mt-5 text-[17px] font-bold text-white">{pillar.title}</h3>
+                  <p className="mt-3 text-[13.5px] leading-[1.7] text-brand-muted">
                     {pillar.description}
                   </p>
                 </div>
@@ -134,12 +147,14 @@ export default function AboutPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
 
-        <div className="section-padding container-wide relative grid gap-14 lg:grid-cols-2">
+        <div className="section-padding container-wide relative grid gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
               <Image
                 src="https://images.unsplash.com/photo-1565514020176-efe69048881b?auto=format&fit=crop&w=1600&q=80"
                 alt="Precision metal finishing and CNC manufacturing"
@@ -147,7 +162,8 @@ export default function AboutPage() {
                 className="object-cover"
                 sizes="(max-width:1024px) 92vw, 46vw"
               />
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
+              <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
             </div>
           </Reveal>
 
@@ -164,14 +180,14 @@ export default function AboutPage() {
                 {services.map((service, i) => (
                   <div
                     key={service.id}
-                    className="glass flex items-start gap-4 rounded-xl p-4 transition-colors hover:border-brand-red/35"
+                    className="glass flex items-start gap-4 rounded-xl p-4 transition-colors duration-300 hover:border-white/16"
                   >
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-red/15 text-[11px] font-bold text-brand-red">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-brand-red/20 bg-brand-red/12 text-[11px] font-bold tabular-nums text-brand-red-bright">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div>
-                      <p className="text-sm font-bold text-white">{service.name}</p>
-                      <p className="mt-1 text-xs leading-relaxed text-brand-muted">
+                      <p className="text-[13.5px] font-bold text-white">{service.name}</p>
+                      <p className="mt-1.5 text-[12px] leading-[1.65] text-brand-muted">
                         {service.shortDescription}
                       </p>
                     </div>
@@ -190,8 +206,9 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="relative overflow-hidden bg-brand-black">
-        <div className="absolute inset-0 bg-grid opacity-40" />
+      <section className="relative overflow-hidden bg-ink">
+        <div className="absolute inset-0 bg-grid opacity-80" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
 
         <div className="section-padding container-wide relative">
           <SectionHeading
@@ -201,17 +218,17 @@ export default function AboutPage() {
             align="center"
           />
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-5 lg:gap-5">
             {company.values.map((value, i) => (
               <Reveal key={value.title} delay={i * 70}>
-                <div className="glass hover-lift h-full rounded-2xl p-6 text-center hover:-translate-y-1.5 hover:border-brand-red/40">
-                  <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-brand-red/15 text-brand-red">
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <div className="glass hover-lift h-full rounded-2xl p-5 text-center hover:-translate-y-1.5 hover:border-white/16 sm:p-6">
+                  <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-brand-red/20 bg-brand-red/12 text-brand-red-bright">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </span>
-                  <h3 className="mt-4 text-sm font-bold text-white">{value.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-brand-muted">
+                  <h3 className="mt-4 text-[13.5px] font-bold text-white">{value.title}</h3>
+                  <p className="mt-2 text-[12px] leading-[1.65] text-brand-muted">
                     {value.description}
                   </p>
                 </div>

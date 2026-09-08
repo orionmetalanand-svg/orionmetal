@@ -1,8 +1,12 @@
 import { ImageResponse } from "next/og";
 
-export const size = { width: 32, height: 32 };
+export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
+/**
+ * Favicon: the logo's red crescent wrapped around a white "O".
+ * Drawn with SVG paths — Satori doesn't support per-side border colours.
+ */
 export default function Icon() {
   return new ImageResponse(
     (
@@ -13,17 +17,21 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#0a0a0a",
+          background: "#060608",
         }}
       >
-        <div
-          style={{
-            width: 16,
-            height: 16,
-            background: "#c8102e",
-            borderRadius: 2,
-          }}
-        />
+        <svg width="56" height="56" viewBox="0 0 100 100">
+          {/* Crescent — 270° arc, gap on the right */}
+          <path
+            d="M 78.3 21.7 A 40 40 0 1 0 78.3 78.3"
+            fill="none"
+            stroke="#e11d2e"
+            strokeWidth="13"
+            strokeLinecap="round"
+          />
+          {/* Wordmark "O" */}
+          <circle cx="50" cy="50" r="15" fill="none" stroke="#ffffff" strokeWidth="13" />
+        </svg>
       </div>
     ),
     { ...size }

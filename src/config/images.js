@@ -90,9 +90,22 @@ export const stock = {
   },
 };
 
+/**
+ * Brand lockup assets, generated from the master artwork by
+ * `scripts/build-logo-assets.mjs` (trimmed + dark-surface recolour).
+ */
+export const brand = {
+  /** Original colours — for white / light surfaces and social previews. */
+  logoDark: "/images/company/orion-logo.png",
+  /** Wordmark recoloured to white — for the dark site chrome. */
+  logoLight: "/images/company/orion-logo-light.png",
+  logoWidth: 1200,
+  logoHeight: 573,
+};
+
 /** Local Orion assets — unique product / brand photography */
 export const local = {
-  logo: "/images/company/orion-logo.jpeg",
+  logo: brand.logoDark,
   flyer: "/images/company/orion-company-flyer.jpeg",
   heroFacility: "/images/hero/powder-coating-facility-hero.jpeg",
   products: {

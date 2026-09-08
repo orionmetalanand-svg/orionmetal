@@ -27,7 +27,7 @@ export default function PageHero({
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand-black pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-20 lg:pb-24">
+    <section className="relative isolate overflow-hidden bg-ink pb-14 pt-9 sm:pb-20 sm:pt-12 lg:pb-28 lg:pt-16">
       <div className="absolute inset-0 -z-10">
         {image && (
           <>
@@ -36,28 +36,30 @@ export default function PageHero({
               alt={imageAlt || title}
               fill
               priority
-              quality={75}
-              className="object-cover opacity-20"
+              quality={78}
+              className="object-cover opacity-[0.22]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/94 to-ink/55" />
           </>
         )}
-        <div className="absolute inset-0 bg-grid opacity-50" />
+        <div className="absolute inset-0 bg-grid opacity-90" />
         <div className="absolute inset-0 bg-radial-red" />
-        <div className="absolute -left-32 top-0 h-80 w-80 rounded-full bg-brand-red/14 blur-[120px] animate-glow-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-noise opacity-[0.04]" />
+        <div className="absolute -left-32 -top-16 h-[340px] w-[340px] rounded-full bg-brand-red/[0.12] blur-[130px]" />
       </div>
 
-      <div className="container-wide px-5 sm:px-6 lg:px-8">
+      <div className="container-wide container-gutter">
         {/* Breadcrumbs */}
         {breadcrumbs.length > 0 && (
-          <nav aria-label="Breadcrumb" className="mb-8">
-            <ol className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-brand-faint">
+          <nav aria-label="Breadcrumb" className="mb-9 sm:mb-12">
+            <ol className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-brand-faint">
               {breadcrumbs.map((crumb, i) => (
-                <li key={crumb.href || crumb.label} className="flex items-center gap-2">
-                  {i > 0 && <span className="text-white/20">/</span>}
+                <li key={crumb.href || crumb.label} className="flex items-center gap-2.5">
+                  {i > 0 && <span className="text-white/18">/</span>}
                   {crumb.href ? (
-                    <Link href={crumb.href} className="transition-colors hover:text-brand-red">
+                    <Link href={crumb.href} className="transition-colors hover:text-brand-red-bright">
                       {crumb.label}
                     </Link>
                   ) : (
@@ -71,14 +73,14 @@ export default function PageHero({
 
         <div className="max-w-3xl">
           {eyebrow && (
-            <div className="glass-red inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-red-bright animate-fade-up">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-red animate-glow-pulse" />
+            <div className="eyebrow-label text-brand-red-bright animate-fade-up">
+              <span className="h-px w-7 bg-gradient-to-r from-brand-red to-brand-red/15" />
               {eyebrow}
             </div>
           )}
 
           <h1
-            className="mt-5 text-[1.9rem] font-bold leading-[1.08] tracking-tight sm:mt-6 sm:text-5xl lg:text-[3.6rem] animate-fade-up"
+            className="mt-5 text-[clamp(1.75rem,7.6vw,2.3rem)] font-extrabold leading-[1.06] sm:mt-6 sm:text-[3rem] lg:text-[3.85rem] animate-fade-up"
             style={{ animationDelay: "70ms" }}
           >
             {renderTitle()}
@@ -86,7 +88,7 @@ export default function PageHero({
 
           {description && (
             <p
-              className="mt-6 max-w-2xl text-base leading-relaxed text-brand-muted sm:text-lg animate-fade-up"
+              className="mt-6 max-w-2xl text-[15px] leading-[1.75] text-brand-muted sm:mt-7 sm:text-[17.5px] animate-fade-up"
               style={{ animationDelay: "140ms" }}
             >
               {description}
@@ -94,7 +96,7 @@ export default function PageHero({
           )}
 
           {primaryCta && (
-            <div className="mt-9 animate-fade-up" style={{ animationDelay: "210ms" }}>
+            <div className="mt-9 animate-fade-up sm:mt-11" style={{ animationDelay: "210ms" }}>
               <Button href={primaryCta.href} variant="primary" size="lg">
                 {primaryCta.label}
               </Button>

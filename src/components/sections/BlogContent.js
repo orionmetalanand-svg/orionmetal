@@ -34,7 +34,7 @@ function renderInline(text) {
   return parts.map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
-        <strong key={i} className="font-bold text-brand-black">
+        <strong key={i} className="font-bold text-ink">
           {part.slice(2, -2)}
         </strong>
       );
@@ -53,7 +53,7 @@ export default function BlogContent({ content }) {
           return (
             <h2
               key={block.key}
-              className="scroll-mt-24 pt-6 text-2xl font-bold leading-snug text-brand-black sm:text-[1.7rem]"
+              className="scroll-mt-24 pt-6 text-[1.4rem] font-extrabold leading-snug text-ink sm:text-[1.7rem]"
             >
               <span className="mr-3 inline-block h-6 w-1 translate-y-0.5 rounded-full bg-brand-red align-middle" />
               {block.text}
@@ -63,7 +63,7 @@ export default function BlogContent({ content }) {
 
         if (block.type === "h3") {
           return (
-            <h3 key={block.key} className="pt-4 text-xl font-bold text-brand-black">
+            <h3 key={block.key} className="pt-4 text-[18px] font-bold text-ink sm:text-xl">
               {block.text}
             </h3>
           );
@@ -73,7 +73,7 @@ export default function BlogContent({ content }) {
           return (
             <ul key={block.key} className="space-y-2.5">
               {block.items.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-gray-600">
+                <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-4/70">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" />
                   <span>{renderInline(item)}</span>
                 </li>
@@ -83,7 +83,7 @@ export default function BlogContent({ content }) {
         }
 
         return (
-          <p key={block.key} className="text-[15px] leading-[1.8] text-gray-600 sm:text-base">
+          <p key={block.key} className="text-[15px] leading-[1.8] text-ink-4/70 sm:text-base">
             {renderInline(block.text)}
           </p>
         );

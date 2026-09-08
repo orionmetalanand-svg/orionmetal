@@ -1,33 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  /* Core palette — strictly red / white / black */
-  --color-ink: #08080a;
-  --color-ink-2: #0d0d10;
-  --color-ink-3: #141418;
-  --color-ink-4: #1c1c22;
+  /* ── Ink scale — deep, neutral blacks with a cool cast ── */
+  --color-ink: #060608;
+  --color-ink-2: #0b0b0f;
+  --color-ink-3: #111116;
+  --color-ink-4: #191920;
+  --color-ink-5: #22222b;
 
-  --color-brand-black: #08080a;
-  --color-brand-dark: #0d0d10;
-  --color-brand-gray: #141418;
+  --color-brand-black: #060608;
+  --color-brand-dark: #0b0b0f;
+  --color-brand-gray: #111116;
   --color-brand-white: #ffffff;
 
+  /* ── Brand red ── */
   --color-brand-red: #e11d2e;
-  --color-brand-red-bright: #ff3348;
+  --color-brand-red-bright: #ff3446;
   --color-brand-red-deep: #9d0f1d;
   --color-brand-red-dark: #a50f1e;
 
-  --color-brand-muted: #9b9ba4;
-  --color-brand-faint: #6b6b76;
+  /* ── Neutral text ── */
+  --color-brand-muted: #a1a1ab;
+  --color-brand-faint: #6e6e79;
+  --color-brand-hair: rgba(255, 255, 255, 0.08);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  --animate-marquee: marquee 45s linear infinite;
-  --animate-marquee-slow: marquee 70s linear infinite;
-  --animate-glow-pulse: glow-pulse 4s ease-in-out infinite;
-  --animate-scan: scan 3.5s ease-in-out infinite;
-  --animate-float-slow: float-slow 7s ease-in-out infinite;
-  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* ── Premium layered shadows ── */
+  --shadow-panel: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
+    0 2px 4px -1px rgba(0, 0, 0, 0.4), 0 24px 48px -24px rgba(0, 0, 0, 0.9);
+  --shadow-lift: 0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+    0 4px 8px -2px rgba(0, 0, 0, 0.5), 0 40px 80px -32px rgba(0, 0, 0, 1);
+  --shadow-red: 0 1px 0 0 rgba(255, 255, 255, 0.14) inset,
+    0 8px 24px -8px rgba(225, 29, 46, 0.5), 0 2px 6px -2px rgba(0, 0, 0, 0.6);
+  --shadow-red-lift: 0 1px 0 0 rgba(255, 255, 255, 0.2) inset,
+    0 14px 40px -10px rgba(225, 29, 46, 0.62), 0 2px 8px -2px rgba(0, 0, 0, 0.6);
+
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-marquee: marquee 52s linear infinite;
+  --animate-marquee-slow: marquee 78s linear infinite;
+  --animate-glow-pulse: glow-pulse 5s ease-in-out infinite;
+  --animate-scan: scan 3.6s ease-in-out infinite;
+  --animate-float-slow: float-slow 9s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-sheen: sheen 6s ease-in-out infinite;
 }
 
 @keyframes marquee {
@@ -42,10 +60,10 @@
 @keyframes glow-pulse {
   0%,
   100% {
-    opacity: 0.35;
+    opacity: 0.4;
   }
   50% {
-    opacity: 0.75;
+    opacity: 0.85;
   }
 }
 
@@ -72,18 +90,29 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-12px);
   }
 }
 
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(22px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes sheen {
+  0%,
+  100% {
+    transform: translateX(-120%);
+  }
+  55%,
+  100% {
+    transform: translateX(220%);
   }
 }
 
@@ -97,15 +126,30 @@
     background-color: var(--color-ink);
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    font-feature-settings: "cv11", "ss01";
+    font-variant-ligatures: contextual;
   }
 
+  /* Display face + optical tracking for headings */
   h1,
   h2,
   h3,
-  h4 {
-    letter-spacing: -0.02em;
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.035em;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   ::selection {
@@ -116,17 +160,18 @@
   :focus-visible {
     outline: 2px solid var(--color-brand-red-bright);
     outline-offset: 3px;
+    border-radius: 2px;
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
   }
   ::-webkit-scrollbar-track {
-    background: #0d0d10;
+    background: #0b0b0f;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2a2a32;
+    background: #2a2a33;
     border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
@@ -145,83 +190,147 @@
   }
 }
 
+/* ── Layout ─────────────────────────────────────── */
 @utility container-wide {
   margin-inline: auto;
   max-width: 84rem;
 }
 
-@utility section-padding {
-  padding-inline: 1rem;
-  padding-block: 3.5rem;
+@utility container-tight {
+  margin-inline: auto;
+  max-width: 60rem;
+}
+
+@utility container-gutter {
+  padding-inline: 1.25rem;
   @media (min-width: 640px) {
-    padding-inline: 1.5rem;
-    padding-block: 5rem;
+    padding-inline: 2rem;
   }
   @media (min-width: 1024px) {
-    padding-inline: 2rem;
-    padding-block: 7.5rem;
+    padding-inline: 2.5rem;
   }
 }
 
-/* ── Glass surfaces ─────────────────────────────── */
+@utility section-padding {
+  padding-inline: 1.25rem;
+  padding-block: 4rem;
+  @media (min-width: 640px) {
+    padding-inline: 2rem;
+    padding-block: 5.5rem;
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 2.5rem;
+    padding-block: 8rem;
+  }
+}
+
+/* ── Surfaces ───────────────────────────────────── */
+/* Hairline border + top light edge is the core premium detail. */
 @utility glass {
   background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.07) 0%,
-    rgba(255, 255, 255, 0.02) 100%
+    160deg,
+    rgba(255, 255, 255, 0.055) 0%,
+    rgba(255, 255, 255, 0.018) 55%,
+    rgba(255, 255, 255, 0.008) 100%
   );
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(20px) saturate(130%);
+  -webkit-backdrop-filter: blur(20px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 18px 40px -28px rgba(0, 0, 0, 0.9);
 }
 
 @utility glass-strong {
   background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.035) 100%
+    160deg,
+    rgba(255, 255, 255, 0.085) 0%,
+    rgba(255, 255, 255, 0.03) 55%,
+    rgba(255, 255, 255, 0.012) 100%
   );
-  backdrop-filter: blur(26px) saturate(150%);
-  -webkit-backdrop-filter: blur(26px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.09) inset,
+    0 2px 6px -2px rgba(0, 0, 0, 0.5), 0 40px 80px -40px rgba(0, 0, 0, 1);
 }
 
 @utility glass-light {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid rgba(8, 8, 10, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(6, 6, 8, 0.07);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.7) inset,
+    0 20px 50px -30px rgba(6, 6, 8, 0.35);
 }
 
 @utility glass-red {
   background: linear-gradient(
-    135deg,
-    rgba(225, 29, 46, 0.16) 0%,
-    rgba(225, 29, 46, 0.04) 100%
+    160deg,
+    rgba(225, 29, 46, 0.14) 0%,
+    rgba(225, 29, 46, 0.035) 100%
   );
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(225, 29, 46, 0.28);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(225, 29, 46, 0.24);
+  box-shadow: 0 1px 0 0 rgba(255, 120, 130, 0.12) inset;
 }
 
-/* ── Glow & accents ─────────────────────────────── */
+/* Solid engineered panel — used where glass would muddy content */
+@utility panel {
+  background: linear-gradient(168deg, #14141a 0%, #0d0d12 60%, #0a0a0e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
+    0 24px 48px -32px rgba(0, 0, 0, 0.95);
+}
+
+/* ── Hairlines & rules ──────────────────────────── */
+@utility hairline-x {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.14) 50%,
+    transparent 100%
+  );
+}
+
+@utility hairline-red {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(225, 29, 46, 0.85) 50%,
+    transparent 100%
+  );
+}
+
+@utility accent-rule {
+  height: 2px;
+  width: 2.75rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-brand-red) 0%, rgba(225, 29, 46, 0) 100%);
+}
+
+/* ── Accents ────────────────────────────────────── */
 @utility glow-red {
-  box-shadow: 0 0 0 1px rgba(225, 29, 46, 0.35), 0 14px 50px -12px rgba(225, 29, 46, 0.55);
+  box-shadow: 0 0 0 1px rgba(225, 29, 46, 0.3),
+    0 18px 60px -18px rgba(225, 29, 46, 0.45);
 }
 
 @utility text-glow-red {
-  text-shadow: 0 0 28px rgba(255, 51, 72, 0.45);
+  text-shadow: 0 0 40px rgba(255, 52, 70, 0.28);
 }
 
 @utility gradient-red-text {
-  background: linear-gradient(103deg, #ffffff 0%, #ffffff 42%, #ff3348 78%, #e11d2e 100%);
+  background: linear-gradient(103deg, #ffffff 0%, #ffffff 46%, #ff3446 82%, #e11d2e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+/* Subtle top-light on headings — keeps contrast high, adds depth */
 @utility gradient-white-text {
-  background: linear-gradient(180deg, #ffffff 0%, #b9b9c2 100%);
+  background: linear-gradient(178deg, #ffffff 0%, #ffffff 38%, #d5d5dd 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -229,57 +338,122 @@
 
 /* ── Backgrounds ────────────────────────────────── */
 @utility bg-grid {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 64px 64px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 88px 88px;
 }
 
 @utility bg-grid-light {
-  background-image: linear-gradient(rgba(8, 8, 10, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(8, 8, 10, 0.05) 1px, transparent 1px);
-  background-size: 64px 64px;
+  background-image: linear-gradient(rgba(6, 6, 8, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 6, 8, 0.045) 1px, transparent 1px);
+  background-size: 88px 88px;
+}
+
+/* Fine film grain — the single biggest "expensive" texture cue */
+@utility bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 @utility bg-radial-red {
   background: radial-gradient(
-    60% 60% at 50% 0%,
-    rgba(225, 29, 46, 0.22) 0%,
-    rgba(225, 29, 46, 0) 70%
+    58% 58% at 50% 0%,
+    rgba(225, 29, 46, 0.16) 0%,
+    rgba(225, 29, 46, 0) 72%
+  );
+}
+
+@utility bg-vignette {
+  background: radial-gradient(
+    120% 100% at 50% 40%,
+    rgba(6, 6, 8, 0) 40%,
+    rgba(6, 6, 8, 0.55) 78%,
+    rgba(6, 6, 8, 0.92) 100%
   );
 }
 
 @utility bg-metal {
   background: linear-gradient(
     135deg,
-    #16161a 0%,
-    #1e1e24 25%,
-    #121216 50%,
-    #1e1e24 75%,
-    #16161a 100%
+    #14141a 0%,
+    #1d1d25 24%,
+    #101015 50%,
+    #1d1d25 76%,
+    #14141a 100%
   );
+}
+
+/* Brushed-steel band — premium neutral, stays inside black/white */
+@utility bg-steel {
+  background-image: linear-gradient(
+      135deg,
+      #101016 0%,
+      #1a1a22 22%,
+      #0e0e13 46%,
+      #1c1c24 70%,
+      #0f0f14 100%
+    ),
+    repeating-linear-gradient(
+      98deg,
+      rgba(255, 255, 255, 0.022) 0px,
+      rgba(255, 255, 255, 0.022) 1px,
+      transparent 1px,
+      transparent 4px
+    );
 }
 
 /* ── Effects ────────────────────────────────────── */
 @utility hover-lift {
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.3s ease, box-shadow 0.4s ease;
+  transition: transform 0.55s var(--ease-premium), border-color 0.4s ease,
+    box-shadow 0.55s var(--ease-premium), background-color 0.4s ease;
+}
+
+/* Diagonal light sweep across a surface on hover */
+@utility sheen {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    background: linear-gradient(
+      100deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.09) 50%,
+      transparent 100%
+    );
+    transform: translateX(-160%) skewX(-14deg);
+    transition: transform 0.9s var(--ease-premium);
+    pointer-events: none;
+  }
+  &:hover::after {
+    transform: translateX(320%) skewX(-14deg);
+  }
 }
 
 @utility mask-fade-x {
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 12%,
-    black 88%,
+    black 10%,
+    black 90%,
     transparent
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    black 12%,
-    black 88%,
+    black 10%,
+    black 90%,
     transparent
   );
+}
+
+@utility mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
 }
 
 @utility no-scrollbar {
@@ -290,18 +464,29 @@
   }
 }
 
-@utility accent-rule {
-  height: 3px;
-  width: 3rem;
-  background: linear-gradient(90deg, var(--color-brand-red) 0%, transparent 100%);
+/* ── Typography helpers ─────────────────────────── */
+/* `font-display` comes from the --font-display theme token. */
+@utility eyebrow-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@utility text-balance-heading {
+  text-wrap: balance;
 }
 
 /* ── Scroll reveal ──────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(26px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
@@ -319,4 +504,11 @@
 
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+/* Keep the floating WhatsApp/chat buttons out of the mobile menu's way.
+   `visibility` is used deliberately — `opacity` would create a containing
+   block and reposition the fixed children. */
+body.menu-open .site-widgets {
+  visibility: hidden;
 }

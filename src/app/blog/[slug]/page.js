@@ -98,7 +98,7 @@ export default async function BlogPostPage({ params }) {
             <div className="absolute inset-0 bg-radial-red" />
           </div>
 
-          <div className="container-wide max-w-4xl px-5 sm:px-6 lg:px-8">
+          <div className="container-wide container-gutter max-w-4xl">
             <nav aria-label="Breadcrumb" className="mb-8">
               <ol className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-brand-faint">
                 <li>
@@ -129,11 +129,11 @@ export default async function BlogPostPage({ params }) {
               </span>
             </div>
 
-            <h1 className="mt-6 text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-[3.2rem]">
+            <h1 className="mt-6 text-[1.85rem] font-extrabold leading-[1.08] sm:text-[2.6rem] lg:text-[3.2rem]">
               <span className="gradient-white-text">{post.title}</span>
             </h1>
 
-            <p className="mt-6 text-base leading-relaxed text-brand-muted sm:text-lg">
+            <p className="mt-6 text-[15px] leading-[1.75] text-brand-muted sm:text-[17.5px]">
               {post.excerpt}
             </p>
           </div>
@@ -142,8 +142,8 @@ export default async function BlogPostPage({ params }) {
         {/* Cover image */}
         {post.coverImage && (
           <div className="relative -mt-4 bg-brand-black pb-4">
-            <div className="container-wide max-w-5xl px-5 sm:px-6 lg:px-8">
-              <div className="relative aspect-[21/9] overflow-hidden rounded-2xl border border-white/10">
+            <div className="container-wide container-gutter max-w-5xl">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/[0.09] shadow-lift sm:aspect-[21/9] sm:rounded-3xl">
                 <Image
                   src={post.coverImage}
                   alt={post.title}
@@ -152,7 +152,7 @@ export default async function BlogPostPage({ params }) {
                   className="object-cover"
                   sizes="(max-width:1024px) 100vw, 1024px"
                 />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+                <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default async function BlogPostPage({ params }) {
 
         {/* Content */}
         <section className="relative overflow-hidden bg-white">
-          <div className="absolute inset-0 bg-grid-light opacity-50" />
+          <div className="absolute inset-0 bg-grid-light opacity-60" />
 
           <div className="section-padding container-wide relative max-w-3xl">
             <BlogContent content={post.content} />
@@ -178,14 +178,25 @@ export default async function BlogPostPage({ params }) {
               </div>
             )}
 
-            <div className="mt-10 flex flex-wrap gap-3 border-t border-black/8 pt-8">
-              <Button href="/contact" variant="primary" size="md">
+            <div className="mt-10 flex flex-col gap-3 border-t border-ink/[0.08] pt-8 sm:flex-row sm:flex-wrap">
+              <Button href="/contact" variant="primary" size="md" className="w-full sm:w-auto">
                 Request a Quote
               </Button>
-              <Button href={getWhatsAppUrl()} variant="outline" size="md" external>
+              <Button
+                href={getWhatsAppUrl()}
+                variant="outline"
+                size="md"
+                external
+                className="w-full sm:w-auto"
+              >
                 WhatsApp Us
               </Button>
-              <Button href="/blog" variant="ghost" size="md" className="text-gray-500 hover:text-brand-red">
+              <Button
+                href="/blog"
+                variant="ghost"
+                size="md"
+                className="w-full text-ink-4/55 hover:border-ink/12 hover:text-brand-red sm:w-auto"
+              >
                 More Articles
               </Button>
             </div>
@@ -194,17 +205,18 @@ export default async function BlogPostPage({ params }) {
 
         {/* Related */}
         {related.length > 0 && (
-          <section className="relative overflow-hidden bg-brand-dark">
-            <div className="absolute inset-0 bg-grid opacity-30" />
+          <section className="relative overflow-hidden bg-ink-2">
+            <div className="absolute inset-0 bg-grid opacity-60" />
+            <div className="absolute inset-0 bg-noise opacity-[0.035]" />
 
             <div className="section-padding container-wide relative">
               <Reveal>
-                <h2 className="text-2xl font-bold sm:text-3xl">
+                <h2 className="text-[1.6rem] font-extrabold sm:text-3xl">
                   <span className="gradient-white-text">Related </span>
                   <span className="text-brand-red">Articles</span>
                 </h2>
               </Reveal>
-              <div className="mt-10">
+              <div className="mt-10 sm:mt-12">
                 <BlogGrid posts={related} />
               </div>
             </div>

@@ -38,8 +38,10 @@ export default function ServicesPage() {
       />
 
       {/* Overview grid */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
 
         <div className="section-padding container-wide relative">
           <SectionHeading
@@ -49,7 +51,7 @@ export default function ServicesPage() {
             description="Each service can be used standalone or combined into a complete turnkey fabrication package."
             align="center"
           />
-          <div className="mt-14">
+          <div className="mt-12 sm:mt-16">
             <ServiceGrid services={services} detailed />
           </div>
         </div>
@@ -63,41 +65,46 @@ export default function ServicesPage() {
             key={service.id}
             id={service.id}
             className={`relative scroll-mt-24 overflow-hidden ${
-              isDark ? "bg-brand-black" : "bg-brand-dark"
+              isDark ? "bg-ink" : "bg-ink-2"
             }`}
           >
-            <div className="absolute inset-0 bg-grid opacity-35" />
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.07] to-transparent" />
+            <div className={`absolute inset-0 bg-grid ${isDark ? "opacity-80" : "opacity-60"}`} />
+            <div className="absolute inset-0 bg-noise opacity-[0.035]" />
             {isDark && (
-              <div className="absolute -left-40 top-1/3 h-[400px] w-[400px] rounded-full bg-brand-red/10 blur-[130px]" />
+              <div className="absolute -left-40 top-1/3 h-[400px] w-[400px] rounded-full bg-brand-red/[0.08] blur-[140px]" />
             )}
 
-            <div className="section-padding container-wide relative grid items-start gap-14 lg:grid-cols-2">
+            <div className="section-padding container-wide relative grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
               <div className={index % 2 !== 0 ? "lg:order-2" : ""}>
-                <div className="glass-red inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
-                  <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
+                <div className="eyebrow-label text-brand-red-bright">
+                  <span className="h-px w-7 bg-gradient-to-r from-brand-red to-brand-red/15" />
                   Service {String(index + 1).padStart(2, "0")}
                 </div>
 
-                <h2 className="mt-6 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+                <h2 className="mt-5 text-[1.7rem] font-extrabold leading-[1.1] sm:text-[2.35rem]">
                   <span className="gradient-white-text">{service.name}</span>
                 </h2>
 
-                <p className="mt-5 text-base leading-relaxed text-brand-muted sm:text-lg">
+                <p className="mt-5 text-[15px] leading-[1.75] text-brand-muted sm:text-[17.5px]">
                   {service.overview}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-brand-muted">
+                <p className="mt-4 text-[13.5px] leading-[1.75] text-brand-muted">
                   {service.description}
                 </p>
 
-                <div className="mt-9 grid gap-5 sm:grid-cols-2">
+                <div className="mt-9 grid gap-4 sm:grid-cols-2 sm:gap-5">
                   <div className="glass rounded-2xl p-5">
-                    <h3 className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-red">
+                    <h3 className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
                       Typical Applications
                     </h3>
                     <ul className="mt-4 space-y-2.5">
                       {service.applications.map((app) => (
-                        <li key={app} className="flex items-start gap-2.5 text-xs text-white/75">
-                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-red" />
+                        <li
+                          key={app}
+                          className="flex items-start gap-2.5 text-[12.5px] leading-relaxed text-white/75"
+                        >
+                          <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-brand-red" />
                           {app}
                         </li>
                       ))}
@@ -105,13 +112,23 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="glass rounded-2xl p-5">
-                    <h3 className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-red">
+                    <h3 className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
                       Benefits
                     </h3>
                     <ul className="mt-4 space-y-2.5">
                       {service.benefits.map((benefit) => (
-                        <li key={benefit} className="flex items-start gap-2.5 text-xs text-white/75">
-                          <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
+                        <li
+                          key={benefit}
+                          className="flex items-start gap-2.5 text-[12.5px] leading-relaxed text-white/75"
+                        >
+                          <svg
+                            className="mt-[3px] h-3 w-3 shrink-0 text-brand-red"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={3.5}
+                            aria-hidden="true"
+                          >
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                           {benefit}
@@ -121,19 +138,25 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="mt-9 flex flex-wrap gap-3">
-                  <Button href="/contact" variant="primary" size="md">
+                <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <Button href="/contact" variant="primary" size="md" className="w-full sm:w-auto">
                     Request a Quote
                   </Button>
-                  <Button href={getWhatsAppUrl()} variant="secondary" size="md" external>
+                  <Button
+                    href={getWhatsAppUrl()}
+                    variant="secondary"
+                    size="md"
+                    external
+                    className="w-full sm:w-auto"
+                  >
                     Enquire on WhatsApp
                   </Button>
                 </div>
               </div>
 
               <Reveal className={index % 2 !== 0 ? "lg:order-1" : ""}>
-                <div className="relative">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
+                <div className="relative pb-10 lg:pb-0">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
                     <Image
                       src={service.localImage || service.image}
                       alt={`${service.name} — Orion Metal Industries Moorabbin`}
@@ -141,14 +164,17 @@ export default function ServicesPage() {
                       className="object-cover"
                       sizes="(max-width:1024px) 92vw, 46vw"
                     />
-                    <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
+                    <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
                   </div>
 
-                  <div className="glass-strong absolute -bottom-5 left-5 right-5 rounded-xl px-5 py-3.5">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red">
+                  <div className="glass-strong absolute bottom-0 left-4 right-4 rounded-2xl px-5 py-4 lg:-bottom-6 lg:left-6 lg:right-6">
+                    <p className="text-[9.5px] font-bold uppercase tracking-[0.22em] text-brand-red-bright">
                       Capability
                     </p>
-                    <p className="mt-1 text-sm text-white/85">{service.shortDescription}</p>
+                    <p className="mt-1.5 text-[13px] leading-relaxed text-white/85">
+                      {service.shortDescription}
+                    </p>
                   </div>
                 </div>
               </Reveal>

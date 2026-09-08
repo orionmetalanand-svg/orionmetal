@@ -13,60 +13,77 @@ const capabilityChips = [
   "Assembly",
 ];
 
+const proofPoints = [
+  { label: "Moorabbin", detail: "Melbourne facility" },
+  { label: "Commercial", detail: "& industrial clients" },
+  { label: "In-house", detail: "coating & assembly" },
+];
+
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-brand-black sm:min-h-[92vh]">
+    <section className="relative isolate flex min-h-[86vh] items-center overflow-hidden bg-ink sm:min-h-[90vh]">
+      {/* Background stack */}
       <div className="absolute inset-0 -z-10">
         <Image
           src={stock.laserSparks.src}
           alt={stock.laserSparks.alt}
           fill
           priority
-          quality={80}
-          className="object-cover opacity-30"
+          quality={82}
+          className="object-cover opacity-[0.28]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/70" />
-        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/94 to-ink/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/80" />
+        <div className="absolute inset-0 bg-grid opacity-90" />
         <div className="absolute inset-0 bg-radial-red" />
-        <div className="absolute -left-40 top-1/4 h-[320px] w-[320px] rounded-full bg-brand-red/18 blur-[110px] animate-glow-pulse sm:h-[420px] sm:w-[420px]" />
+        <div className="absolute inset-0 bg-vignette" />
+        <div className="absolute inset-0 bg-noise opacity-[0.04]" />
+        <div className="absolute -left-40 top-1/4 h-[340px] w-[340px] rounded-full bg-brand-red/[0.14] blur-[130px] animate-glow-pulse sm:h-[460px] sm:w-[460px]" />
       </div>
 
       <HeroVisualWrapper />
 
-      <div className="section-padding container-wide relative w-full !py-16 sm:!py-20 lg:!py-24">
+      <div className="container-wide container-gutter relative w-full py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl">
-          <div className="glass inline-flex max-w-full items-center gap-2.5 rounded-full px-3.5 py-2 animate-fade-up sm:gap-3 sm:px-4">
-            <span className="relative flex h-2 w-2 shrink-0">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-red opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-red" />
+          {/* Location badge */}
+          <div
+            className="glass inline-flex max-w-full items-center gap-3 rounded-full py-2 pl-3 pr-4 animate-fade-up sm:pl-3.5 sm:pr-5"
+            style={{ animationDelay: "40ms" }}
+          >
+            <span className="relative flex h-1.5 w-1.5 shrink-0">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-red opacity-70" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand-red" />
             </span>
-            <span className="truncate text-[10px] font-bold uppercase tracking-[0.16em] text-white/85 sm:text-[11px] sm:tracking-[0.2em]">
+            <span className="truncate text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 sm:text-[11px]">
               {company.address.suburb} · Melbourne · Victoria
             </span>
           </div>
 
           <h1
-            className="mt-6 text-[2.15rem] font-bold leading-[1.05] tracking-tight text-white animate-fade-up sm:mt-8 sm:text-5xl md:text-6xl lg:text-[4.2rem]"
-            style={{ animationDelay: "80ms" }}
+            className="mt-7 text-[clamp(1.95rem,8.6vw,2.6rem)] font-extrabold leading-[1.03] text-white animate-fade-up sm:mt-9 sm:text-[3.4rem] md:text-[4rem] lg:text-[4.6rem]"
+            style={{ animationDelay: "110ms" }}
           >
             <span className="gradient-white-text">Precision Sheet Metal</span>
             <br />
             <span className="gradient-white-text">Fabrication. Built for</span>{" "}
-            <span className="text-brand-red text-glow-red">Industry.</span>
+            <span className="relative inline-block text-brand-red text-glow-red">
+              Industry.
+              <span className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-brand-red to-transparent sm:-bottom-2" />
+            </span>
           </h1>
 
           <p
-            className="mt-5 max-w-xl text-[15px] leading-relaxed text-brand-muted animate-fade-up sm:mt-7 sm:text-lg"
-            style={{ animationDelay: "160ms" }}
+            className="mt-7 max-w-xl text-[15.5px] leading-[1.75] text-brand-muted animate-fade-up sm:mt-8 sm:text-[17.5px]"
+            style={{ animationDelay: "180ms" }}
           >
             {company.hero.subtitle}
           </p>
 
+          {/* CTAs */}
           <div
-            className="mt-8 flex flex-col gap-3 animate-fade-up sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
-            style={{ animationDelay: "240ms" }}
+            className="mt-9 flex flex-col gap-3 animate-fade-up sm:mt-11 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
+            style={{ animationDelay: "250ms" }}
           >
             <Button href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
               Request a Quote
@@ -86,10 +103,10 @@ export default function Hero() {
             </Button>
             <a
               href={getTelUrl()}
-              className="group inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-white/70 transition-colors hover:text-white sm:justify-start sm:py-3.5"
+              className="group inline-flex items-center justify-center gap-3 rounded-full py-2 text-sm font-semibold text-white/65 transition-colors hover:text-white sm:justify-start sm:pl-1"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition-colors group-hover:border-brand-red group-hover:text-brand-red">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 transition-all duration-300 group-hover:border-brand-red/60 group-hover:bg-brand-red/10 group-hover:text-brand-red-bright">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.9} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </span>
@@ -97,25 +114,44 @@ export default function Hero() {
             </a>
           </div>
 
+          {/* Capability chips */}
           <div
-            className="no-scrollbar mt-10 flex gap-2 overflow-x-auto pb-1 animate-fade-up sm:mt-12 sm:flex-wrap sm:overflow-visible"
+            className="no-scrollbar -mx-5 mt-10 flex gap-2 overflow-x-auto px-5 pb-1 animate-fade-up sm:mx-0 sm:mt-12 sm:flex-wrap sm:overflow-visible sm:px-0"
             style={{ animationDelay: "320ms" }}
           >
             {capabilityChips.map((chip) => (
               <span
                 key={chip}
-                className="glass shrink-0 rounded-full px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/70 sm:text-[11px] sm:tracking-[0.14em]"
+                className="glass shrink-0 rounded-full px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white/65"
               >
                 {chip}
               </span>
             ))}
           </div>
+
+          {/* Proof strip */}
+          <dl
+            className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/[0.08] pt-7 animate-fade-up sm:mt-12 sm:gap-6"
+            style={{ animationDelay: "390ms" }}
+          >
+            {proofPoints.map((point) => (
+              <div key={point.label}>
+                <dt className="text-[13px] font-bold leading-tight text-white sm:text-[15px]">
+                  {point.label}
+                </dt>
+                <dd className="mt-1 text-[10.5px] leading-snug text-brand-faint sm:text-[11.5px]">
+                  {point.detail}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 lg:block">
-        <div className="relative h-14 w-6 overflow-hidden rounded-full border border-white/15">
-          <span className="absolute left-1/2 top-0 h-6 w-0.5 -translate-x-1/2 bg-gradient-to-b from-brand-red to-transparent animate-scan" />
+      {/* Scroll cue */}
+      <div className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 lg:block">
+        <div className="relative h-14 w-[22px] overflow-hidden rounded-full border border-white/12">
+          <span className="absolute left-1/2 top-0 h-6 w-px -translate-x-1/2 bg-gradient-to-b from-brand-red to-transparent animate-scan" />
         </div>
       </div>
     </section>

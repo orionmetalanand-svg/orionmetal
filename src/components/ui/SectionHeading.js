@@ -8,48 +8,68 @@ export default function SectionHeading({
   light = false,
   accentWord,
 }) {
-  const alignClass =
-    align === "center" ? "mx-auto text-center items-center" : "items-start";
+  const centered = align === "center";
 
   const renderTitle = () => {
     if (!accentWord || typeof title !== "string") {
       return light ? title : <span className="gradient-white-text">{title}</span>;
     }
-    const parts = title.split(accentWord);
+    const [before, after] = title.split(accentWord);
+    const Neutral = ({ children }) =>
+      light ? <>{children}</> : <span className="gradient-white-text">{children}</span>;
     return (
       <>
-        {light ? parts[0] : <span className="gradient-white-text">{parts[0]}</span>}
+        <Neutral>{before}</Neutral>
         <span className="text-brand-red">{accentWord}</span>
-        {light ? parts[1] : <span className="gradient-white-text">{parts[1]}</span>}
+        <Neutral>{after}</Neutral>
       </>
     );
   };
 
   return (
-    <Reveal className={`flex max-w-3xl flex-col ${alignClass}`}>
+    <Reveal
+      className={`flex max-w-3xl flex-col ${
+        centered ? "mx-auto items-center text-center" : "items-start"
+      }`}
+    >
       {eyebrow && (
         <div
-          className={`mb-5 inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] ${
-            light
-              ? "border border-brand-red/25 bg-brand-red/8 text-brand-red"
-              : "glass-red text-brand-red-bright"
+          className={`eyebrow-label mb-6 ${
+            light ? "text-brand-red-dark" : "text-brand-red-bright"
           }`}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-red animate-glow-pulse" />
+          <span
+            className={`h-px w-7 ${
+              light
+                ? "bg-gradient-to-r from-brand-red/70 to-brand-red/10"
+                : "bg-gradient-to-r from-brand-red to-brand-red/15"
+            }`}
+          />
           {eyebrow}
+          {centered && (
+            <span
+              className={`h-px w-7 ${
+                light
+                  ? "bg-gradient-to-l from-brand-red/70 to-brand-red/10"
+                  : "bg-gradient-to-l from-brand-red to-brand-red/15"
+              }`}
+            />
+          )}
         </div>
       )}
+
       <h2
-        className={`text-[2rem] font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-[2.95rem] ${
-          light ? "text-brand-black" : "text-white"
+        className={`text-[1.75rem] font-extrabold leading-[1.08] sm:text-[2.35rem] lg:text-[3rem] ${
+          light ? "text-ink" : "text-white"
         }`}
       >
         {renderTitle()}
       </h2>
+
       {description && (
         <p
-          className={`mt-5 text-base leading-relaxed sm:text-lg ${
-            light ? "text-gray-600" : "text-brand-muted"
+          className={`mt-6 max-w-2xl text-[15px] leading-[1.75] sm:text-[17px] ${
+            light ? "text-ink-4/75" : "text-brand-muted"
           }`}
         >
           {description}

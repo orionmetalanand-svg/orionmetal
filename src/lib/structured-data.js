@@ -11,7 +11,13 @@ export function getOrganizationSchema() {
     description: company.description,
     url: siteConfig.url,
     telephone: company.phone,
-    image: `${siteConfig.url}/images/company/orion-logo.jpeg`,
+    image: `${siteConfig.url}/images/company/orion-logo.png`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteConfig.url}/images/company/orion-logo.png`,
+      width: 1200,
+      height: 573,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: company.address.street,

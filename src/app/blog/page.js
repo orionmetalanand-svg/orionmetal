@@ -33,6 +33,7 @@ export default async function BlogPage() {
 
       <section className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 bg-grid-light opacity-60" />
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-red via-brand-red/40 to-transparent" />
 
         <div className="section-padding container-wide relative">
           <SectionHeading

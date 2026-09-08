@@ -44,15 +44,15 @@ export default function FileUpload({ files, setFiles, error, setError }) {
 
   return (
     <div>
-      <label className="mb-2.5 block text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">
+      <label className="mb-2.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
         Attach Drawings / Specifications
       </label>
 
       <div
-        className={`rounded-2xl border-2 border-dashed p-7 text-center transition-all duration-300 ${
+        className={`rounded-2xl border border-dashed p-6 text-center transition-all duration-300 sm:p-8 ${
           dragOver
-            ? "border-brand-red bg-brand-red/8"
-            : "border-white/15 bg-white/[0.03] hover:border-white/25"
+            ? "border-brand-red bg-brand-red/[0.07]"
+            : "border-white/[0.16] bg-white/[0.025] hover:border-white/28"
         }`}
         onDragOver={(e) => {
           e.preventDefault();
@@ -75,24 +75,24 @@ export default function FileUpload({ files, setFiles, error, setError }) {
           aria-describedby="file-help"
         />
 
-        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/15 text-brand-red">
+        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl border border-brand-red/20 bg-brand-red/10 text-brand-red-bright">
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
           </svg>
         </span>
 
-        <p className="mt-4 text-sm text-white/75">
+        <p className="mt-4 text-[13.5px] text-white/75">
           Drag and drop files here, or{" "}
           <button
             type="button"
-            className="font-bold text-brand-red underline-offset-4 hover:underline"
+            className="font-bold text-brand-red-bright underline-offset-4 transition-colors hover:text-brand-red hover:underline"
             onClick={() => inputRef.current?.click()}
           >
             browse files
           </button>
         </p>
 
-        <p id="file-help" className="mt-2.5 text-[11px] text-brand-faint">
+        <p id="file-help" className="mt-3 text-[11px] leading-relaxed text-brand-faint">
           PDF · DWG · DXF · STEP · JPG · PNG · ZIP — max {formatFileSize(MAX_FILE_SIZE)} per file,{" "}
           {MAX_FILES} files
         </p>
@@ -127,7 +127,7 @@ export default function FileUpload({ files, setFiles, error, setError }) {
               <button
                 type="button"
                 onClick={() => removeFile(i)}
-                className="shrink-0 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-red transition-colors hover:text-brand-red-bright"
+                className="shrink-0 rounded-full px-2 py-1.5 text-[9.5px] font-bold uppercase tracking-[0.18em] text-brand-red transition-colors hover:bg-brand-red/10 hover:text-brand-red-bright"
                 aria-label={`Remove ${file.name}`}
               >
                 Remove

@@ -79,8 +79,8 @@ export default function Carousel({
   }, [autoPlay, interval, scrollByCards]);
 
   const arrowBase = light
-    ? "border-black/10 bg-white/80 text-brand-black hover:border-brand-red hover:text-brand-red"
-    : "border-white/15 bg-white/5 text-white hover:border-brand-red hover:text-brand-red-bright";
+    ? "border-ink/[0.09] bg-white text-ink shadow-[0_1px_2px_rgba(6,6,8,0.04)] hover:border-ink/20"
+    : "border-white/[0.11] bg-white/[0.04] text-white hover:border-white/25 hover:bg-white/[0.08]";
 
   return (
     <div className="relative" role="group" aria-label={ariaLabel}>

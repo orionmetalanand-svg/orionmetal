@@ -30,9 +30,11 @@ export default function IndustriesPage() {
         primaryCta={{ label: "Discuss Your Project", href: "/contact" }}
       />
 
-      <section className="relative overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-brand-red/10 blur-[150px]" />
+      <section className="relative overflow-hidden bg-ink-2">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+        <div className="absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-brand-red/[0.09] blur-[150px]" />
 
         <div className="section-padding container-wide relative">
           <SectionHeading
@@ -43,7 +45,7 @@ export default function IndustriesPage() {
             align="center"
           />
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-6">
             {industries.map((industry, i) => (
               <IndustryCard key={industry.id} industry={industry} index={i} />
             ))}

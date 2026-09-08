@@ -101,14 +101,7 @@ export function getPageMetadata(pageKey) {
       siteName: company.name,
       locale: siteConfig.locale,
       type: "website",
-      images: [
-        {
-          url: `${siteConfig.url}/images/company/orion-logo.jpeg`,
-          width: 1200,
-          height: 630,
-          alt: company.name,
-        },
-      ],
+      // Preview image comes from src/app/opengraph-image.js (file convention).
     },
     twitter: {
       card: "summary_large_image",

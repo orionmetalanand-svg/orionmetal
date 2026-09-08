@@ -1,0 +1,76 @@
+Category,Task,Details / What to do,Status,Owner,Due Date,Priority,Notes / Links
+Domain,Register primary domain,"Purchase and register business domain (e.g. orionmetalindustries.com.au or preferred .com.au)",Not Started,,,High,
+Domain,Connect domain to Vercel,"Vercel → Project → Settings → Domains → add custom domain",Not Started,,,High,Current live URL: https://orionmetal.vercel.app/
+Domain,Configure DNS records,"Add A/CNAME records at domain registrar as shown in Vercel",Not Started,,,High,
+Domain,Enable HTTPS / SSL,"Verify SSL certificate is active after DNS propagation",Not Started,,,High,
+Domain,Set NEXT_PUBLIC_SITE_URL,"Update Vercel env var to production domain (no trailing slash)",Not Started,,,High,
+Domain,Add www redirect,"Decide www vs non-www and set redirect in Vercel",Not Started,,,Medium,
+Business Email,Set up business email,"Create professional email (e.g. info@orionmetalindustries.com.au)",Not Started,,,High,Currently using Gmail for contact form only
+Business Email,Configure email forwarding,"Forward business email to team inbox if needed",Not Started,,,Medium,
+Business Email,Update website contact details,"Replace placeholder emails on Contact page / Footer if using new domain email",Not Started,,,High,
+Business Email,Move off Gmail App Password (optional),"Migrate contact form SMTP to business email provider or transactional email (Resend/SendGrid)",Not Started,,,Medium,Current: orionmetalanand@gmail.com → anandanathurelangovan94@gmail.com
+Website,Verify Vercel env variables,"Confirm all vars from .envvercel are set in Vercel Production",Not Started,,,High,
+Website,Redeploy after env changes,"Trigger redeploy so contact form + Supabase work on live site",Not Started,,,High,
+Website,Test contact form on live site,"Submit test enquiry on https://orionmetal.vercel.app/contact",Not Started,,,High,
+Website,Test WhatsApp & phone links,"Verify all CTAs work on mobile and desktop",Not Started,,,Medium,
+Website Updates,Replace stock images with real photos,"Swap Unsplash placeholders with actual workshop/product photos where ready",Not Started,,,Medium,Kiosk/pylon already use stock by request
+Website Updates,Upload product images to Supabase,"Update products table image_url via Supabase or future CMS",Not Started,,,High,Run supabase/update-product-images.sql if needed
+Website Updates,Upload project gallery images,"Add real project photos to projects section / Supabase",Not Started,,,Medium,
+Website Updates,Update company logo if new version,"Replace /public/images/company/orion-logo.jpeg",Not Started,,,Low,
+Website Updates,Add trusted customer logos,"Replace dummy customer names with real logos in Supabase trusted_customers table",Not Started,,,Medium,
+Website Updates,Replace dummy Google reviews,"Add real reviews + Google links in Supabase google_reviews table",Not Started,,,High,
+Profile Upload,Google Business Profile,"Create/claim Google Business Profile for 1A Bibby Ct Moorabbin VIC 3189",Not Started,,,High,
+Profile Upload,Complete GBP listing,"Add hours phone photos services categories description",Not Started,,,High,
+Profile Upload,Add GBP link to website,"Set NEXT_PUBLIC_GOOGLE_BUSINESS_URL in Vercel + Supabase review links",Not Started,,,Medium,
+Profile Upload,Facebook Business Page,"Create/update Facebook Page for Orion Metal Industries",Not Started,,,Medium,
+Profile Upload,Instagram Business Profile,"Create/update Instagram account with logo bio contact link",Not Started,,,Medium,
+Profile Upload,LinkedIn Company Page (optional),"Create company page for B2B visibility",Not Started,,,Low,
+Google Search Console,Create GSC account,"Sign up at search.google.com/search-console",Not Started,,,High,
+Google Search Console,Verify domain ownership,"Verify via DNS TXT record or HTML tag in Vercel",Not Started,,,High,
+Google Search Console,Submit sitemap,"Submit https://[your-domain]/sitemap.xml",Not Started,,,High,Sitemap auto-generated at /sitemap.xml
+Google Search Console,Request indexing for key pages,"Inspect URL → Request indexing for Home About Services Contact Products",Not Started,,,Medium,
+Google Search Console,Set preferred domain,"Confirm www vs non-www in GSC settings",Not Started,,,Medium,
+GA4,Create GA4 property,"Google Analytics → Admin → Create Property for Orion Metal",Not Started,,,High,
+GA4,Create web data stream,"Add data stream for production website URL",Not Started,,,High,
+GA4,Install GA4 tag on website,"Add gtag script or @next/third-parties/google to layout.js",Not Started,,,High,Not yet implemented in codebase
+GA4,Map key events,"Track: contact_form_submit whatsapp_click phone_click quote_cta",Not Started,,,High,
+GA4,Link GA4 to Search Console,"Admin → Product Links → Search Console",Not Started,,,Medium,
+GA4,Exclude internal traffic (optional),"Filter office/dev IP from reports",Not Started,,,Low,
+GA4,Verify data in Realtime,"Confirm page views appear after deployment",Not Started,,,High,
+Sitemap,Sitemap live check,"Open /sitemap.xml on production — confirm all pages listed",Not Started,,,High,Includes blog slugs from Supabase
+Sitemap,Robots.txt check,"Open /robots.txt — confirm allows indexing + sitemap URL",Not Started,,,Medium,
+Sitemap,Resubmit after content changes,"Re-submit sitemap in GSC when new blog posts/products added",Not Started,,,Medium,
+SEO,On-page meta review,"Check titles descriptions on all pages (Home About Services Products etc.)",Not Started,,,High,Configured in src/data/seo.js
+SEO,Local SEO — NAP consistency,"Ensure Name Address Phone match exactly across web GBP directories",Not Started,,,High,"Orion Metal Industries | 1A Bibby Ct Moorabbin VIC 3189 | +61 402 208 011"
+SEO,Structured data validation,"Test JSON-LD with Google Rich Results Test",Not Started,,,Medium,Organization LocalBusiness Service BlogPosting
+SEO,Image alt text audit,"Review alt text on all product/service/project images",Not Started,,,Medium,
+SEO,Page speed / Core Web Vitals,"Run Lighthouse on mobile + desktop; fix issues if any",Not Started,,,Medium,
+SEO,Create Google Business categories,"Select correct primary/secondary categories in GBP",Not Started,,,High,e.g. Metal Fabricator Sheet Metal Contractor
+Instagram,Create/link Instagram account,"Set up @ handle aligned with brand name",Not Started,,,Medium,
+Instagram,Add website link in bio,"Link to production domain",Not Started,,,Medium,
+Instagram,Upload profile + cover assets,"Use logo and workshop/product photos",Not Started,,,Medium,
+Instagram,First posts (launch content),"Post 3–5 posts: facility services projects team",Not Started,,,Low,
+Instagram,Add Instagram link to website footer (optional),"Add social icon in Footer component",Not Started,,,Low,Not in site yet — add if requested
+Facebook,Create/update Facebook Page,"Business name address phone website hours",Not Started,,,Medium,
+Facebook,Add website URL to Page,"Link to production domain",Not Started,,,Medium,
+Facebook,Upload cover + profile photo,"Brand-consistent imagery",Not Started,,,Medium,
+Facebook Backlinks,Add Facebook URL to GBP,"Link Facebook page in Google Business Profile",Not Started,,,Medium,
+Facebook Backlinks,Add Facebook to website footer,"Add social link in Footer (if desired)",Not Started,,,Low,
+Facebook Backlinks,Directory listings with FB link,"Add to Yellow Pages TrueLocal industry directories",Not Started,,,Low,
+Backlinks / Citations,Australian business directories,"List on Yelp Yellow Pages Hotfrog StartLocal etc. with consistent NAP",Not Started,,,Medium,
+Backlinks / Citations,Industry directories,"Metal fabrication / manufacturing directories in Victoria",Not Started,,,Medium,
+Backlinks / Citations,Supplier/partner backlinks,"Ask suppliers clients for website mentions where appropriate",Not Started,,,Low,
+Blog,Supabase blog table seeded,"Confirm blog_posts has content and is_published = true",Not Started,,,High,Run supabase/schema.sql if not done
+Blog,Publish first 3 articles,"Review/edit seeded posts or write new Moorabbin/Melbourne SEO articles",Not Started,,,High,/blog routes live
+Blog,Monthly blog schedule,"Plan 1–2 posts/month for local SEO (laser cutting fabrication tips)",Not Started,,,Medium,
+Blog,Internal linking from blog,"Link blog posts to Services Contact Products pages",Not Started,,,Medium,
+Blog,Share new posts on social,"Cross-post to Facebook Instagram when published",Not Started,,,Low,
+Supabase,Run schema + grants SQL,"Execute supabase/schema.sql and supabase/grants.sql in SQL Editor",Not Started,,,High,Required for live product/blog/review data
+Supabase,Update product images in DB,"Run supabase/update-product-images.sql if old kiosk URLs remain",Not Started,,,Medium,
+Supabase,Plan CMS phase (future),"Admin dashboard for products blog customers reviews",Not Started,,,Low,Architecture ready — not built yet
+Security,Rotate exposed secrets (if shared in chat),"Regenerate Gmail App Password + review Supabase keys if exposed",Not Started,,,High,Recommended after sharing credentials
+Security,Confirm .envvercel not in Git,"Verify secrets only in Vercel + local .env.local",Not Started,,,High,.envvercel is gitignored
+Launch,Final QA — desktop,"Click through all pages forms links on desktop browser",Not Started,,,High,
+Launch,Final QA — mobile,"Test on real phone: nav form WhatsApp chatbot maps",Not Started,,,High,
+Launch,Team handover doc,"Document how to update products blog via Supabase",Not Started,,,Medium,
+Launch,Go-live announcement,"Email/social announcement when custom domain is live",Not Started,,,Low,

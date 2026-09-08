@@ -62,9 +62,10 @@ export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
   const average = getAverageRating(reviews);
 
   return (
-    <section className="relative overflow-hidden bg-brand-black">
-      <div className="absolute inset-0 bg-grid opacity-40" />
-      <div className="absolute -right-32 top-1/3 h-[400px] w-[400px] rounded-full bg-brand-red/12 blur-[130px]" />
+    <section className="relative overflow-hidden bg-ink">
+      <div className="absolute inset-0 bg-grid opacity-80" />
+      <div className="absolute inset-0 bg-noise opacity-[0.035]" />
+      <div className="absolute -right-32 top-1/3 h-[400px] w-[400px] rounded-full bg-brand-red/[0.09] blur-[140px]" />
 
       <div className="section-padding container-wide relative">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -77,36 +78,40 @@ export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
 
           {/* Rating summary card */}
           <Reveal delay={120}>
-            <div className="glass-strong w-full rounded-2xl p-7 lg:w-80">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
+            <div className="panel relative w-full overflow-hidden rounded-3xl p-6 sm:p-7 lg:w-[21rem]">
+              <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/18 to-transparent" />
+
+              <div className="flex items-center gap-3.5">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.06]">
                   <GoogleGlyph />
                 </span>
                 <div>
-                  <p className="text-sm font-bold text-white">Google Reviews</p>
-                  <p className="text-[11px] uppercase tracking-[0.16em] text-brand-faint">
+                  <p className="text-[13.5px] font-bold text-white">Google Reviews</p>
+                  <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-faint">
                     Placeholder data
                   </p>
                 </div>
               </div>
 
-              <div className="mt-6 flex items-end gap-4">
-                <span className="text-5xl font-bold leading-none text-white">{average}</span>
-                <div className="pb-1">
+              <div className="mt-7 flex items-end gap-4">
+                <span className="text-[3.25rem] font-extrabold leading-none tracking-tight text-white">
+                  {average}
+                </span>
+                <div className="pb-1.5">
                   <Stars rating={Math.round(average)} size="h-4 w-4" />
-                  <p className="mt-1.5 text-xs text-brand-muted">
+                  <p className="mt-2 text-[11.5px] text-brand-muted">
                     {reviews.length} reviews
                   </p>
                 </div>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-7">
                 {googleBusinessUrl ? (
                   <Button href={googleBusinessUrl} variant="outline" size="sm" external className="w-full">
                     View on Google
                   </Button>
                 ) : (
-                  <p className="rounded-xl border border-dashed border-white/15 px-4 py-3 text-center text-[11px] uppercase tracking-[0.14em] text-brand-faint">
+                  <p className="rounded-full border border-dashed border-white/14 px-4 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-faint">
                     Google link — coming soon
                   </p>
                 )}
@@ -116,27 +121,29 @@ export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
         </div>
 
         {/* Reviews carousel */}
-        <div className="mt-14">
+        <div className="mt-12 sm:mt-16">
           <Carousel
             ariaLabel="Customer reviews"
-            itemClassName="min-w-[88%] sm:min-w-[52%] lg:min-w-[33.5%]"
+            itemClassName="min-w-[86%] sm:min-w-[52%] lg:min-w-[33.5%]"
             autoPlay
             interval={6000}
           >
             {reviews.map((review) => (
               <article
                 key={review.id}
-                className="glass hover-lift flex h-full min-h-[17rem] flex-col rounded-2xl p-7 hover:border-brand-red/35"
+                className="glass hover-lift relative flex h-full min-h-[17rem] flex-col overflow-hidden rounded-2xl p-5 hover:border-white/16 sm:p-7"
               >
+                <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/14 to-transparent" />
+
                 <div className="flex items-start justify-between">
                   <Stars rating={review.rating} />
-                  <span className="opacity-40">
+                  <span className="opacity-35">
                     <GoogleGlyph />
                   </span>
                 </div>
 
                 <svg
-                  className="mt-5 h-7 w-7 text-brand-red/40"
+                  className="mt-5 h-6 w-6 text-brand-red/35"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -144,19 +151,19 @@ export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
                   <path d="M9.983 3v7.391C9.983 16.095 6.298 19.65 1 20.995l-.995-2.161c2.632-.811 3.983-2.549 4.062-4.834H0V3h9.983zM24 3v7.391c0 5.704-3.685 9.259-8.983 10.604l-.995-2.161c2.632-.811 3.983-2.549 4.062-4.834H14V3h10z" />
                 </svg>
 
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-white/80">
+                <p className="mt-4 flex-1 text-[13.5px] leading-[1.75] text-white/80 sm:text-sm">
                   {review.reviewText}
                 </p>
 
-                <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-red/15 text-sm font-bold text-brand-red-bright">
+                <div className="mt-6 flex items-center gap-3.5 border-t border-white/[0.08] pt-5">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-red/20 bg-brand-red/12 text-[13px] font-bold text-brand-red-bright">
                     {review.reviewerName.charAt(0)}
                   </span>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-bold text-white">
+                    <p className="truncate text-[13.5px] font-bold text-white">
                       {review.reviewerName}
                     </p>
-                    <p className="text-[11px] text-brand-faint">
+                    <p className="mt-0.5 text-[11px] text-brand-faint">
                       {formatDate(review.reviewDate)}
                       {review.googleReviewUrl ? (
                         <>
