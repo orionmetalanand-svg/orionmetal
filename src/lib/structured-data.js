@@ -11,6 +11,7 @@ export function getOrganizationSchema() {
     description: company.description,
     url: siteConfig.url,
     telephone: company.phone,
+    email: company.email,
     image: `${siteConfig.url}/images/company/orion-logo.png`,
     logo: {
       "@type": "ImageObject",

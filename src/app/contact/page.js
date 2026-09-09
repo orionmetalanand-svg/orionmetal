@@ -167,6 +167,20 @@ export default function ContactPage() {
 
                   <div>
                     <dt className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
+                      Email
+                    </dt>
+                    <dd className="mt-1.5">
+                      <a
+                        href={`mailto:${company.email}`}
+                        className="break-all text-sm font-bold text-white transition-colors hover:text-brand-red"
+                      >
+                        {company.email}
+                      </a>
+                    </dd>
+                  </div>
+
+                  <div>
+                    <dt className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-brand-red-bright">
                       Contact Person
                     </dt>
                     <dd className="mt-2 text-[13.5px] text-white/85">{company.contactPerson}</dd>

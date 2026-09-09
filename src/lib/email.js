@@ -16,9 +16,11 @@ import { company } from "@/data/company";
  *   SMTP_PORT       — defaults to 587
  */
 export function getContactRecipients() {
-  const sources = [process.env.CONTACT_EMAIL, process.env.CONTACT_EMAIL_CC].filter(
-    Boolean
-  );
+  const sources = [
+    process.env.CONTACT_EMAIL,
+    process.env.CONTACT_EMAIL_CC,
+    company.email,
+  ].filter(Boolean);
 
   const emails = sources
     .flatMap((value) => value.split(","))
