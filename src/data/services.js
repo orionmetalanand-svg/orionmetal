@@ -11,8 +11,8 @@ export const services = [
       "Our precision laser cutting service delivers clean, accurate cuts for commercial and industrial components. From simple profiles to intricate decorative patterns, we process a wide variety of metal types, thicknesses, acrylics, plastics and timber with consistent quality.",
     description:
       "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC laser technology, we cut complex geometries with tight tolerances and minimal material waste — across ferrous and non-ferrous metals, coated steels, timber, acrylic and engineering plastics.",
-    image: stock.laserSparks.src,
-    localImage: "/images/services/laser-cutting-steel-flanges.jpeg",
+    image: "/images/services/cnc-laser-cutting-machine.jpeg",
+    localImage: "/images/services/cnc-laser-cutting-machine.jpeg",
     materialsSection: {
       title: "Covering Your Metal-Cutting Needs",
       description:
@@ -110,8 +110,8 @@ export const services = [
       "We provide end-to-end metal fabrication — from cutting and forming through to welding, assembly, and finishing. Our team delivers custom solutions tailored to commercial and industrial specifications.",
     description:
       "Metal fabrication at Orion Metal Industries covers the complete manufacturing process. We work from your drawings or specifications to produce finished components and assemblies ready for installation or integration.",
-    image: stock.weldingSparks.src,
-    localImage: "/images/services/metal-fabrication-assembly.jpeg",
+    image: "/images/services/metal-fabrication-welding.jpeg",
+    localImage: "/images/services/metal-fabrication-welding.jpeg",
     applications: [
       "Industrial equipment housings",
       "Custom frames and structures",
@@ -136,8 +136,8 @@ export const services = [
       "Our powder coating service provides durable, professional finishes for fabricated metal components. We offer a range of colours and finishes to protect and enhance your products.",
     description:
       "Powder coating delivers a tough, uniform finish that protects metal components from corrosion and wear. Our in-house coating line handles components of various sizes, with quality finishes suitable for commercial and industrial applications.",
-    image: stock.powderFinish.src,
-    localImage: "/images/services/powder-coating-line.jpeg",
+    image: "/images/services/powder-coating-booth.jpeg",
+    localImage: "/images/services/powder-coating-booth.jpeg",
     applications: [
       "Enclosures and housings",
       "Frames and structural components",

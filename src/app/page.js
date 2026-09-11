@@ -115,8 +115,8 @@ export default async function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
                 <Image
-                  src="/images/projects/formed-steel-frame-brackets.jpeg"
-                  alt="Laser-cut and press-brake formed steel frame brackets manufactured by Orion Metal Industries in Moorabbin"
+                  src="/images/services/cnc-laser-cutting-machine.jpeg"
+                  alt="CNC laser cutting machine at the Orion Metal Industries workshop in Moorabbin"
                   fill
                   className="object-cover"
                   sizes="(max-width:1024px) 92vw, 46vw"
