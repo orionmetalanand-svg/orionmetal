@@ -84,8 +84,8 @@ export const services = [
       "Our sheet metal bending service uses press brake technology to form accurate folds, channels, and profiles. We deliver consistent angles and dimensions for brackets, enclosures, frames, and structural components.",
     description:
       "Precision bending transforms flat sheet metal into functional three-dimensional components. Our press brake capabilities handle a range of material thicknesses and bend configurations, ensuring your parts meet exact dimensional requirements.",
-    image: stock.pressBrake.src,
-    localImage: "/images/services/sheet-metal-bending-fabrication.jpeg",
+    image: "/images/services/sheet-metal-bending-press-brake.jpeg",
+    localImage: "/images/services/sheet-metal-bending-press-brake.jpeg",
     applications: [
       "Brackets and mounting plates",
       "Enclosure housings and chassis",
