@@ -63,14 +63,15 @@ export default function ProjectGallery({ projects }) {
 
       {/* Masonry-ish grid */}
       <div className="mt-8 grid auto-rows-[12rem] grid-cols-1 gap-3 sm:mt-10 sm:auto-rows-[16rem] sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-        {filtered.map((project, i) => (
+        {filtered.map((project) => (
           <button
             key={project.id}
             type="button"
             onClick={() => setSelected(project)}
             aria-label={`View ${project.title}`}
+            /* Tall cells follow the source image, so portrait shots aren't centre-cropped. */
             className={`group relative overflow-hidden rounded-2xl border border-white/[0.09] text-left transition-all duration-500 hover:border-white/20 hover:shadow-lift ${
-              i % 5 === 0 ? "sm:row-span-2" : ""
+              project.orientation === "portrait" ? "sm:row-span-2" : ""
             }`}
           >
             <Image
@@ -128,7 +129,14 @@ export default function ProjectGallery({ projects }) {
               </svg>
             </button>
 
-            <div className="relative aspect-[16/10] w-full bg-ink">
+            {/* Portrait shots get a taller frame so they aren't letterboxed into a sliver. */}
+            <div
+              className={`relative w-full bg-ink ${
+                selected.orientation === "portrait"
+                  ? "h-[54dvh] sm:h-[62dvh]"
+                  : "aspect-[16/10]"
+              }`}
+            >
               <Image
                 src={selected.image}
                 alt={selected.title}

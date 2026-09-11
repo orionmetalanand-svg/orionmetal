@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <>
       {/* Utility bar */}
-      <div className="hidden bg-ink lg:block">
+      <div className="hidden bg-ink xl:block">
         <div className="container-wide container-gutter flex items-center justify-between py-2.5 text-[11px] tracking-[0.02em] text-white/45">
           <p className="flex items-center gap-2.5">
             <span className="h-1 w-1 rounded-full bg-brand-red" />
@@ -78,13 +78,13 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className="container-wide container-gutter flex items-center justify-between gap-4 py-2.5 sm:py-3 lg:py-4"
+          className="container-wide container-gutter flex items-center justify-between gap-4 py-2.5 sm:py-3 xl:py-4"
           aria-label="Main navigation"
         >
           <Logo variant="light" size="lg" priority />
 
-          {/* Desktop nav */}
-          <ul className="hidden items-center gap-1 lg:flex">
+          {/* Desktop nav — needs xl to fit 8 links plus both CTAs without overflowing */}
+          <ul className="hidden items-center gap-1 xl:flex">
             {navigation.map((item) => {
               const active = isActive(item.href);
               return (
@@ -108,7 +108,7 @@ export default function Navbar() {
             })}
           </ul>
 
-          <div className="hidden items-center gap-2.5 lg:flex">
+          <div className="hidden items-center gap-2.5 xl:flex">
             <a
               href={getWhatsAppUrl()}
               target="_blank"
@@ -126,7 +126,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             type="button"
-            className="glass flex h-12 w-12 items-center justify-center rounded-xl lg:hidden"
+            className="glass flex h-12 w-12 items-center justify-center rounded-xl xl:hidden"
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -156,7 +156,7 @@ export default function Navbar() {
       {/* Mobile drawer */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-40 lg:hidden ${
+        className={`fixed inset-0 z-40 xl:hidden ${
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
         aria-hidden={!open}

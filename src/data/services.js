@@ -6,13 +6,13 @@ export const services = [
     slug: "precision-laser-cutting",
     name: "Precision Laser Cutting",
     shortDescription:
-      "CNC laser cutting for metals, acrylic, plastics and timber — mild steel to 20mm, stainless to 16mm, aluminium to 12mm, and more.",
+      "CNC laser cutting across metals, acrylic, plastics and timber — up to 20mm mild steel.",
     overview:
       "Our precision laser cutting service delivers clean, accurate cuts for commercial and industrial components. From simple profiles to intricate decorative patterns, we process a wide variety of metal types, thicknesses, acrylics, plastics and timber with consistent quality.",
     description:
       "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC laser technology, we cut complex geometries with tight tolerances and minimal material waste — across ferrous and non-ferrous metals, coated steels, timber, acrylic and engineering plastics.",
     image: stock.laserSparks.src,
-    localImage: "/images/services/laser-cutting-decorative.jpeg",
+    localImage: "/images/services/laser-cutting-steel-flanges.jpeg",
     materialsSection: {
       title: "Covering Your Metal-Cutting Needs",
       description:

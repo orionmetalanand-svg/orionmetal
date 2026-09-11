@@ -51,8 +51,7 @@ Clean edge quality, minimal heat-affected zones, and efficient nesting for batch
 ## Getting a Quote
 
 Contact Orion Metal Industries with your drawings and specifications. We provide precision laser cutting as part of our full fabrication service in Moorabbin, Melbourne.`,
-    coverImage:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80",
+    coverImage: "/images/services/laser-cutting-steel-flanges.jpeg",
     author: "Orion Metal Industries",
     tags: ["laser cutting", "Melbourne", "industrial"],
     metaTitle: "Laser Cutting Melbourne | Industrial Applications",

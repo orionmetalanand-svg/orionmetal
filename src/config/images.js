@@ -8,9 +8,10 @@ export const stock = {
     src: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80",
     alt: "Industrial laser cutting sparks on a metal sheet",
   },
-  laserCnc: {
+  /** Drafting / technical drawing scene — not machinery, despite the name history. */
+  engineeringDesk: {
     src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80",
-    alt: "CNC industrial machinery on a manufacturing floor",
+    alt: "Engineer marking up technical drawings for a fabrication job",
   },
   pressBrake: {
     src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80",

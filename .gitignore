@@ -43,3 +43,8 @@ next-env.d.ts
 dev.log
 dev-out.log
 dev-err.log
+
+# local QA tooling output (scripts/audit-responsive.mjs, scripts/shoot.mjs)
+/shots/
+/.chrome-audit/
+/.chrome-shot/

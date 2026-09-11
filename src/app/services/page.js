@@ -61,11 +61,28 @@ export default function ServicesPage() {
       {/* Detailed service sections */}
       {services.map((service, index) => {
         const isDark = index % 2 === 0;
+        const ctaRow = (
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button href="/contact" variant="primary" size="md" className="w-full sm:w-auto">
+              Request a Quote
+            </Button>
+            <Button
+              href={getWhatsAppUrl()}
+              variant="secondary"
+              size="md"
+              external
+              className="w-full sm:w-auto"
+            >
+              Enquire on WhatsApp
+            </Button>
+          </div>
+        );
+
         return (
           <section
             key={service.id}
             id={service.id}
-            className={`relative scroll-mt-24 overflow-hidden ${
+            className={`relative scroll-mt-24 overflow-hidden xl:scroll-mt-28 ${
               isDark ? "bg-ink" : "bg-ink-2"
             }`}
           >
@@ -76,8 +93,9 @@ export default function ServicesPage() {
               <div className="absolute -left-40 top-1/3 h-[400px] w-[400px] rounded-full bg-brand-red/[0.08] blur-[140px]" />
             )}
 
-            <div className="section-padding container-wide relative grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
-              <div className={index % 2 !== 0 ? "lg:order-2" : ""}>
+            <div className="section-padding container-wide relative">
+              <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+                <div className={index % 2 !== 0 ? "lg:order-2" : ""}>
                 <div className="eyebrow-label text-brand-red-bright">
                   <span className="h-px w-7 bg-gradient-to-r from-brand-red to-brand-red/15" />
                   Service {String(index + 1).padStart(2, "0")}
@@ -93,12 +111,6 @@ export default function ServicesPage() {
                 <p className="mt-4 text-[13.5px] leading-[1.75] text-brand-muted">
                   {service.description}
                 </p>
-
-                {service.materialsSection && (
-                  <div className="mt-8">
-                    <ServiceMaterialsPanel section={service.materialsSection} />
-                  </div>
-                )}
 
                 <div className="mt-9 grid gap-4 sm:grid-cols-2 sm:gap-5">
                   <div className="glass rounded-2xl p-5">
@@ -145,23 +157,11 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <Button href="/contact" variant="primary" size="md" className="w-full sm:w-auto">
-                    Request a Quote
-                  </Button>
-                  <Button
-                    href={getWhatsAppUrl()}
-                    variant="secondary"
-                    size="md"
-                    external
-                    className="w-full sm:w-auto"
-                  >
-                    Enquire on WhatsApp
-                  </Button>
+                {/* Services with a materials table get their CTA below it instead. */}
+                {!service.materialsSection && <div className="mt-9">{ctaRow}</div>}
                 </div>
-              </div>
 
-              <Reveal className={index % 2 !== 0 ? "lg:order-1" : ""}>
+                <Reveal className={index % 2 !== 0 ? "lg:order-1" : ""}>
                 <div className="relative pb-10 lg:pb-0">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
                     <Image
@@ -184,7 +184,18 @@ export default function ServicesPage() {
                     </p>
                   </div>
                 </div>
-              </Reveal>
+                </Reveal>
+              </div>
+
+              {/* Full-width so the material/thickness grid isn't cramped into one column. */}
+              {service.materialsSection && (
+                <>
+                  <div className="mt-12 lg:mt-16">
+                    <ServiceMaterialsPanel section={service.materialsSection} wide />
+                  </div>
+                  <div className="mt-9">{ctaRow}</div>
+                </>
+              )}
             </div>
           </section>
         );

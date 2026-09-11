@@ -115,8 +115,8 @@ export default async function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
                 <Image
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80"
-                  alt="CNC industrial machinery — precision manufacturing capability"
+                  src="/images/projects/formed-steel-frame-brackets.jpeg"
+                  alt="Laser-cut and press-brake formed steel frame brackets manufactured by Orion Metal Industries in Moorabbin"
                   fill
                   className="object-cover"
                   sizes="(max-width:1024px) 92vw, 46vw"
@@ -262,8 +262,8 @@ export default async function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
                 <Image
-                  src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1600&q=80"
-                  alt="Metal fabrication welding sparks in an industrial workshop"
+                  src="/images/projects/decorative-metal-art-showroom.jpeg"
+                  alt="Powder-coated laser-cut metalwork on display at the Orion Metal Industries workshop in Moorabbin"
                   fill
                   className="object-cover"
                   sizes="(max-width:1024px) 92vw, 46vw"
