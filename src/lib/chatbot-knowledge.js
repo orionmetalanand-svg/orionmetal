@@ -1,5 +1,7 @@
 import { company } from "@/data/company";
-import { services } from "@/data/services";
+import { services, getLaserCuttingMaterialsSummary } from "@/data/services";
+
+const laserMaterialsSummary = getLaserCuttingMaterialsSummary();
 
 export const chatbotKnowledge = {
   greeting:
@@ -24,9 +26,29 @@ export const chatbotKnowledge = {
     },
     {
       keywords: ["laser", "cutting", "laser cut"],
-      answer:
-        services.find((s) => s.id === "laser-cutting")?.shortDescription +
-        " We cut a wide range of metals with high precision for components, panels, signage, and decorative work.",
+      answer: `${
+        services.find((s) => s.id === "laser-cutting")?.shortDescription
+      } Materials include: ${laserMaterialsSummary}. Visit our Services page for the full capability list.`,
+    },
+    {
+      keywords: [
+        "material",
+        "materials",
+        "thickness",
+        "mild steel",
+        "stainless",
+        "aluminium",
+        "aluminum",
+        "acrylic",
+        "perspex",
+        "plastic",
+        "timber",
+        "bisalloy",
+        "galvanised",
+        "copper",
+        "brass",
+      ],
+      answer: `Our laser cutting covers a wide range of materials and thicknesses. ${laserMaterialsSummary} For project-specific limits, submit your drawings via our contact form.`,
     },
     {
       keywords: ["bend", "bending", "fold", "folding", "press brake"],

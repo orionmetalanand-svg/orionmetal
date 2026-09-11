@@ -5,6 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 import ProcessSection from "@/components/sections/ProcessSection";
 import CTASection from "@/components/sections/CTASection";
 import Button from "@/components/ui/Button";
+import ServiceMaterialsPanel from "@/components/ui/ServiceMaterialsPanel";
 import { ServiceGrid } from "@/components/ui/ServiceCard";
 import { services } from "@/data/services";
 import { getPageMetadata } from "@/data/seo";
@@ -92,6 +93,12 @@ export default function ServicesPage() {
                 <p className="mt-4 text-[13.5px] leading-[1.75] text-brand-muted">
                   {service.description}
                 </p>
+
+                {service.materialsSection && (
+                  <div className="mt-8">
+                    <ServiceMaterialsPanel section={service.materialsSection} />
+                  </div>
+                )}
 
                 <div className="mt-9 grid gap-4 sm:grid-cols-2 sm:gap-5">
                   <div className="glass rounded-2xl p-5">

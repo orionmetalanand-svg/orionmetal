@@ -6,13 +6,60 @@ export const services = [
     slug: "precision-laser-cutting",
     name: "Precision Laser Cutting",
     shortDescription:
-      "High precision laser cutting for a wide range of metals and thicknesses.",
+      "CNC laser cutting for metals, acrylic, plastics and timber — mild steel to 20mm, stainless to 16mm, aluminium to 12mm, and more.",
     overview:
-      "Our precision laser cutting service delivers clean, accurate cuts for commercial and industrial sheet metal components. From simple profiles to intricate decorative patterns, we process a wide range of metals with consistent quality.",
+      "Our precision laser cutting service delivers clean, accurate cuts for commercial and industrial components. From simple profiles to intricate decorative patterns, we process a wide variety of metal types, thicknesses, acrylics, plastics and timber with consistent quality.",
     description:
-      "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC laser technology, we cut complex geometries with tight tolerances and minimal material waste. This process is ideal for prototypes, production runs, and custom one-off components.",
+      "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC laser technology, we cut complex geometries with tight tolerances and minimal material waste — across ferrous and non-ferrous metals, coated steels, timber, acrylic and engineering plastics.",
     image: stock.laserSparks.src,
     localImage: "/images/services/laser-cutting-decorative.jpeg",
+    materialsSection: {
+      title: "Covering Your Metal-Cutting Needs",
+      description:
+        "We have the ability to cut a variety of metal types and thicknesses, including:",
+      groups: [
+        {
+          label: "Structural & Steel",
+          items: [
+            { name: "Mild Steel", thickness: "Up to 20mm" },
+            { name: "Bisalloy", thickness: "Up to 20mm" },
+            { name: "Galvanised Steel", thickness: "All thicknesses" },
+          ],
+        },
+        {
+          label: "Stainless & Aluminium",
+          items: [
+            { name: "Stainless Steel", thickness: "Up to 16mm" },
+            { name: "Aluminium", thickness: "Up to 12mm" },
+          ],
+        },
+        {
+          label: "Specialty Metals",
+          items: [
+            { name: "Copper", thickness: "Up to 6mm" },
+            { name: "Brass", thickness: "Up to 6mm" },
+            {
+              name: "Zinc Seal / Anneal / Aluminised",
+              thickness: "All thicknesses",
+            },
+          ],
+        },
+        {
+          label: "Non-Metal Materials",
+          items: [
+            { name: "Timber" },
+            {
+              name: "Acrylic",
+              detail: "Perspex, Plexiglass, Lucite",
+            },
+            {
+              name: "Plastics",
+              detail: "HDPE, ABS, Polypropylene, Polyurethane",
+            },
+          ],
+        },
+      ],
+    },
     applications: [
       "Component profiles and brackets",
       "Ventilation and mounting panels",
@@ -139,4 +186,25 @@ export function getServiceBySlug(slug) {
 
 export function getServiceById(id) {
   return services.find((s) => s.id === id);
+}
+
+/** Plain-text summary of laser cutting materials — used by chatbot and SEO helpers. */
+export function getLaserCuttingMaterialsSummary() {
+  const service = getServiceById("laser-cutting");
+  const section = service?.materialsSection;
+  if (!section) return "";
+
+  return section.groups
+    .map((group) => {
+      const items = group.items
+        .map((item) => {
+          const parts = [item.name];
+          if (item.thickness) parts.push(item.thickness);
+          if (item.detail) parts.push(item.detail);
+          return parts.join(" — ");
+        })
+        .join("; ");
+      return `${group.label}: ${items}`;
+    })
+    .join(". ");
 }

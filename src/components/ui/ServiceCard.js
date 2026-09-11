@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./Reveal";
+import { getMaterialPreviewNames } from "./ServiceMaterialsPanel";
 
 export default function ServiceCard({ service, index = 0, detailed = false }) {
+  const materialPreview = detailed ? getMaterialPreviewNames(service.materialsSection, 5) : [];
+
   return (
     <Reveal delay={index * 70} className="h-full">
       <article className="panel hover-lift group relative flex h-full flex-col overflow-hidden rounded-2xl hover:-translate-y-1.5 hover:border-white/15 hover:shadow-lift">
@@ -34,6 +37,22 @@ export default function ServiceCard({ service, index = 0, detailed = false }) {
           <p className="mt-3 flex-1 text-[13.5px] leading-[1.7] text-brand-muted sm:text-sm">
             {detailed ? service.overview : service.shortDescription}
           </p>
+
+          {detailed && materialPreview.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {materialPreview.map((name) => (
+                <span
+                  key={name}
+                  className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 text-[10px] font-semibold text-white/75"
+                >
+                  {name}
+                </span>
+              ))}
+              <span className="self-center text-[10px] font-bold uppercase tracking-wide text-brand-red">
+                + more
+              </span>
+            </div>
+          )}
 
           {detailed && (
             <ul className="mt-5 space-y-2.5 border-t border-white/[0.06] pt-5">
