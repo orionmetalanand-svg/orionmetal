@@ -56,7 +56,7 @@ export const products = [
     description:
       "Slim-profile metal pylon housing for digital wayfinding displays with angled top design and powder-coated finish.",
     application: "Shopping centres, commercial precincts",
-    image: stock.retailInterior.src,
+    image: "/images/products/wayfinding-pylon.jpeg",
     category: "Commercial Enclosures",
   },
 ];
