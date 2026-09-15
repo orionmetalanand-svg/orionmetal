@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./Reveal";
+import { productImageObjectFit } from "@/lib/product-images";
 
 export default function ProductCard({ product, index = 0 }) {
-  const imageSrc = product.coverImage || product.image;
+  const imageSrc = product.image || product.coverImage;
+  const objectFit = productImageObjectFit(product.id || product.slug, imageSrc);
 
   return (
     <Reveal delay={index * 55} className="h-full">
@@ -16,7 +18,7 @@ export default function ProductCard({ product, index = 0 }) {
             src={imageSrc}
             alt={`${product.name} — custom fabrication by Orion Metal Industries`}
             fill
-            className="object-cover transition-transform duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+            className={`${objectFit} p-2 transition-transform duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] sm:p-3`}
             sizes="(max-width:480px) 100vw, (max-width:1024px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-3 via-ink-3/10 to-transparent" />

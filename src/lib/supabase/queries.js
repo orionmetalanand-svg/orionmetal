@@ -1,18 +1,20 @@
 import { createSupabaseClient } from "./client";
 import { products as fallbackProducts } from "@/data/products";
+import { resolveProductImage } from "@/lib/product-images";
 import { trustedCustomers as fallbackCustomers } from "@/data/trusted-customers";
 import { googleReviews as fallbackReviews } from "@/data/google-reviews";
 import { blogPosts as fallbackBlogPosts } from "@/data/blog-posts";
 
 function mapProduct(row) {
+  const slug = row.slug;
   return {
-    id: row.slug,
-    slug: row.slug,
+    id: slug,
+    slug,
     name: row.name,
     description: row.description,
     application: row.application || "",
-    image: row.image_url,
-    coverImage: row.cover_image_url || null,
+    image: resolveProductImage(slug, row.image_url),
+    coverImage: null,
     category: row.category,
     metaTitle: row.meta_title,
     metaDescription: row.meta_description,
