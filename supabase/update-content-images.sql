@@ -2,7 +2,7 @@
 -- Updates product and blog cover URLs when content is loaded from Supabase.
 
 UPDATE products
-SET image_url = '/images/products/wayfinding-pylon.jpeg'
+SET image_url = '/images/products/metalbody.png'
 WHERE slug = 'kiosk-pylon';
 
 UPDATE blog_posts

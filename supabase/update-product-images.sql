@@ -1,6 +1,6 @@
 -- Run in Supabase SQL Editor if products already seeded with old kiosk images
-UPDATE products SET image_url = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80'
+UPDATE products SET image_url = '/images/products/metalbody.png'
 WHERE slug = 'digital-kiosk-housing';
 
-UPDATE products SET image_url = '/images/products/wayfinding-pylon.jpeg'
+UPDATE products SET image_url = '/images/products/metalbody.png'
 WHERE slug = 'kiosk-pylon';

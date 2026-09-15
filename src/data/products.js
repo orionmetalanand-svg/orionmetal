@@ -1,8 +1,5 @@
-import { stock } from "@/config/images";
-
 /**
- * Product catalogue — Unsplash stock for kiosk/pylon (no WhatsApp renders).
- * Other items use real Orion workshop photos where available.
+ * Product catalogue — local Orion product renders where available.
  */
 export const products = [
   {
@@ -11,7 +8,7 @@ export const products = [
     description:
       "Custom-fabricated metal housings for digital wayfinding and information kiosks with precision-cut panels and powder-coated finishes.",
     application: "Commercial buildings, retail centres, public spaces",
-    image: stock.commercialLobby.src,
+    image: "/images/products/metalbody.png",
     category: "Commercial Enclosures",
   },
   {
@@ -56,7 +53,7 @@ export const products = [
     description:
       "Slim-profile metal pylon housing for digital wayfinding displays with angled top design and powder-coated finish.",
     application: "Shopping centres, commercial precincts",
-    image: "/images/products/wayfinding-pylon.jpeg",
+    image: "/images/products/metalbody.png",
     category: "Commercial Enclosures",
   },
 ];
