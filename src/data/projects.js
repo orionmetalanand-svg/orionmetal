@@ -101,7 +101,7 @@ export const projects = [
       "Intricate decorative panel cut from mild steel sheet, demonstrating complex geometry laser cutting capability.",
     category: "Laser Cutting",
     industry: "Architectural",
-    image: "/images/projects/decorative-laser-cut-panel.jpeg",
+    image: "/images/projects/decorative-laser-cut-panel.png",
     orientation: "portrait",
   },
   {
