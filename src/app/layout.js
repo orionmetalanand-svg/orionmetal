@@ -1,5 +1,6 @@
 import { Inter, Archivo } from "next/font/google";
 import "./globals.css";
+import GoogleAnalyticsScripts from "@/components/analytics/GoogleAnalyticsScripts";
 import SiteLayout from "@/components/layout/SiteLayout";
 import { siteConfig, getPageMetadata } from "@/data/seo";
 import { JsonLd, getOrganizationSchema, getWebsiteSchema } from "@/lib/structured-data";
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
         <JsonLd data={getOrganizationSchema()} />
         <JsonLd data={getWebsiteSchema()} />
         <SiteLayout>{children}</SiteLayout>
+        <GoogleAnalyticsScripts />
       </body>
     </html>
   );
