@@ -8,7 +8,7 @@ export const GA_MEASUREMENT_ID =
 export const isGoogleAnalyticsEnabled =
   process.env.NODE_ENV === "production" && Boolean(GA_MEASUREMENT_ID);
 
-export function GoogleAnalyticsScripts() {
+export default function GoogleAnalyticsScripts() {
   if (!isGoogleAnalyticsEnabled) return null;
 
   return (
