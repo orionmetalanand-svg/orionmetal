@@ -62,7 +62,6 @@ export default async function HomePage() {
     getSchemaReviews(),
   ]);
 
-  const googleBusinessUrl = process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL || null;
   const reviewsSchema = getReviewsSchema(schemaReviews);
 
   return (
@@ -353,7 +352,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <GoogleReviews reviews={reviews} googleBusinessUrl={googleBusinessUrl} />
+      <GoogleReviews reviews={reviews} googleBusinessUrl={company.googleBusinessUrl} />
 
       {/* ── Blog — deliberate light band for contrast ─ */}
       {blogPosts.length > 0 && (

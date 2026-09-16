@@ -10,6 +10,7 @@ export function getOrganizationSchema() {
     name: company.name,
     description: company.description,
     url: siteConfig.url,
+    hasMap: company.googleBusinessUrl,
     telephone: company.phone,
     email: company.email,
     image: `${siteConfig.url}/images/company/orion-logo.png`,
