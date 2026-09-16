@@ -1,3 +1,5 @@
+"use client";
+
 import Script from "next/script";
 
 /** GA4 measurement ID (public; safe in page source). Override via env on Vercel. */

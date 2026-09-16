@@ -58,7 +58,6 @@ export default function OpengraphImage() {
           }}
         />
 
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={logoSrc} alt="" width={430} height={205} />
 
         <div style={{ display: "flex", flexDirection: "column" }}>
