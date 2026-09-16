@@ -1,4 +1,4 @@
-import { siteConfig } from "@/data/seo";
+import { absoluteUrl } from "@/data/seo";
 
 export default function robots() {
   return {
@@ -7,6 +7,7 @@ export default function robots() {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: `${siteConfig.url}/sitemap.xml`,
+    sitemap: absoluteUrl("/sitemap.xml"),
+    host: absoluteUrl("/").replace(/\/$/, ""),
   };
 }

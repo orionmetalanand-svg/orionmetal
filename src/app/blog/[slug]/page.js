@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { BlogGrid } from "@/components/ui/BlogCard";
 import { getBlogPostBySlug, getBlogPosts } from "@/lib/supabase/queries";
-import { siteConfig } from "@/data/seo";
+import { absoluteUrl, siteConfig } from "@/data/seo";
 import { company } from "@/data/company";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { JsonLd, getArticleSchema, getBreadcrumbSchema } from "@/lib/structured-data";
@@ -27,20 +27,23 @@ export async function generateMetadata({ params }) {
 
   const title = post.metaTitle || post.title;
   const description = post.metaDescription || post.excerpt;
-  const url = `${siteConfig.url}/blog/${post.slug}`;
+  const url = absoluteUrl(`/blog/${post.slug}`);
 
   return {
     title,
     description,
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
     openGraph: {
       title: `${title} | ${company.shortName}`,
       description,
       url,
       type: "article",
       publishedTime: post.publishedAt,
+      locale: siteConfig.locale,
+      siteName: company.name,
       images: post.coverImage
-        ? [{ url: `${siteConfig.url}${post.coverImage}`, alt: post.title }]
+        ? [{ url: absoluteUrl(post.coverImage), alt: post.title }]
         : undefined,
     },
     twitter: { card: "summary_large_image", title, description },

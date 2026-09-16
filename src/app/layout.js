@@ -27,6 +27,9 @@ export const metadata = {
   description: siteConfig.defaultDescription,
   keywords: siteConfig.keywords,
   robots: { index: true, follow: true },
+  verification: {
+    google: "UCDzffLYL5-0Gf-IBrNDGkStyJVPL2rf0Kffw2KwrAM",
+  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,

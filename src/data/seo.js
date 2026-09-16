@@ -1,10 +1,18 @@
 import { company } from "./company";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://orionmetalindustries.com.au";
+/** Production canonical origin (www, no trailing slash). */
+export const CANONICAL_ORIGIN = "https://www.orionmetalindustries.com.au";
+
+function normalizeOrigin(raw) {
+  const trimmed = (raw || CANONICAL_ORIGIN).trim().replace(/\/+$/, "");
+  if (trimmed === "https://orionmetalindustries.com.au") {
+    return CANONICAL_ORIGIN;
+  }
+  return trimmed || CANONICAL_ORIGIN;
+}
 
 export const siteConfig = {
-  url: siteUrl,
+  url: normalizeOrigin(process.env.NEXT_PUBLIC_SITE_URL),
   name: company.name,
   defaultTitle: `${company.shortName} | Sheet Metal Fabrication Moorabbin Melbourne`,
   defaultDescription:
@@ -22,6 +30,14 @@ export const siteConfig = {
     "industrial sheet metal fabrication Victoria",
   ],
 };
+
+export function absoluteUrl(path = "/") {
+  if (!path || path === "/") {
+    return `${siteConfig.url}/`;
+  }
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${siteConfig.url}${normalized}`;
+}
 
 export const pageSeo = {
   home: {
@@ -88,14 +104,17 @@ export function getPageMetadata(pageKey) {
   const page = pageSeo[pageKey];
   if (!page) return {};
 
-  const url = `${siteConfig.url}${page.path}`;
+  const url = absoluteUrl(page.path);
+  const ogTitle = `${page.title} | ${company.shortName}`;
 
   return {
     title: page.title,
     description: page.description,
+    keywords: siteConfig.keywords,
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
     openGraph: {
-      title: `${page.title} | ${company.shortName}`,
+      title: ogTitle,
       description: page.description,
       url,
       siteName: company.name,
@@ -105,8 +124,13 @@ export function getPageMetadata(pageKey) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${page.title} | ${company.shortName}`,
+      title: ogTitle,
       description: page.description,
     },
   };
+}
+
+/** Static routes included in sitemap.xml (keys of pageSeo). */
+export function getStaticSitemapPages() {
+  return Object.values(pageSeo);
 }
