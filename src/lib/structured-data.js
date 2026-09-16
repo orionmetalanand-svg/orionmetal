@@ -37,6 +37,7 @@ export function getOrganizationSchema() {
       { "@type": "City", name: "Melbourne" },
       { "@type": "State", name: "Victoria" },
     ],
+    sameAs: [company.social?.instagram, company.social?.facebook].filter(Boolean),
     priceRange: "$$",
   };
 }

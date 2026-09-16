@@ -23,6 +23,10 @@ export const company = {
   phoneDisplay: "0402 208 011",
   contactPerson: "Dinesh Kumar",
   email: "info@orionmetalindustries.com.au",
+  social: {
+    instagram: "https://www.instagram.com/orionmetalindustries/",
+    facebook: "https://www.facebook.com/profile.php?id=61594299636009",
+  },
   location: {
     lat: -37.9369,
     lng: 145.0415,
