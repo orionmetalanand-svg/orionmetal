@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter, Archivo } from "next/font/google";
 import "./globals.css";
 import GoogleAnalyticsScripts from "@/components/analytics/GoogleAnalyticsScripts";
@@ -51,6 +53,8 @@ export default function RootLayout({ children }) {
         <JsonLd data={getWebsiteSchema()} />
         <SiteLayout>{children}</SiteLayout>
         <GoogleAnalyticsScripts />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
