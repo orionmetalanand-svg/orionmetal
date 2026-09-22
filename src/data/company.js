@@ -27,7 +27,7 @@ export const company = {
   googleBusinessUrl: "https://maps.app.goo.gl/MPaKN8kjunEFjmin8",
   social: {
     instagram: "https://www.instagram.com/orionmetalindustries/",
-    facebook: "https://www.facebook.com/profile.php?id=61594299636009",
+    facebook: "https://www.facebook.com/profile.php?id=61594591923757",
   },
   location: {
     lat: -37.9369,
