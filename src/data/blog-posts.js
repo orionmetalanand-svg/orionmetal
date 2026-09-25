@@ -114,7 +114,7 @@ Powder coating is the preferred finish for **custom sheet metal enclosure fabric
 - **Cleaner for industrial work** — no solvent-heavy wet spray on the same line as precision cut parts
 - **Specified by colour code** — Dulux, Interpon or RAL references keep repeat orders matching
 
-![Industrial metal finishing and precision coating process for commercial fabrication](https://images.unsplash.com/photo-1565514020176-efe69048881b?auto=format&fit=crop&w=1600&q=80)
+![Industrial metal fabrication sparks during cutting and finishing of commercial steel parts](/images/blog/industrial-metal-fabrication-sparks.jpeg)
 
 ## Powder coated enclosures, cabinets and frames
 
@@ -135,7 +135,7 @@ See finished examples on our [products](/products) and [projects](/projects) pag
 
 **Orion powder coating** is not a separate shop. Components are nested and cut, formed, welded where required, then prepared and coated on our line before assembly and dispatch.
 
-![Sheet metal ready for fabrication and powder coating in Melbourne](https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=1600&q=80)
+![Laser-cut sheet metal components ready for fabrication and powder coating in Melbourne](/images/projects/laser-cut-steel-components-batch.jpeg)
 
 ### What to send for an accurate quote
 
@@ -146,7 +146,7 @@ See finished examples on our [products](/products) and [projects](/projects) pag
 
 We serve commercial, industrial, manufacturing and construction clients across **Melbourne and Victoria**. Local pickup and delivery discussion is straightforward because production sits in Moorabbin — not interstate.
 
-![Commercial architecture and precincts that specify powder-coated metalwork in Melbourne](https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80)
+![Powder-coated formed steel frames and brackets fabricated in Moorabbin Melbourne](/images/projects/formed-steel-frame-brackets.jpeg)
 
 ## Powder coating vs other finishes
 
