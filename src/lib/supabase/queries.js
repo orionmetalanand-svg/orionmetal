@@ -113,7 +113,14 @@ export async function getBlogPosts(limit) {
     return limit ? posts.slice(0, limit) : posts;
   }
 
-  return data.map(mapBlogPost);
+  const mapped = data.map(mapBlogPost);
+  const extra = fallbackBlogPosts.filter(
+    (p) => p.isPublished && !mapped.some((row) => row.slug === p.slug)
+  );
+  const merged = [...mapped, ...extra].sort(
+    (a, b) => new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0)
+  );
+  return limit ? merged.slice(0, limit) : merged;
 }
 
 export async function getBlogPostBySlug(slug) {

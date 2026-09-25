@@ -1,3 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const IMAGE_BLOCK = /^!\[([^\]]*)\]\(([^)]+)\)$/;
+
 function parseBlocks(content) {
   if (!content) return [];
 
@@ -6,6 +11,16 @@ function parseBlocks(content) {
     .map((block, index) => {
       const trimmed = block.trim();
       if (!trimmed) return null;
+
+      const imageMatch = trimmed.match(IMAGE_BLOCK);
+      if (imageMatch) {
+        return {
+          type: "img",
+          alt: imageMatch[1],
+          src: imageMatch[2],
+          key: index,
+        };
+      }
 
       if (trimmed.startsWith("## ")) {
         return { type: "h2", text: trimmed.replace(/^## /, ""), key: index };
@@ -28,19 +43,60 @@ function parseBlocks(content) {
     .filter(Boolean);
 }
 
-/** Renders **bold** inline markdown safely as React nodes. */
 function renderInline(text) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={i} className="font-bold text-ink">
-          {part.slice(2, -2)}
+  const tokens = [];
+  const regex = /(\*\*[^*]+\*\*|\[([^\]]+)\]\(([^)]+)\))/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      tokens.push(text.slice(lastIndex, match.index));
+    }
+
+    if (match[0].startsWith("**")) {
+      tokens.push(
+        <strong key={`${match.index}-b`} className="font-bold text-ink">
+          {match[0].slice(2, -2)}
         </strong>
       );
+    } else {
+      const href = match[3];
+      const label = match[2];
+      const isInternal = href.startsWith("/");
+      if (isInternal) {
+        tokens.push(
+          <Link
+            key={`${match.index}-l`}
+            href={href}
+            className="font-semibold text-brand-red underline decoration-brand-red/30 underline-offset-2 hover:decoration-brand-red"
+          >
+            {label}
+          </Link>
+        );
+      } else {
+        tokens.push(
+          <a
+            key={`${match.index}-a`}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-brand-red underline decoration-brand-red/30 underline-offset-2 hover:decoration-brand-red"
+          >
+            {label}
+          </a>
+        );
+      }
     }
-    return part;
-  });
+
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    tokens.push(text.slice(lastIndex));
+  }
+
+  return tokens.length ? tokens : text;
 }
 
 export default function BlogContent({ content }) {
@@ -79,6 +135,30 @@ export default function BlogContent({ content }) {
                 </li>
               ))}
             </ul>
+          );
+        }
+
+        if (block.type === "img") {
+          return (
+            <figure
+              key={block.key}
+              className="relative my-8 overflow-hidden rounded-2xl border border-black/8 bg-ink-2/5"
+            >
+              <div className="relative aspect-[16/9] w-full">
+                <Image
+                  src={block.src}
+                  alt={block.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 768px"
+                />
+              </div>
+              {block.alt ? (
+                <figcaption className="border-t border-black/6 px-4 py-3 text-[12.5px] leading-relaxed text-ink-4/55">
+                  {block.alt}
+                </figcaption>
+              ) : null}
+            </figure>
           );
         }
 
