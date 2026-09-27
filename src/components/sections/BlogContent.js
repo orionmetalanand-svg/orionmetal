@@ -139,17 +139,22 @@ export default function BlogContent({ content }) {
         }
 
         if (block.type === "img") {
+          const isPortraitProduct =
+            block.src.includes("wayfinding-pylon") ||
+            block.src.includes("digital-wayfinding-pylon");
           return (
             <figure
               key={block.key}
               className="relative my-8 overflow-hidden rounded-2xl border border-black/8 bg-ink-2/5"
             >
-              <div className="relative aspect-[16/9] w-full">
+              <div
+                className={`relative w-full ${isPortraitProduct ? "aspect-[4/5] bg-[#ececef]" : "aspect-[16/9]"}`}
+              >
                 <Image
                   src={block.src}
                   alt={block.alt}
                   fill
-                  className="object-cover"
+                  className={isPortraitProduct ? "object-contain" : "object-cover"}
                   sizes="(max-width: 768px) 100vw, 768px"
                 />
               </div>
