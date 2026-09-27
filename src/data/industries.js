@@ -5,7 +5,7 @@ export const industries = [
     id: "commercial",
     name: "Commercial",
     description:
-      "Custom metal fabrication for commercial fit-outs, signage, display systems, and building components. We support architects, builders, and commercial contractors with precision-manufactured metalwork.",
+      "Custom metal fabrication in Melbourne for commercial fit-outs, signage, display systems, and building components across Victoria.",
     applications: [
       "Digital kiosk and display housings",
       "Signage and branding elements",
@@ -18,7 +18,7 @@ export const industries = [
     id: "industrial",
     name: "Industrial",
     description:
-      "Heavy-duty fabrication for industrial applications including equipment housings, guards, frames, and structural components built to commercial specifications.",
+      "Heavy-duty fabrication in Moorabbin for Melbourne industrial clients — equipment housings, guards, frames, and structural components.",
     applications: [
       "Equipment enclosures and guards",
       "Industrial frames and structures",

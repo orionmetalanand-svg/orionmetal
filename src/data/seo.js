@@ -16,17 +16,20 @@ export const siteConfig = {
   name: company.name,
   defaultTitle: `${company.shortName} | Sheet Metal Fabrication Moorabbin Melbourne`,
   defaultDescription:
-    "Orion Metal Industries Pty Ltd — precision laser cutting, sheet metal bending, fabrication, powder coating and custom assembly in Moorabbin, Melbourne, Victoria. Commercial and industrial sheet metal fabrication.",
+    "Australian sheet metal fabricator in Moorabbin, Melbourne VIC. Laser cutting, bending, powder coating, kiosk enclosures and custom assembly for commercial clients across Victoria — not an international workshop.",
   locale: "en_AU",
   keywords: [
     "sheet metal fabrication Moorabbin",
     "sheet metal fabrication Melbourne",
-    "laser cutting Moorabbin",
+    "sheet metal fabrication Victoria Australia",
+    "laser cutting Moorabbin Melbourne",
     "laser cutting Melbourne",
-    "metal fabrication Melbourne",
+    "metal fabrication Melbourne Australia",
     "sheet metal bending Melbourne",
-    "powder coating Melbourne",
-    "custom metal fabrication Melbourne",
+    "powder coating Melbourne Moorabbin",
+    "custom metal enclosures Melbourne",
+    "custom sheet metal enclosure fabrication Melbourne",
+    "kiosk housing Melbourne",
     "industrial sheet metal fabrication Victoria",
   ],
 };
@@ -41,61 +44,61 @@ export function absoluteUrl(path = "/") {
 
 export const pageSeo = {
   home: {
-    title: "Precision Sheet Metal Fabrication | Moorabbin Melbourne",
+    title: "Sheet Metal Fabrication Moorabbin Melbourne VIC | Orion",
     description:
-      "Orion Metal Industries — precision laser cutting, bending, fabrication, powder coating and custom assembly for commercial and industrial clients in Moorabbin, Melbourne, Victoria.",
+      "Orion Metal Industries — Australian workshop at 1A Bibby Ct, Moorabbin VIC 3189. Laser cutting, bending, powder coating and custom enclosures for Melbourne and Victoria only.",
     path: "/",
   },
   about: {
-    title: "About Us | Precision Metal Engineering Moorabbin",
+    title: "About Orion | Sheet Metal Fabricator Moorabbin VIC Australia",
     description:
-      "Learn about Orion Metal Industries Pty Ltd — precision metal engineering and manufacturing in Moorabbin, Victoria. Quality workmanship, modern equipment, and commercial focus.",
+      "Orion Metal Industries Pty Ltd is a Moorabbin, Melbourne fabricator. Local laser cutting, bending, powder coating and assembly for Victorian commercial and industrial clients.",
     path: "/about",
   },
   services: {
-    title: "Sheet Metal Services | Laser Cutting, Bending, Powder Coating Melbourne",
+    title: "Sheet Metal Services Melbourne | Laser, Bending, Powder Coating VIC",
     description:
-      "Professional sheet metal services in Moorabbin: precision laser cutting, sheet metal bending, metal fabrication, powder coating and custom assembly for commercial and industrial applications.",
+      "Sheet metal services in Moorabbin, Melbourne: laser cutting, press-brake bending, fabrication, powder coating and assembly. Serving Victoria, Australia.",
     path: "/services",
   },
   products: {
-    title: "Products & Capabilities | Custom Metal Fabrication Melbourne",
+    title: "Kiosk Enclosures & Metal Products | Fabricated in Melbourne VIC",
     description:
-      "Explore Orion Metal Industries' product capabilities — digital kiosk housings, electronic enclosures, architectural metalwork and custom fabricated components.",
+      "Digital kiosk housings, wayfinding pylons and custom metal enclosures fabricated and powder coated in Moorabbin, Melbourne, Australia.",
     path: "/products",
   },
   projects: {
-    title: "Projects Gallery | Sheet Metal Fabrication Work",
+    title: "Fabrication Projects Melbourne | Laser Cutting & Powder Coating VIC",
     description:
-      "View fabrication projects showcasing laser cutting, powder coating, architectural metalwork and custom assembly capabilities from Orion Metal Industries.",
+      "Melbourne and Moorabbin fabrication gallery — laser-cut parts, powder-coated frames, architectural metalwork and commercial assemblies from our Victorian workshop.",
     path: "/projects",
   },
   industries: {
-    title: "Industries Served | Commercial & Industrial Fabrication",
+    title: "Melbourne Industries | Commercial & Industrial Fabrication VIC",
     description:
-      "Orion Metal Industries serves commercial, industrial, manufacturing, construction and engineering sectors with precision sheet metal fabrication in Melbourne.",
+      "Sheet metal fabrication in Melbourne for commercial, industrial, manufacturing, construction and engineering clients across Victoria, Australia.",
     path: "/industries",
   },
   contact: {
-    title: "Contact & Request a Quote | Moorabbin VIC",
+    title: "Quote | Moorabbin Melbourne Workshop VIC 3189 Australia",
     description:
-      "Contact Orion Metal Industries in Moorabbin, Victoria. Request a quote for laser cutting, bending, fabrication, powder coating or custom assembly. Upload drawings and specifications.",
+      "Request a fabrication quote from Orion Metal Industries, 1A Bibby Ct, Moorabbin VIC 3189, Australia. Australian customers — laser cutting, enclosures, powder coating.",
     path: "/contact",
   },
   blog: {
-    title: "Blog | Sheet Metal Fabrication Insights Melbourne",
+    title: "Fabrication Blog Melbourne | Moorabbin VIC Insights",
     description:
-      "Expert articles on sheet metal fabrication, laser cutting, powder coating, and commercial metal manufacturing in Moorabbin and Melbourne, Victoria.",
+      "Guides on sheet metal fabrication, powder coating, wayfinding kiosks and laser cutting for Moorabbin, Melbourne and Victoria, Australia.",
     path: "/blog",
   },
   privacy: {
-    title: "Privacy Policy",
-    description: "Privacy policy for Orion Metal Industries Pty Ltd website.",
+    title: "Privacy Policy | Orion Metal Industries Melbourne",
+    description: "Privacy policy for Orion Metal Industries Pty Ltd, Moorabbin VIC, Australia.",
     path: "/privacy",
   },
   terms: {
-    title: "Terms of Use",
-    description: "Terms of use for Orion Metal Industries Pty Ltd website.",
+    title: "Terms of Use | Orion Metal Industries Melbourne",
+    description: "Terms of use for Orion Metal Industries Pty Ltd website, Australia.",
     path: "/terms",
   },
 };
@@ -111,7 +114,13 @@ export function getPageMetadata(pageKey) {
     title: page.title,
     description: page.description,
     keywords: siteConfig.keywords,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        "en-AU": url,
+        "x-default": url,
+      },
+    },
     robots: { index: true, follow: true },
     openGraph: {
       title: ogTitle,

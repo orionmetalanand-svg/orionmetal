@@ -54,7 +54,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Request a Quote"
         accentWord="Quote"
-        description="Send your enquiry with drawings or specifications. We respond to all commercial and industrial fabrication enquiries."
+        description="Send drawings from Australian commercial and industrial clients. Workshop: 1A Bibby Ct, Moorabbin VIC 3189, Melbourne. We fabricate in Victoria, Australia."
         image="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Engineering and industrial production environment"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}

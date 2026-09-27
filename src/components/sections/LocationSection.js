@@ -4,18 +4,6 @@ import Button from "@/components/ui/Button";
 import { company } from "@/data/company";
 import { getWhatsAppUrl, getTelUrl } from "@/lib/whatsapp";
 
-const serviceAreas = [
-  "Moorabbin",
-  "Cheltenham",
-  "Braeside",
-  "Clayton",
-  "Dandenong",
-  "Bayside",
-  "South East Melbourne",
-  "Greater Melbourne",
-  "Victoria",
-];
-
 const contactRows = [
   {
     label: "Workshop",
@@ -76,9 +64,9 @@ export default function LocationSection() {
       <div className="section-padding container-wide relative">
         <SectionHeading
           eyebrow="Location"
-          title="Based in Moorabbin. Serving Melbourne & Victoria."
+          title="Based in Moorabbin. Serving Melbourne & Victoria, Australia."
           accentWord="Moorabbin"
-          description="Our workshop is located in Moorabbin, Victoria — convenient for commercial and industrial clients across Melbourne's south-east and greater metropolitan area."
+          description="Workshop at 1A Bibby Ct, Moorabbin VIC 3189, Australia. We fabricate for commercial and industrial clients across Melbourne and Victoria — Australian production only, not an overseas or US workshop."
           align="center"
         />
 
@@ -156,7 +144,7 @@ export default function LocationSection() {
                   Service Areas
                 </p>
                 <div className="mt-3.5 flex flex-wrap gap-2">
-                  {serviceAreas.map((area) => (
+                  {company.serviceAreas.map((area) => (
                     <span
                       key={area}
                       className="rounded-full border border-white/[0.09] bg-white/[0.03] px-3 py-1.5 text-[11px] text-white/65"

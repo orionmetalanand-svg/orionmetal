@@ -23,7 +23,7 @@ export default function IndustriesPage() {
         eyebrow="Industries"
         title="Industries We Serve"
         accentWord="Serve"
-        description="Precision sheet metal fabrication for commercial, industrial, manufacturing, construction and engineering sectors. These represent our target application areas across Melbourne and Victoria."
+        description="Sheet metal fabrication in Melbourne and Victoria for commercial, industrial, manufacturing, construction and engineering clients — Australian workshop in Moorabbin."
         image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Industrial manufacturing facility"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries" }]}

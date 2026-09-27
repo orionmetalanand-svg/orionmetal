@@ -25,7 +25,7 @@ export default async function BlogPage() {
         eyebrow="Insights"
         title="Fabrication Insights & Articles"
         accentWord="Insights"
-        description="Practical guidance on sheet metal fabrication, laser cutting, powder coating and commercial manufacturing in Moorabbin and Melbourne."
+        description="Sheet metal, powder coating, wayfinding kiosks and laser cutting guides for Moorabbin, Melbourne and Victoria, Australia."
         image="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Industrial laser cutting for sheet metal fabrication"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}

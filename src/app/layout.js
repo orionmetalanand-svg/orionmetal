@@ -5,6 +5,7 @@ import "./globals.css";
 import GoogleAnalyticsScripts from "@/components/analytics/GoogleAnalyticsScripts";
 import SiteLayout from "@/components/layout/SiteLayout";
 import { siteConfig, getPageMetadata } from "@/data/seo";
+import { company } from "@/data/company";
 import { JsonLd, getOrganizationSchema, getWebsiteSchema } from "@/lib/structured-data";
 
 const inter = Inter({
@@ -32,6 +33,12 @@ export const metadata = {
   robots: { index: true, follow: true },
   verification: {
     google: "UCDzffLYL5-0Gf-IBrNDGkStyJVPL2rf0Kffw2KwrAM",
+  },
+  other: {
+    "geo.region": "AU-VIC",
+    "geo.placename": "Moorabbin, Melbourne",
+    "geo.position": `${company.location.lat};${company.location.lng}`,
+    ICBM: `${company.location.lat}, ${company.location.lng}`,
   },
   openGraph: {
     type: "website",

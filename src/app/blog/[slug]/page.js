@@ -32,7 +32,10 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: { "en-AU": url, "x-default": url },
+    },
     robots: { index: true, follow: true },
     openGraph: {
       title: `${title} | ${company.shortName}`,

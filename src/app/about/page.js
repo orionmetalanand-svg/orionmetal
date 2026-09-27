@@ -78,9 +78,10 @@ export default function AboutPage() {
 
             <Reveal delay={140}>
               <p className="mt-7 text-sm leading-relaxed text-brand-muted">
-                Our focus is on providing reliable fabrication services — from precision laser
-                cutting and sheet metal bending through to powder coating and custom assembly — for
-                clients who require quality workmanship and dependable delivery.
+                We are a local Australian fabricator — laser cutting, sheet metal bending, powder
+                coating and custom assembly from Moorabbin for clients across Melbourne and
+                Victoria. We are not a US or international walk-in shop; quotes are for Australian
+                commercial and industrial work.
               </p>
 
               <div className="glass-red mt-8 rounded-2xl p-5 sm:p-6">

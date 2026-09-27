@@ -56,7 +56,7 @@ export default function Hero() {
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand-red" />
             </span>
             <span className="truncate text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 sm:text-[11px]">
-              {company.address.suburb} · Melbourne · Victoria
+              {company.address.suburb} · Melbourne · Victoria · Australia
             </span>
           </div>
 
