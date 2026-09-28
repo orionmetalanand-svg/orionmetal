@@ -129,12 +129,20 @@ export function getPageMetadata(pageKey) {
       siteName: company.name,
       locale: siteConfig.locale,
       type: "website",
-      // Preview image comes from src/app/opengraph-image.js (file convention).
+      images: [
+        {
+          url: absoluteUrl("/images/services/cnc-laser-cutting-machine.jpeg"),
+          width: 1600,
+          height: 1067,
+          alt: "CNC laser cutting at Orion Metal Industries, Moorabbin Melbourne",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle,
       description: page.description,
+      images: [absoluteUrl("/images/services/cnc-laser-cutting-machine.jpeg")],
     },
   };
 }

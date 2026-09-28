@@ -5,8 +5,8 @@
  */
 export const stock = {
   laserSparks: {
-    src: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80",
-    alt: "Industrial laser cutting sparks on a metal sheet",
+    src: "/images/services/cnc-laser-cutting-machine.jpeg",
+    alt: "CNC laser cutting machine at Orion Metal Industries workshop in Moorabbin Melbourne",
   },
   /** Drafting / technical drawing scene — not machinery, despite the name history. */
   engineeringDesk: {

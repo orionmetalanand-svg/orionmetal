@@ -52,8 +52,8 @@ export default function AboutPage() {
         title="Precision Metal Engineering in Moorabbin"
         accentWord="Moorabbin"
         description={company.description}
-        image="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80"
-        imageAlt="Industrial laser cutting sparks on metal sheet"
+        image="/images/services/cnc-laser-cutting-machine.jpeg"
+        imageAlt="CNC laser cutting at Orion Metal Industries Moorabbin Melbourne"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
         primaryCta={{ label: "Request a Quote", href: "/contact" }}
       />

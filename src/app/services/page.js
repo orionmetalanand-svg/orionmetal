@@ -32,8 +32,8 @@ export default function ServicesPage() {
         title="Sheet Metal Fabrication Services Melbourne"
         accentWord="Melbourne"
         description="Laser cutting, bending, fabrication, powder coating and assembly from our Moorabbin VIC workshop for commercial clients across Melbourne and Victoria, Australia."
-        image="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80"
-        imageAlt="Industrial laser cutting sparks on a metal sheet"
+        image="/images/services/cnc-laser-cutting-machine.jpeg"
+        imageAlt="CNC laser cutting at Orion Metal Industries workshop in Moorabbin"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
         primaryCta={{ label: "Request a Quote", href: "/contact" }}
       />

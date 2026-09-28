@@ -17,7 +17,11 @@ export function getOrganizationSchema() {
     email: company.email,
     currenciesAccepted: "AUD",
     availableLanguage: "en-AU",
-    image: `${siteConfig.url}/images/company/orion-logo.png`,
+    image: [
+      `${siteConfig.url}/images/company/orion-logo.png`,
+      `${siteConfig.url}/images/services/cnc-laser-cutting-machine.jpeg`,
+      `${siteConfig.url}/images/company/outlook1.png`,
+    ],
     logo: {
       "@type": "ImageObject",
       url: `${siteConfig.url}/images/company/orion-logo.png`,
