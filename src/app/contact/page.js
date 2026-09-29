@@ -65,9 +65,9 @@ export default function ContactPage() {
 
       <PageHero
         eyebrow="Contact"
-        title="Request a Quote"
+        title="Request a Quote — 24-Hour Response"
         accentWord="Quote"
-        description="Send drawings from Australian commercial and industrial clients. Workshop: 1A Bibby Ct, Moorabbin VIC 3189, Melbourne. We fabricate in Victoria, Australia."
+        description="Send your drawings and receive a quote within 24 hours. Workshop: 1A Bibby Ct, Moorabbin VIC 3189, south-east Melbourne. Laser cutting, enclosures and powder coating for Victoria, Australia."
         image="/images/services/metal-fabrication-welding.jpeg"
         imageAlt="Metal fabrication welding at Orion Metal Industries Moorabbin Melbourne"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}

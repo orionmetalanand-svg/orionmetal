@@ -7,11 +7,11 @@ export const company = {
   tagline: "Precision. Strength. Quality.",
   secondaryTagline: "Built on Precision Driven by Quality",
   description:
-    "Orion Metal Industries Pty Ltd is a Moorabbin, Melbourne sheet metal fabricator serving commercial and industrial clients across Victoria, Australia. We provide laser cutting, bending, fabrication, powder coating and custom assembly from 1A Bibby Ct, Moorabbin VIC 3189 — Australian workshop only.",
+    "Orion Metal Industries Pty Ltd is a full-service sheet metal fabricator in Moorabbin, south-east Melbourne VIC 3189. Laser cutting, bending, in-house powder coating and custom assembly under one roof — with quotes returned within 24 hours for commercial and industrial clients across Victoria, Australia.",
   hero: {
     title: "Precision Sheet Metal Fabrication. Built for Industry.",
     subtitle:
-      "Laser cutting, bending, fabrication, powder coating and custom assembly for commercial and industrial clients in Moorabbin, Melbourne and across Victoria, Australia.",
+      "Full-service fabrication in Moorabbin, Melbourne — laser cutting, bending, powder coating and assembly under one roof. Quotes within 24 hours for commercial and industrial clients across Victoria.",
   },
   address: {
     street: "1A Bibby Ct",
@@ -28,6 +28,9 @@ export const company = {
     "Clayton",
     "Dandenong",
     "Bayside",
+    "Carrum Downs",
+    "Springvale",
+    "Keysborough",
     "South East Melbourne",
     "Greater Melbourne",
     "Victoria",
@@ -68,6 +71,10 @@ export const company = {
     {
       title: "Competitive Pricing",
       description: "Fair, transparent pricing for commercial clients.",
+    },
+    {
+      title: "24-Hour Quotes",
+      description: "Quotes returned within 24 hours of receiving your drawings.",
     },
     {
       title: "On Time Delivery",

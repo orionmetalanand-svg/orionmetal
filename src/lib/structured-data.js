@@ -49,6 +49,10 @@ export function getOrganizationSchema() {
       { "@type": "City", name: "Cheltenham" },
       { "@type": "City", name: "Dandenong" },
       { "@type": "City", name: "Clayton" },
+      { "@type": "City", name: "Carrum Downs" },
+      { "@type": "City", name: "Springvale" },
+      { "@type": "City", name: "Keysborough" },
+      { "@type": "City", name: "Braeside" },
     ],
     sameAs: [
       company.googleBusinessUrl,

@@ -16,25 +16,31 @@ export const siteConfig = {
   name: company.name,
   defaultTitle: `${company.shortName} | Sheet Metal Fabrication Moorabbin Melbourne`,
   defaultDescription:
-    "Australian sheet metal fabricator in Moorabbin, Melbourne VIC. Laser cutting, bending, powder coating, kiosk enclosures and custom assembly for commercial clients across Victoria — not an international workshop.",
+    "Full-service sheet metal fabricator in Moorabbin, south-east Melbourne VIC. Laser cutting, bending, in-house powder coating, kiosk enclosures and custom assembly under one roof — 24-hour quotes for Victorian commercial clients.",
   locale: "en_AU",
   keywords: [
     "sheet metal fabrication Moorabbin",
     "sheet metal fabrication Melbourne",
+    "sheet metal fabrication south east Melbourne",
     "sheet metal fabrication Victoria Australia",
+    "full service sheet metal fabrication Melbourne",
     "laser cutting Moorabbin Melbourne",
+    "laser cutting south east Melbourne",
     "laser cutting Melbourne",
     "metal fabrication Melbourne Australia",
     "sheet metal bending Melbourne",
     "powder coating Melbourne Moorabbin",
     "custom powder coating Melbourne",
+    "in-house powder coating Melbourne",
     "custom metal enclosures Melbourne",
     "sheet metal enclosures Melbourne",
     "custom sheet metal enclosure fabrication Melbourne",
     "sheet metal enclosure fabrication Melbourne",
     "precision sheet metal services Melbourne",
+    "kiosk enclosure fabrication Melbourne",
     "kiosk housing Melbourne",
     "industrial sheet metal fabrication Victoria",
+    "sheet metal fabrication 24 hour quote Melbourne",
   ],
 };
 
@@ -60,9 +66,9 @@ export const pageSeo = {
     path: "/about",
   },
   services: {
-    title: "Sheet Metal Services Melbourne | Laser, Bending, Powder Coating VIC",
+    title: "Sheet Metal Services South-East Melbourne | Full-Service Fabrication VIC",
     description:
-      "Sheet metal services in Moorabbin, Melbourne: laser cutting, press-brake bending, fabrication, powder coating and assembly. Serving Victoria, Australia.",
+      "Laser cutting, press-brake bending, fabrication, in-house powder coating and assembly from our Moorabbin, south-east Melbourne workshop. 24-hour quotes for Victorian commercial clients.",
     path: "/services",
   },
   products: {
@@ -84,9 +90,9 @@ export const pageSeo = {
     path: "/industries",
   },
   contact: {
-    title: "Quote | Moorabbin Melbourne Workshop VIC 3189 Australia",
+    title: "Get a Quote in 24 Hours | Sheet Metal Fabrication Moorabbin Melbourne",
     description:
-      "Request a fabrication quote from Orion Metal Industries, 1A Bibby Ct, Moorabbin VIC 3189, Australia. Australian customers — laser cutting, enclosures, powder coating.",
+      "Request a fabrication quote from Orion Metal Industries — 1A Bibby Ct, Moorabbin VIC 3189. 24-hour quotes for laser cutting, sheet metal enclosures and powder coating in south-east Melbourne.",
     path: "/contact",
   },
   blog: {
