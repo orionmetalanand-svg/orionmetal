@@ -72,13 +72,13 @@ export const pageSeo = {
     path: "/products",
   },
   projects: {
-    title: "Fabrication Projects Melbourne | Laser Cutting & Powder Coating VIC",
+    title: "Sheet Metal Fabrication Projects Moorabbin Melbourne VIC",
     description:
       "Melbourne and Moorabbin fabrication gallery — laser-cut parts, powder-coated frames, architectural metalwork and commercial assemblies from our Victorian workshop.",
     path: "/projects",
   },
   industries: {
-    title: "Melbourne Industries | Commercial & Industrial Fabrication VIC",
+    title: "Industries Served | Sheet Metal Fabrication Melbourne Victoria",
     description:
       "Sheet metal fabrication in Melbourne for commercial, industrial, manufacturing, construction and engineering clients across Victoria, Australia.",
     path: "/industries",

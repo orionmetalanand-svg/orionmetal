@@ -26,8 +26,8 @@ export default async function ProductsPage() {
         title="Custom Sheet Metal Enclosures & Kiosk Products Melbourne"
         accentWord="Melbourne"
         description="Sheet metal enclosure fabrication Melbourne — wayfinding pylons, digital kiosk housings and custom metal products powder coated at our Moorabbin VIC workshop."
-        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
-        imageAlt="Modern commercial architecture"
+        image="/images/products/metalbody.png"
+        imageAlt="Custom sheet metal enclosure fabricated at Orion Metal Industries Moorabbin Melbourne"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products" }]}
         primaryCta={{ label: "Enquire About a Product", href: "/contact" }}
       />

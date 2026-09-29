@@ -21,11 +21,11 @@ export default function IndustriesPage() {
 
       <PageHero
         eyebrow="Industries"
-        title="Industries We Serve"
-        accentWord="Serve"
+        title="Industries We Serve in Melbourne & Victoria"
+        accentWord="Melbourne"
         description="Sheet metal fabrication in Melbourne and Victoria for commercial, industrial, manufacturing, construction and engineering clients — Australian workshop in Moorabbin."
-        image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1920&q=80"
-        imageAlt="Industrial manufacturing facility"
+        image="/images/services/laser-cutting-steel-flanges.jpeg"
+        imageAlt="Laser cutting steel flanges at Orion Metal Industries Moorabbin Melbourne"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries" }]}
         primaryCta={{ label: "Discuss Your Project", href: "/contact" }}
       />
@@ -39,9 +39,9 @@ export default function IndustriesPage() {
         <div className="section-padding container-wide relative">
           <SectionHeading
             eyebrow="Sectors"
-            title="Application Areas We Support"
-            accentWord="Support"
-            description="Each sector has different tolerance, finish and delivery requirements. We adapt our process to suit the application."
+            title="Melbourne Sectors We Support"
+            accentWord="Melbourne"
+            description="Each sector has different tolerance, finish and delivery requirements. We adapt our fabrication process to suit the application."
             align="center"
           />
 

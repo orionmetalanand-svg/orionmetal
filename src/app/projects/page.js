@@ -20,11 +20,11 @@ export default function ProjectsPage() {
 
       <PageHero
         eyebrow="Gallery"
-        title="Fabrication Project Gallery"
-        accentWord="Project"
+        title="Fabrication Projects — Moorabbin Melbourne VIC"
+        accentWord="Melbourne"
         description="Laser cutting, powder coating and commercial metalwork from our Moorabbin, Melbourne VIC workshop."
-        image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80"
-        imageAlt="Commercial construction and structural steelwork"
+        image="/images/services/sheet-metal-bending-press-brake.jpeg"
+        imageAlt="Sheet metal bending press brake at Orion Metal Industries Moorabbin"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Projects" }]}
       />
 
