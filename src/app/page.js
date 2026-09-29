@@ -172,9 +172,9 @@ export default async function HomePage() {
           <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
               eyebrow="Products"
-              title="Custom Fabricated Products"
-              accentWord="Custom"
-              description="Digital kiosk housings, electronic enclosures, architectural metalwork and bespoke industrial components."
+              title="Custom Sheet Metal Enclosures Melbourne"
+              accentWord="Melbourne"
+              description="Custom sheet metal enclosure fabrication from our Moorabbin workshop — kiosk housings, electronic enclosures and industrial components for Victoria, Australia."
             />
             <Reveal delay={120}>
               <Button href="/products" variant="secondary" size="md" className="w-full sm:w-auto">
@@ -352,7 +352,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <GoogleReviews reviews={reviews} googleBusinessUrl={company.googleBusinessUrl} />
+      <GoogleReviews
+        reviews={reviews}
+        googleBusinessUrl={company.googleBusinessUrl}
+        googleReviewUrl={company.googleReviewUrl}
+      />
 
       {/* ── Blog — deliberate light band for contrast ─ */}
       {blogPosts.length > 0 && (

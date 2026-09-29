@@ -1,3 +1,6 @@
+const DEFAULT_GOOGLE_MAPS_URL = "https://maps.app.goo.gl/MPaKN8kjunEFjmin8";
+const DEFAULT_GOOGLE_REVIEW_URL = "https://g.page/r/Cfk-DFvV0WpUEAI/review";
+
 export const company = {
   name: "Orion Metal Industries Pty Ltd",
   shortName: "Orion Metal Industries",
@@ -36,7 +39,11 @@ export const company = {
   contactPerson: "Dinesh Kumar",
   email: "info@orionmetalindustries.com.au",
   /** Public Google Business Profile / Maps listing */
-  googleBusinessUrl: "https://maps.app.goo.gl/MPaKN8kjunEFjmin8",
+  googleBusinessUrl:
+    process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL?.trim() || DEFAULT_GOOGLE_MAPS_URL,
+  /** Direct “Write a review” link for GBP */
+  googleReviewUrl:
+    process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL?.trim() || DEFAULT_GOOGLE_REVIEW_URL,
   social: {
     instagram: "https://www.instagram.com/orionmetalindustries/",
     facebook:

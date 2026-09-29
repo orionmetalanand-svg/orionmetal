@@ -23,9 +23,9 @@ export default async function ProductsPage() {
 
       <PageHero
         eyebrow="Products"
-        title="Kiosk Enclosures & Metal Products Melbourne"
+        title="Custom Sheet Metal Enclosures & Kiosk Products Melbourne"
         accentWord="Melbourne"
-        description="Wayfinding pylons, digital kiosk housings and custom metal enclosures fabricated and powder coated in Moorabbin, Melbourne VIC — Australian production."
+        description="Sheet metal enclosure fabrication Melbourne — wayfinding pylons, digital kiosk housings and custom metal products powder coated at our Moorabbin VIC workshop."
         image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Modern commercial architecture"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products" }]}

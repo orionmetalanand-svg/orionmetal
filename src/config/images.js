@@ -54,8 +54,8 @@ export const stock = {
     alt: "Engineering and industrial production",
   },
   powderFinish: {
-    src: "https://images.unsplash.com/photo-1565514020176-efe69048881b?auto=format&fit=crop&w=1600&q=80",
-    alt: "Precision CNC machining and metal finishing",
+    src: "/images/services/powder-coating-booth.jpeg",
+    alt: "In-house powder coating booth at Orion Metal Industries Moorabbin",
   },
   metalSheets: {
     src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=1600&q=80",

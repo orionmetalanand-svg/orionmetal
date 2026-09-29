@@ -27,8 +27,12 @@ export const siteConfig = {
     "metal fabrication Melbourne Australia",
     "sheet metal bending Melbourne",
     "powder coating Melbourne Moorabbin",
+    "custom powder coating Melbourne",
     "custom metal enclosures Melbourne",
+    "sheet metal enclosures Melbourne",
     "custom sheet metal enclosure fabrication Melbourne",
+    "sheet metal enclosure fabrication Melbourne",
+    "precision sheet metal services Melbourne",
     "kiosk housing Melbourne",
     "industrial sheet metal fabrication Victoria",
   ],
@@ -46,13 +50,13 @@ export const pageSeo = {
   home: {
     title: "Sheet Metal Fabrication Moorabbin Melbourne VIC | Orion",
     description:
-      "Orion Metal Industries — Australian workshop at 1A Bibby Ct, Moorabbin VIC 3189. Laser cutting, bending, powder coating and custom enclosures for Melbourne and Victoria only.",
+      "Custom sheet metal enclosure fabrication in Melbourne — Orion’s Moorabbin workshop (1A Bibby Ct VIC 3189). Laser cutting, bending, powder coating and assembly for Victoria, Australia.",
     path: "/",
   },
   about: {
-    title: "About Orion | Sheet Metal Fabricator Moorabbin VIC Australia",
+    title: "About Us | Sheet Metal Fabricator Moorabbin Melbourne VIC",
     description:
-      "Orion Metal Industries Pty Ltd is a Moorabbin, Melbourne fabricator. Local laser cutting, bending, powder coating and assembly for Victorian commercial and industrial clients.",
+      "Meet Orion Metal Industries — precision sheet metal services in Moorabbin, Melbourne. Laser cutting, bending, powder coating and enclosure fabrication for Victorian commercial clients.",
     path: "/about",
   },
   services: {
@@ -62,9 +66,9 @@ export const pageSeo = {
     path: "/services",
   },
   products: {
-    title: "Kiosk Enclosures & Metal Products | Fabricated in Melbourne VIC",
+    title: "Custom Sheet Metal Enclosures Melbourne | Kiosk Products Moorabbin",
     description:
-      "Digital kiosk housings, wayfinding pylons and custom metal enclosures fabricated and powder coated in Moorabbin, Melbourne, Australia.",
+      "Sheet metal enclosures Melbourne — kiosk housings, wayfinding pylons and custom fabricated metal products, powder coated in Moorabbin VIC 3189 for Australian commercial clients.",
     path: "/products",
   },
   projects: {

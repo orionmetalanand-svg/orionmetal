@@ -162,6 +162,11 @@ export default function LocationSection() {
                 <Button href={getWhatsAppUrl()} variant="secondary" size="md" external className="w-full">
                   WhatsApp Us
                 </Button>
+                {company.googleReviewUrl ? (
+                  <Button href={company.googleReviewUrl} variant="outline" size="md" external className="w-full">
+                    Leave a Google Review
+                  </Button>
+                ) : null}
               </div>
             </div>
           </Reveal>

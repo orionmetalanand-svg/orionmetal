@@ -157,8 +157,8 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/[0.09] shadow-lift">
               <Image
-                src="https://images.unsplash.com/photo-1565514020176-efe69048881b?auto=format&fit=crop&w=1600&q=80"
-                alt="Precision metal finishing and CNC manufacturing"
+                src="/images/services/powder-coating-booth.jpeg"
+                alt="Precision metal finishing and CNC manufacturing at Orion Metal Industries Moorabbin"
                 fill
                 className="object-cover"
                 sizes="(max-width:1024px) 92vw, 46vw"

@@ -50,7 +50,11 @@ export function getOrganizationSchema() {
       { "@type": "City", name: "Dandenong" },
       { "@type": "City", name: "Clayton" },
     ],
-    sameAs: [company.social?.instagram, company.social?.facebook].filter(Boolean),
+    sameAs: [
+      company.googleBusinessUrl,
+      company.social?.instagram,
+      company.social?.facebook,
+    ].filter(Boolean),
     priceRange: "$$",
   };
 }

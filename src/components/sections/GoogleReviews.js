@@ -56,7 +56,11 @@ function formatDate(dateStr) {
   });
 }
 
-export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
+export default function GoogleReviews({
+  reviews,
+  googleBusinessUrl = null,
+  googleReviewUrl = null,
+}) {
   if (!reviews?.length) return null;
 
   const average = getAverageRating(reviews);
@@ -73,7 +77,7 @@ export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
             eyebrow="Reviews"
             title="What Clients Say About Our Work"
             accentWord="Clients"
-            description="Placeholder review content shown for layout. Verified Google reviews and links can be connected in Supabase before launch."
+            description="Worked with Orion in Melbourne or Victoria? Your Google review helps local businesses find our Moorabbin fabrication workshop."
           />
 
           {/* Rating summary card */}
@@ -88,7 +92,7 @@ export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
                 <div>
                   <p className="text-[13.5px] font-bold text-white">Google Reviews</p>
                   <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-faint">
-                    Placeholder data
+                    Moorabbin, Melbourne VIC
                   </p>
                 </div>
               </div>
@@ -105,16 +109,21 @@ export default function GoogleReviews({ reviews, googleBusinessUrl = null }) {
                 </div>
               </div>
 
-              <div className="mt-7">
+              <div className="mt-7 grid gap-2.5">
+                {googleReviewUrl ? (
+                  <Button href={googleReviewUrl} variant="primary" size="sm" external className="w-full">
+                    Leave a Google Review
+                  </Button>
+                ) : null}
                 {googleBusinessUrl ? (
                   <Button href={googleBusinessUrl} variant="outline" size="sm" external className="w-full">
-                    View on Google
+                    View on Google Maps
                   </Button>
-                ) : (
+                ) : !googleReviewUrl ? (
                   <p className="rounded-full border border-dashed border-white/14 px-4 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-faint">
                     Google link — coming soon
                   </p>
-                )}
+                ) : null}
               </div>
             </div>
           </Reveal>
