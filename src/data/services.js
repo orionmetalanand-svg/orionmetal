@@ -6,11 +6,11 @@ export const services = [
     slug: "precision-laser-cutting",
     name: "Precision Laser Cutting",
     shortDescription:
-      "CNC laser cutting across metals, acrylic, plastics and timber — up to 20mm mild steel.",
+      "CNC fibre laser cutting in south-east Melbourne — custom sheet metal enclosures, brackets and panels to ±0.1 mm. 24-hour quotes.",
     overview:
-      "Our fibre laser cutting service in Moorabbin, south-east Melbourne delivers clean, accurate cuts for commercial and industrial components. From simple profiles and custom sheet metal enclosures to intricate decorative screens, we process a wide variety of metals with ±0.1 mm positional accuracy.",
+      "Our fibre laser cutting service in Moorabbin, south-east Melbourne delivers clean, accurate cuts for commercial and industrial components. From custom sheet metal enclosures and laser cut brackets to intricate architectural screens, we process a wide variety of metals with ±0.1 mm positional accuracy and return quotes within 24 hours.",
     description:
-      "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC fibre laser technology, we cut complex geometries with tight tolerances and minimal material waste — across mild steel, stainless, aluminium, galvanised, coated steels and more. We accept DXF, DWG, STEP and PDF. Quotes returned within 24 hours.",
+      "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC fibre laser technology, we cut complex geometries with tight tolerances and minimal material waste — across mild steel, stainless, aluminium, galvanised, coated steels and more. We accept DXF, DWG, STEP and PDF. Quotes returned within 24 hours. Read our full technical guide on [laser cutting in Melbourne](/blog/laser-cutting-melbourne-guide).",
     image: "/images/services/cnc-laser-cutting-machine.jpeg",
     localImage: "/images/services/cnc-laser-cutting-machine.jpeg",
     materialsSection: {

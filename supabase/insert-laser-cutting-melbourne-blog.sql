@@ -1,4 +1,4 @@
--- Run in Supabase SQL editor to publish the laser cutting guide.
+-- Run in Supabase SQL editor to publish the laser cutting Melbourne guide.
 -- Safe to re-run: ON CONFLICT (slug) DO UPDATE.
 
 INSERT INTO blog_posts (
@@ -121,11 +121,11 @@ Yes — we pack and dispatch to customers across Victoria, interstate, and to so
 
 To get a quote from our Moorabbin workshop:
 
-1. Send your DXF, DWG, STEP or PDF to info@orionmetalindustries.com.au
+1. Send your DXF, DWG, STEP or PDF to [info@orionmetalindustries.com.au](mailto:info@orionmetalindustries.com.au)
 2. Include material, thickness, quantity and finish
-3. We return a quote within 24 hours
+3. We return a quote within **24 hours**
 
-Or use our contact form at orionmetalindustries.com.au/contact.
+Or use our [contact form](/contact) or [WhatsApp](https://wa.me/61402208011).
 
 ![Sheet metal fabrication at the Orion Metal Industries workshop — Moorabbin VIC 3189](/images/blog/sheet-metal-fabrication-moorabbin.jpeg)
 
@@ -133,11 +133,11 @@ Or use our contact form at orionmetalindustries.com.au/contact.
 
 **Orion Metal Industries Pty Ltd**
 **1A Bibby Ct, Moorabbin VIC 3189, Australia**
-Phone: 0402 208 011
+Phone: [0402 208 011](tel:+61402208011)
 Email: info@orionmetalindustries.com.au
-Maps: https://maps.app.goo.gl/MPaKN8kjunEFjmin8
+Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)
 
-We provide laser cutting, bending, powder coating and custom assembly under one roof for commercial and industrial clients in Melbourne and across Victoria, Australia.$post$,
+We provide laser cutting, bending, powder coating and custom assembly under one roof for commercial and industrial clients in Melbourne and across Victoria, Australia. [Request a quote](/contact) or read our guides on [powder coating in Melbourne](/blog/powder-coating-melbourne-moorabbin) and [sheet metal fabrication in Moorabbin](/blog/sheet-metal-fabrication-moorabbin-guide).$post$,
   '/images/services/cnc-laser-cutting-machine.jpeg',
   ARRAY['laser cutting Melbourne','laser cutting south east Melbourne','CNC laser cutting','sheet metal fabrication Melbourne','custom sheet metal enclosures Melbourne','laser cutting guide','fibre laser cutting'],
   'Laser Cutting Melbourne: Technical Guide for Commercial Buyers | Orion',
@@ -146,12 +146,12 @@ We provide laser cutting, bending, powder coating and custom assembly under one 
   '2026-10-02T00:00:00.000Z'
 )
 ON CONFLICT (slug) DO UPDATE SET
-  title        = EXCLUDED.title,
-  excerpt      = EXCLUDED.excerpt,
-  content      = EXCLUDED.content,
-  cover_image_url = EXCLUDED.cover_image_url,
-  tags         = EXCLUDED.tags,
-  meta_title   = EXCLUDED.meta_title,
+  title          = EXCLUDED.title,
+  excerpt        = EXCLUDED.excerpt,
+  content        = EXCLUDED.content,
+  cover_image_url= EXCLUDED.cover_image_url,
+  tags           = EXCLUDED.tags,
+  meta_title     = EXCLUDED.meta_title,
   meta_description = EXCLUDED.meta_description,
-  is_published = EXCLUDED.is_published,
-  published_at = EXCLUDED.published_at;
+  is_published   = EXCLUDED.is_published,
+  published_at   = EXCLUDED.published_at;
