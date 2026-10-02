@@ -54,9 +54,9 @@ export function absoluteUrl(path = "/") {
 
 export const pageSeo = {
   home: {
-    title: "Sheet Metal Fabrication Moorabbin Melbourne VIC | Orion",
+    title: "Sheet Metal Fabrication Moorabbin South-East Melbourne | Orion",
     description:
-      "Custom sheet metal enclosure fabrication in Melbourne — Orion’s Moorabbin workshop (1A Bibby Ct VIC 3189). Laser cutting, bending, powder coating and assembly for Victoria, Australia.",
+      "Full-service sheet metal fabricator in Moorabbin, south-east Melbourne (1A Bibby Ct VIC 3189). Custom enclosures, laser cutting, bending, in-house powder coating and assembly — quotes within 24 hours for Victoria.",
     path: "/",
   },
   about: {
