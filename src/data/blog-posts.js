@@ -356,7 +356,7 @@ Laser cutting is particularly well suited to:
 - **Structural brackets and plates** — mounting plates, gussets and flanges where bolt-hole positioning is critical
 - **Signage blanks** — letters, logos and form-cut panels for powder coating and installation
 
-![Metal fabrication workshop with CNC plasma/laser cutting machine and industrial equipment](https://images.unsplash.com/photo-1764115424793-063c2a8b61f8?auto=format&fit=crop&w=1600&q=80)
+![Laser cut steel flanges and precision sheet metal components ready for bending and assembly](/images/services/laser-cutting-steel-flanges.jpeg)
 
 ## Laser cutting combined with downstream fabrication
 
