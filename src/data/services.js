@@ -8,9 +8,9 @@ export const services = [
     shortDescription:
       "CNC laser cutting across metals, acrylic, plastics and timber — up to 20mm mild steel.",
     overview:
-      "Our precision laser cutting service delivers clean, accurate cuts for commercial and industrial components. From simple profiles to intricate decorative patterns, we process a wide variety of metal types, thicknesses, acrylics, plastics and timber with consistent quality.",
+      "Our fibre laser cutting service in Moorabbin, south-east Melbourne delivers clean, accurate cuts for commercial and industrial components. From simple profiles and custom sheet metal enclosures to intricate decorative screens, we process a wide variety of metals with ±0.1 mm positional accuracy.",
     description:
-      "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC laser technology, we cut complex geometries with tight tolerances and minimal material waste — across ferrous and non-ferrous metals, coated steels, timber, acrylic and engineering plastics.",
+      "Laser cutting is the foundation of modern sheet metal fabrication. Using advanced CNC fibre laser technology, we cut complex geometries with tight tolerances and minimal material waste — across mild steel, stainless, aluminium, galvanised, coated steels and more. We accept DXF, DWG, STEP and PDF. Quotes returned within 24 hours.",
     image: "/images/services/cnc-laser-cutting-machine.jpeg",
     localImage: "/images/services/cnc-laser-cutting-machine.jpeg",
     materialsSection: {
@@ -61,17 +61,18 @@ export const services = [
       ],
     },
     applications: [
-      "Component profiles and brackets",
+      "Custom sheet metal enclosures and panels",
+      "Component profiles, brackets and flanges",
       "Ventilation and mounting panels",
       "Decorative and architectural screens",
       "Signage and branding elements",
-      "Enclosure cutouts and access panels",
     ],
     benefits: [
-      "High precision with clean edge quality",
-      "Complex shapes and fine detail capability",
-      "Efficient processing for batch production",
-      "Consistent results across repeat orders",
+      "±0.1 mm positional accuracy on standard sheet",
+      "High precision with clean, burr-free edge quality",
+      "DXF, DWG, STEP and PDF files accepted",
+      "24-hour quotes for Melbourne commercial clients",
+      "Consistent results across repeat production batches",
     ],
   },
   {

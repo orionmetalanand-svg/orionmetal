@@ -96,9 +96,9 @@ export const pageSeo = {
     path: "/contact",
   },
   blog: {
-    title: "Fabrication Blog Melbourne | Moorabbin VIC Insights",
+    title: "Laser Cutting & Fabrication Blog Melbourne | Moorabbin VIC",
     description:
-      "Guides on sheet metal fabrication, powder coating, wayfinding kiosks and laser cutting for Moorabbin, Melbourne and Victoria, Australia.",
+      "Technical guides on laser cutting, powder coating, sheet metal enclosures and wayfinding kiosks — from Orion Metal Industries, Moorabbin south-east Melbourne.",
     path: "/blog",
   },
   privacy: {
