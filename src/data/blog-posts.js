@@ -67,17 +67,29 @@ Contact Orion Metal Industries with your drawings and specifications. We provide
       "Why powder coating is the preferred finish for commercial metal fabrication — durability, appearance, and production efficiency.",
     content: `Powder coating provides a durable, professional finish for fabricated metal components. For commercial and industrial applications, it protects against corrosion and supports consistent batch production.
 
+![Industrial powder coating technician applying finish to metal components in a factory spray booth](https://images.unsplash.com/photo-1676646693434-8ee684e8ba49?auto=format&fit=crop&w=1600&q=80)
+
 ## Why Choose Powder Coating
 
-Uniform, tough finish that resists chipping, scratching, and fading.
+Powder coating creates a **uniform, electrostatically bonded film** baked onto the metal surface. Unlike wet paint, it resists chipping, scratching, UV fade and corrosion — making it the go-to finish for commercial enclosures, architectural metalwork and industrial hardware.
+
+Key benefits:
+- **Tougher than wet paint** — fused film that won't peel or crack under normal handling
+- **Colour consistency** — matched to Dulux, Interpon or RAL codes across a full production batch
+- **Clean process** — no solvents, lower VOC emissions than wet spray
+- **Fast turnaround** — cures in minutes once out of the oven
 
 ## Integrated Fabrication Workflow
 
-Choosing a fabricator with in-house powder coating simplifies your supply chain and reduces lead times.
+Choosing a fabricator with **in-house powder coating** simplifies your supply chain significantly. Parts move from laser cutting to bending to coating without leaving the building — one quote, one contact, one delivery.
+
+At Orion Metal Industries in Moorabbin, our powder coating line sits alongside laser cutting, press brake bending and assembly. Commercial clients across Melbourne and Victoria benefit from shorter lead times and consistent quality control at every stage.
 
 ## Orion Metal Industries
 
-Our Moorabbin facility provides integrated fabrication and powder coating for commercial and industrial clients across Melbourne and Victoria.`,
+Our Moorabbin facility provides integrated fabrication and powder coating for commercial and industrial clients across Melbourne and Victoria. [Request a quote](/contact) with your drawings and finish specification.
+
+**1A Bibby Ct, Moorabbin VIC 3189** | Phone: [0402 208 011](tel:+61402208011)`,
     coverImage: "/images/services/powder-coating-booth.jpeg",
     author: "Orion Metal Industries",
     tags: ["powder coating", "Melbourne", "metal fabrication"],
@@ -278,7 +290,7 @@ If you specify **digital wayfinding machines for shopping centres**, we fabricat
 
 This guide covers how fibre laser cutting works, what to expect from a professional Melbourne workshop, and how to prepare your drawings for a clean, fast quote.
 
-![CNC fibre laser cutting machine processing sheet metal at Orion Metal Industries in Moorabbin Melbourne](/images/services/cnc-laser-cutting-machine.jpeg)
+![Industrial CNC laser cutter actively cutting a metal sheet — close-up of the cutting head on a spiked bed](https://images.unsplash.com/photo-1764114235891-66ff86abaf87?auto=format&fit=crop&w=1600&q=80)
 
 ## How fibre laser cutting works
 
@@ -344,7 +356,7 @@ Laser cutting is particularly well suited to:
 - **Structural brackets and plates** — mounting plates, gussets and flanges where bolt-hole positioning is critical
 - **Signage blanks** — letters, logos and form-cut panels for powder coating and installation
 
-![Laser cut steel flanges and precision components from the Orion Metal Industries Moorabbin workshop](/images/services/laser-cutting-steel-flanges.jpeg)
+![Metal fabrication workshop with CNC plasma/laser cutting machine and industrial equipment](https://images.unsplash.com/photo-1764115424793-063c2a8b61f8?auto=format&fit=crop&w=1600&q=80)
 
 ## Laser cutting combined with downstream fabrication
 
@@ -384,7 +396,7 @@ To get a quote from our Moorabbin workshop:
 
 Or use our [contact form](/contact) or [WhatsApp](https://wa.me/61402208011).
 
-![Sheet metal fabrication at the Orion Metal Industries workshop — Moorabbin VIC 3189](/images/blog/sheet-metal-fabrication-moorabbin.jpeg)
+![A machine cutting a piece of metal with sparks — CNC laser cutting in action at an industrial manufacturing facility](https://images.unsplash.com/photo-1735494033576-9c882e80504c?auto=format&fit=crop&w=1600&q=80)
 
 ## Visit or contact
 
