@@ -75,6 +75,31 @@ export function getWebsiteSchema() {
   };
 }
 
+/** Page-level schema — helps Google pick the correct thumbnail for /about etc. */
+export function getWebPageSchema({ name, path, description, imagePath, imageAlt }) {
+  const pageUrl = path.startsWith("http") ? path : `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;
+  const imageUrl = imagePath.startsWith("http")
+    ? imagePath
+    : `${siteConfig.url}${imagePath.startsWith("/") ? imagePath : `/${imagePath}`}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name,
+    description,
+    inLanguage: "en-AU",
+    isPartOf: { "@id": `${siteConfig.url}/#website` },
+    about: { "@id": `${siteConfig.url}/#organization` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: imageUrl,
+      caption: imageAlt || name,
+    },
+  };
+}
+
 export function getServiceSchema(service) {
   return {
     "@context": "https://schema.org",

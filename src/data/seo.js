@@ -62,8 +62,13 @@ export const pageSeo = {
   about: {
     title: "About Us | Sheet Metal Fabricator Moorabbin Melbourne VIC",
     description:
-      "Meet Orion Metal Industries — precision sheet metal services in Moorabbin, Melbourne. Laser cutting, bending, powder coating and enclosure fabrication for Victorian commercial clients.",
+      "Meet Orion Metal Industries — full-service sheet metal fabrication in Moorabbin, south-east Melbourne. Laser cutting, bending, in-house powder coating and assembly. Quotes within 24 hours.",
     path: "/about",
+    /** Used for Open Graph / Twitter / Google thumbnail — real workshop, not stock cars */
+    ogImage: "/images/company/outlook1.png",
+    ogImageAlt: "Orion Metal Industries workshop at 1A Bibby Ct, Moorabbin VIC — sheet metal fabrication",
+    ogImageWidth: 1200,
+    ogImageHeight: 800,
   },
   services: {
     title: "Sheet Metal Services South-East Melbourne | Full-Service Fabrication VIC",
@@ -118,7 +123,16 @@ export function getPageMetadata(pageKey) {
   if (!page) return {};
 
   const url = absoluteUrl(page.path);
-  const ogTitle = `${page.title} | ${company.shortName}`;
+  const ogTitle = page.title.includes(company.shortName)
+    ? page.title
+    : `${page.title} | ${company.shortName}`;
+  const ogImagePath = page.ogImage || "/images/services/cnc-laser-cutting-machine.jpeg";
+  const ogImageUrl = absoluteUrl(ogImagePath);
+  const ogImageWidth = page.ogImageWidth || 1600;
+  const ogImageHeight = page.ogImageHeight || 1067;
+  const ogImageAlt =
+    page.ogImageAlt ||
+    "CNC laser cutting at Orion Metal Industries, Moorabbin Melbourne";
 
   return {
     title: page.title,
@@ -141,10 +155,10 @@ export function getPageMetadata(pageKey) {
       type: "website",
       images: [
         {
-          url: absoluteUrl("/images/services/cnc-laser-cutting-machine.jpeg"),
-          width: 1600,
-          height: 1067,
-          alt: "CNC laser cutting at Orion Metal Industries, Moorabbin Melbourne",
+          url: ogImageUrl,
+          width: ogImageWidth,
+          height: ogImageHeight,
+          alt: ogImageAlt,
         },
       ],
     },
@@ -152,7 +166,7 @@ export function getPageMetadata(pageKey) {
       card: "summary_large_image",
       title: ogTitle,
       description: page.description,
-      images: [absoluteUrl("/images/services/cnc-laser-cutting-machine.jpeg")],
+      images: [ogImageUrl],
     },
   };
 }

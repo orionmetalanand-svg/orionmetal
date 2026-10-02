@@ -9,8 +9,8 @@ import Button from "@/components/ui/Button";
 import Logo from "@/components/ui/Logo";
 import { company } from "@/data/company";
 import { services } from "@/data/services";
-import { getPageMetadata } from "@/data/seo";
-import { JsonLd, getBreadcrumbSchema } from "@/lib/structured-data";
+import { getPageMetadata, pageSeo } from "@/data/seo";
+import { JsonLd, getBreadcrumbSchema, getWebPageSchema } from "@/lib/structured-data";
 
 export const metadata = getPageMetadata("about");
 
@@ -38,6 +38,8 @@ const pillars = [
 ];
 
 export default function AboutPage() {
+  const aboutMeta = pageSeo.about;
+
   return (
     <>
       <JsonLd
@@ -46,14 +48,23 @@ export default function AboutPage() {
           { name: "About", path: "/about" },
         ])}
       />
+      <JsonLd
+        data={getWebPageSchema({
+          name: aboutMeta.title,
+          path: aboutMeta.path,
+          description: aboutMeta.description,
+          imagePath: aboutMeta.ogImage,
+          imageAlt: aboutMeta.ogImageAlt,
+        })}
+      />
 
       <PageHero
         eyebrow="About Us"
         title="Precision Metal Engineering in Moorabbin"
         accentWord="Moorabbin"
         description={company.description}
-        image="/images/services/cnc-laser-cutting-machine.jpeg"
-        imageAlt="CNC laser cutting at Orion Metal Industries Moorabbin Melbourne"
+        image="/images/company/outlook1.png"
+        imageAlt="Orion Metal Industries workshop at 1A Bibby Ct, Moorabbin VIC 3189 — sheet metal fabrication Melbourne"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
         primaryCta={{ label: "Request a Quote", href: "/contact" }}
       />
