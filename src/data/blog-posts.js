@@ -424,4 +424,242 @@ We provide laser cutting, bending, powder coating and custom assembly under one 
     publishedAt: "2026-10-02T00:00:00.000Z",
     isPublished: true,
   },
+  {
+    id: "custom-sheet-metal-enclosures-melbourne",
+    slug: "custom-sheet-metal-enclosures-melbourne",
+    title: "Custom Sheet Metal Enclosures Melbourne: From Design to Powder Coat",
+    excerpt:
+      "How commercial and industrial buyers in Melbourne specify, order and take delivery of custom sheet metal enclosures — panels, apertures, finishes and what to include in your brief.",
+    content: `Custom sheet metal enclosures are the housings that keep electronics, controls, kiosk displays and industrial equipment protected, professional-looking and installation-ready. If you are specifying an enclosure in Melbourne, this guide covers what to include in your brief, what the fabrication process looks like, and what you can expect from a full-service Moorabbin workshop.
+
+![Custom sheet metal enclosure fabrication at Orion Metal Industries Moorabbin Melbourne — laser cut and powder coated](/images/services/cnc-laser-cutting-machine.jpeg)
+
+## What is a custom sheet metal enclosure?
+
+A **custom enclosure** is a fabricated metal housing made to your drawing — not a catalogue box. It may be:
+
+- An **electrical cabinet** housing switchgear, PLCs or distribution boards
+- A **kiosk housing** for a digital display, payment terminal or wayfinding screen
+- An **equipment guard or cover** for industrial machinery
+- A **control panel enclosure** for a custom automation build
+- An **architectural housing** — exterior-grade, powder coated to a specified colour
+
+Unlike off-the-shelf enclosures, custom fabricated units match your exact dimensions, aperture positions, material, and finish.
+
+## Why Melbourne commercial buyers go custom
+
+Standard enclosures from a catalogue rarely fit perfectly. Buyers choose **custom sheet metal enclosure fabrication in Melbourne** when:
+
+- **Screen or component sizes** do not match standard cutout patterns
+- **Powder coat colour** must match a brand standard (RAL, Dulux or Interpon code)
+- **IP or structural rating** requires a specific material and wall thickness
+- **Mounting** is non-standard — flush wall, floor-standing pylon, rack or surface
+- **Multiple apertures** are needed precisely positioned for screens, locks, vents and cabling
+
+![Laser cut steel flanges and precision components from Orion Metal Industries Moorabbin workshop](/images/services/laser-cutting-steel-flanges.jpeg)
+
+## The fabrication process at our Moorabbin workshop
+
+At Orion Metal Industries we take an enclosure from drawing to delivery without leaving Moorabbin:
+
+### 1. Drawing review
+
+Send your PDF, DXF, DWG or STEP file. We check material, wall thickness, bend allowances, aperture positions and any special requirements before quoting. Quotes returned within **24 hours**.
+
+### 2. Laser cutting
+
+The flat pattern is cut on our CNC fibre laser to ±0.1 mm accuracy. Apertures, fixing holes, louvres and cable entries are cut in the same program as the outer profile — no secondary punching required.
+
+### 3. Press brake bending
+
+Flat blanks are formed into the enclosure body on our press brake. Flanges, corners, return lips and mounting tabs are formed to the specified angles.
+
+### 4. Welding and assembly
+
+Seams, brackets and internal mounting rails are welded or fastened. Access doors, hinges, locks and any hardware specified in your drawings are fitted before finishing.
+
+### 5. In-house powder coating
+
+The assembled enclosure is prepared and powder coated in our on-site booth. We match **Dulux, Interpon and RAL** colour references. Standard gloss, satin and matt finishes are available.
+
+### 6. Dispatch
+
+Enclosures are packed and dispatched to Melbourne, Victoria, and nationally. For repeat orders we hold program and colour records.
+
+![In-house powder coating booth at Orion Metal Industries Moorabbin — durable factory finish for custom metal enclosures](/images/services/powder-coating-booth.jpeg)
+
+## What to include in your enclosure brief
+
+To get an accurate quote, include the following:
+
+**Dimensions**
+- Overall external height × width × depth (or internal if critical)
+- Wall thickness — typically 1.5 mm, 2 mm or 3 mm mild steel or zincanneal for standard enclosures
+
+**Apertures and penetrations**
+- Screen cutout size and position (with tolerances if critical)
+- Ventilation — louvres, mesh, or blank with external ventilation
+- Cable entry — gland positions, conduit entry or slots
+- Door or access panel — hinged, removable, or no door
+
+**Material and finish**
+- Mild steel, galvanised, zincanneal, stainless or aluminium
+- Powder coat colour code (Dulux, Interpon or RAL) or provide a physical sample
+- Gloss / satin / matt preference
+- Indoor or outdoor exposure
+
+**Quantity and delivery**
+- Prototype quantity vs production quantity (we quote both)
+- Required delivery date and delivery address
+
+## Common Melbourne enclosure applications we fabricate
+
+- **Digital kiosk housings** for shopping centres, transport hubs and government facilities
+- **Wayfinding pylon enclosures** for commercial precincts
+- **Electrical and control panel enclosures** for manufacturing and utilities
+- **Outdoor equipment housings** — powder coated for UV and weather exposure
+- **Architectural metalwork** — custom profile housings for fitout and commercial interior
+
+See our [products page](/products) for examples of kiosk and wayfinding enclosures we have produced, and our [projects gallery](/projects) for fabricated panels, frames and custom metalwork.
+
+## Why choose a local Melbourne enclosure fabricator
+
+Working with a **Moorabbin-based fabricator** for your custom enclosure means:
+
+- **Easy site visits** — inspect samples and check colour matches before production runs
+- **Shorter freight** — local dispatch reduces lead time and damage risk
+- **One supplier** — laser cutting, bending, welding, coating and assembly under one roof
+- **AU standards** — fabricated to local drawings, Australian material grades and finish specs
+
+## Request a quote
+
+Send your drawings to [info@orionmetalindustries.com.au](mailto:info@orionmetalindustries.com.au) or use our [contact form](/contact). Include material, dimensions, colour and quantity. We return a quote within **24 hours**.
+
+**Orion Metal Industries Pty Ltd**
+**1A Bibby Ct, Moorabbin VIC 3189, Australia**
+Phone: [0402 208 011](tel:+61402208011)
+Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)
+
+Read related guides: [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide) · [powder coating Melbourne](/blog/powder-coating-melbourne-moorabbin) · [sheet metal fabrication Moorabbin](/blog/sheet-metal-fabrication-moorabbin-guide)`,
+    coverImage: "/images/services/cnc-laser-cutting-machine.jpeg",
+    author: "Orion Metal Industries",
+    tags: [
+      "custom sheet metal enclosures Melbourne",
+      "sheet metal enclosure fabrication Melbourne",
+      "custom metal enclosures",
+      "kiosk enclosure Melbourne",
+      "powder coated enclosures Melbourne",
+      "custom fabrication Melbourne",
+    ],
+    metaTitle: "Custom Sheet Metal Enclosures Melbourne | Fabricated & Powder Coated | Orion",
+    metaDescription:
+      "Custom sheet metal enclosure fabrication in Melbourne — laser cut, bent, welded and powder coated at our Moorabbin workshop. Electrical cabinets, kiosk housings, control panels. 24-hour quotes.",
+    publishedAt: "2026-10-08T00:00:00.000Z",
+    isPublished: true,
+  },
+  {
+    id: "sheet-metal-fabrication-near-me-moorabbin",
+    slug: "sheet-metal-fabrication-near-me-moorabbin",
+    title: "Sheet Metal Fabrication Near Me: Why South-East Melbourne Businesses Choose Moorabbin",
+    excerpt:
+      "If you are searching for sheet metal fabrication near me in Melbourne's south-east, here is what to look for and why proximity to a full-service Moorabbin workshop matters.",
+    content: `When you search **sheet metal fabrication near me**, you are looking for a workshop close enough to visit, inspect samples, discuss drawings in person and receive parts without long freight delays. For commercial and industrial businesses in south-east Melbourne, Moorabbin is one of the most accessible fabrication locations in the region.
+
+This guide explains what to look for in a local Melbourne sheet metal fabricator and why **proximity plus capability** together matter for your project.
+
+![Sheet metal fabrication workshop at Orion Metal Industries, Moorabbin VIC 3189 — serving south-east Melbourne](/images/blog/sheet-metal-fabrication-moorabbin.jpeg)
+
+## Why location matters for sheet metal fabrication
+
+Sheet metal fabrication involves multiple touchpoints — sending drawings, reviewing samples, approving colours, inspecting first articles before production runs, and receiving deliveries. Each of these is simpler when your fabricator is close.
+
+**Shorter freight = faster delivery and less damage risk**
+Fabricated parts — particularly enclosures, panels and formed sections — can be damaged in transit if shipped long distances without proper packaging. Local delivery from a Moorabbin workshop to a south-east Melbourne site is typically same-day or next-day.
+
+**Easy site visits for colour approval and drawing review**
+Powder coat colour can vary between screens and physical samples. When your fabricator is local, you can visit the workshop to approve a physical colour chip before committing to a production run. The same applies to first-off samples and fit-check components.
+
+**Faster turnaround on urgent or revised work**
+Drawings change. When you need a revision fabricated quickly, a local workshop can turn around revised parts faster than one that relies on interstate freight.
+
+## What south-east Melbourne suburbs we serve
+
+Our workshop at **1A Bibby Ct, Moorabbin VIC 3189** is central to Melbourne's south-east industrial corridor. We regularly supply fabricated parts to clients in:
+
+- **Cheltenham** · **Braeside** · **Keysborough**
+- **Clayton** · **Springvale** · **Dandenong**
+- **Bayside** · **Carrum Downs** · **Moorabbin**
+- **Greater Melbourne** and Victoria-wide dispatch
+
+For clients outside south-east Melbourne we dispatch by road freight across Victoria and nationally.
+
+![Laser cut and powder coated sheet metal components — fabricated in Moorabbin for Melbourne and Victoria](/images/services/laser-cutting-steel-flanges.jpeg)
+
+## What makes a full-service local fabricator different
+
+Searching **sheet metal fabrication near me** may return a range of results — laser-only shops, bending-only shops, or full-service workshops. Here is what to confirm before you commit:
+
+| Capability | Why it matters |
+|---|---|
+| **Laser cutting** | Precise flat-pattern cutting from your files |
+| **Press brake bending** | Forming flat blanks into 3D profiles and enclosures |
+| **Welding** | Joining components into assemblies |
+| **In-house powder coating** | Consistent colour finish without a second supplier |
+| **Assembly** | Hardware fitting, kitting, dispatch-ready output |
+
+At **Orion Metal Industries** all five are available under one roof at Moorabbin. You do not need to coordinate between a laser shop, a bender and a separate coater — one workshop, one quote, one delivery.
+
+## Common jobs from south-east Melbourne clients
+
+We regularly fabricate for commercial and industrial businesses across the south-east corridor:
+
+- **Custom metal enclosures and cabinets** — electrical, kiosk and control panel housings
+- **Brackets and mounting plates** — structural and equipment mounting
+- **Architectural panels and screens** — decorative and functional metalwork for fitout
+- **Frames and structural components** — custom steel sections for commercial construction
+- **Powder coated signage blanks** — formed and finished to brand colour specifications
+
+If your project involves **custom sheet metal work in Melbourne**, [send us your drawings](/contact) and we will provide a quote within **24 hours**.
+
+## How to prepare for a quote
+
+Whether you found us via **sheet metal fabrication near me**, **Moorabbin metal fabrication** or **south-east Melbourne fabricator** — the fastest way to get a quote is:
+
+1. Prepare your drawing (DXF, DWG, STEP, PDF or sketch with dimensions)
+2. Note material (mild steel, stainless, aluminium, galvanised) and thickness
+3. Specify the finish — powder coat colour code, raw, or galvanise
+4. Include quantity and required date
+5. Send to [info@orionmetalindustries.com.au](mailto:info@orionmetalindustries.com.au) or via our [contact form](/contact)
+
+We return a quote within **24 hours** for standard work. For complex assemblies we may ask a question or two before quoting.
+
+![Sheet metal bending press brake at Orion Metal Industries Moorabbin — forming custom enclosures and brackets for Melbourne clients](/images/services/sheet-metal-bending-press-brake.jpeg)
+
+## Visit or contact
+
+**Orion Metal Industries Pty Ltd**
+**1A Bibby Ct, Moorabbin VIC 3189, Australia**
+
+Located in Melbourne's south-east — easy access from the Nepean Highway, South Road and surrounding industrial precincts.
+
+Phone: [0402 208 011](tel:+61402208011)
+Email: info@orionmetalindustries.com.au
+Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)
+
+Related guides: [custom sheet metal enclosures Melbourne](/blog/custom-sheet-metal-enclosures-melbourne) · [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide) · [powder coating Moorabbin](/blog/powder-coating-melbourne-moorabbin)`,
+    coverImage: "/images/blog/sheet-metal-fabrication-moorabbin.jpeg",
+    author: "Orion Metal Industries",
+    tags: [
+      "sheet metal fabrication near me",
+      "sheet metal fabrication south east Melbourne",
+      "metal fabrication Moorabbin",
+      "sheet metal fabrication Melbourne",
+      "local metal fabricator Melbourne",
+    ],
+    metaTitle: "Sheet Metal Fabrication Near Me | South-East Melbourne | Moorabbin VIC",
+    metaDescription:
+      "Looking for sheet metal fabrication near you in south-east Melbourne? Orion Metal Industries in Moorabbin offers laser cutting, bending, powder coating and assembly. 24-hour quotes.",
+    publishedAt: "2026-10-08T00:00:00.000Z",
+    isPublished: true,
+  },
 ];
