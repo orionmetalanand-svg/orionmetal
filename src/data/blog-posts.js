@@ -432,7 +432,7 @@ We provide laser cutting, bending, powder coating and custom assembly under one 
       "How commercial and industrial buyers in Melbourne specify, order and take delivery of custom sheet metal enclosures — panels, apertures, finishes and what to include in your brief.",
     content: `Custom sheet metal enclosures are the housings that keep electronics, controls, kiosk displays and industrial equipment protected, professional-looking and installation-ready. If you are specifying an enclosure in Melbourne, this guide covers what to include in your brief, what the fabrication process looks like, and what you can expect from a full-service Moorabbin workshop.
 
-![Custom sheet metal enclosure fabrication at Orion Metal Industries Moorabbin Melbourne — laser cut and powder coated](/images/services/cnc-laser-cutting-machine.jpeg)
+![Custom electrical metal enclosure — sheet metal fabrication Melbourne](/images/blog/custom-metal-enclosure-electrical.webp)
 
 ## What is a custom sheet metal enclosure?
 
@@ -456,7 +456,7 @@ Standard enclosures from a catalogue rarely fit perfectly. Buyers choose **custo
 - **Mounting** is non-standard — flush wall, floor-standing pylon, rack or surface
 - **Multiple apertures** are needed precisely positioned for screens, locks, vents and cabling
 
-![Laser cut steel flanges and precision components from Orion Metal Industries Moorabbin workshop](/images/services/laser-cutting-steel-flanges.jpeg)
+![Powder coated industrial metal cabinet — custom enclosure finish Melbourne](/images/blog/cabinet-powder-coated-industrial.jpg)
 
 ## The fabrication process at our Moorabbin workshop
 
@@ -541,7 +541,7 @@ Phone: [0402 208 011](tel:+61402208011)
 Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)
 
 Read related guides: [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide) · [powder coating Melbourne](/blog/powder-coating-melbourne-moorabbin) · [sheet metal fabrication Moorabbin](/blog/sheet-metal-fabrication-moorabbin-guide)`,
-    coverImage: "/images/services/cnc-laser-cutting-machine.jpeg",
+    coverImage: "/images/blog/custom-metal-enclosure-electrical.webp",
     author: "Orion Metal Industries",
     tags: [
       "custom sheet metal enclosures Melbourne",
@@ -567,7 +567,7 @@ Read related guides: [laser cutting Melbourne](/blog/laser-cutting-melbourne-gui
 
 This guide explains what to look for in a local Melbourne sheet metal fabricator and why **proximity plus capability** together matter for your project.
 
-![Sheet metal fabrication workshop at Orion Metal Industries, Moorabbin VIC 3189 — serving south-east Melbourne](/images/blog/sheet-metal-fabrication-moorabbin.jpeg)
+![Industrial workshop interior — sheet metal fabrication south-east Melbourne](/images/blog/industrial-workshop-interior-metal.webp)
 
 ## Why location matters for sheet metal fabrication
 
@@ -593,7 +593,7 @@ Our workshop at **1A Bibby Ct, Moorabbin VIC 3189** is central to Melbourne's so
 
 For clients outside south-east Melbourne we dispatch by road freight across Victoria and nationally.
 
-![Laser cut and powder coated sheet metal components — fabricated in Moorabbin for Melbourne and Victoria](/images/services/laser-cutting-steel-flanges.jpeg)
+![Metal fabrication factory — Melbourne industrial sheet metal workshop](/images/blog/fabrication-factory-melbourne.jpg)
 
 ## What makes a full-service local fabricator different
 
@@ -647,7 +647,7 @@ Email: info@orionmetalindustries.com.au
 Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)
 
 Related guides: [custom sheet metal enclosures Melbourne](/blog/custom-sheet-metal-enclosures-melbourne) · [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide) · [powder coating Moorabbin](/blog/powder-coating-melbourne-moorabbin)`,
-    coverImage: "/images/blog/sheet-metal-fabrication-moorabbin.jpeg",
+    coverImage: "/images/blog/industrial-workshop-interior-metal.webp",
     author: "Orion Metal Industries",
     tags: [
       "sheet metal fabrication near me",
