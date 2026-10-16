@@ -23,9 +23,9 @@ export default async function ProductsPage() {
 
       <PageHero
         eyebrow="Products"
-        title="Custom Sheet Metal Enclosures & Kiosk Products Melbourne"
+        title="Kiosk & Sheet Metal Enclosures Melbourne"
         accentWord="Melbourne"
-        description="Sheet metal enclosure fabrication Melbourne — wayfinding pylons, digital kiosk housings and custom metal products powder coated at our Moorabbin VIC workshop."
+        description="Custom kiosk housings, wayfinding pylons and sheet metal enclosures — laser cut, powder coated and assembled at our Moorabbin, south-east Melbourne workshop. Quotes within 24 hours."
         image="/images/products/metalbody.png"
         imageAlt="Custom sheet metal enclosure fabricated at Orion Metal Industries Moorabbin Melbourne"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products" }]}

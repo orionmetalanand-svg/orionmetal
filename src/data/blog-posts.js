@@ -551,9 +551,9 @@ Read related guides: [laser cutting Melbourne](/blog/laser-cutting-melbourne-gui
       "powder coated enclosures Melbourne",
       "custom fabrication Melbourne",
     ],
-    metaTitle: "Custom Sheet Metal Enclosures Melbourne | Fabricated & Powder Coated | Orion",
+    metaTitle: "Custom Sheet Metal Enclosures Melbourne | 24-Hour Quotes",
     metaDescription:
-      "Custom sheet metal enclosure fabrication in Melbourne — laser cut, bent, welded and powder coated at our Moorabbin workshop. Electrical cabinets, kiosk housings, control panels. 24-hour quotes.",
+      "Custom sheet metal enclosures in Moorabbin, south-east Melbourne — laser cut, bent, welded and powder coated to your drawing. Electrical cabinets, kiosk housings and control panels. Quotes in 24 hours.",
     publishedAt: "2026-10-08T00:00:00.000Z",
     isPublished: true,
   },

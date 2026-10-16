@@ -77,9 +77,9 @@ export const pageSeo = {
     path: "/services",
   },
   products: {
-    title: "Custom Sheet Metal Enclosures Melbourne | Kiosk Products Moorabbin",
+    title: "Kiosk & Sheet Metal Enclosures Melbourne | 24-Hour Quotes",
     description:
-      "Sheet metal enclosures Melbourne — kiosk housings, wayfinding pylons and custom fabricated metal products, powder coated in Moorabbin VIC 3189 for Australian commercial clients.",
+      "Custom kiosk housings, wayfinding pylons and sheet metal enclosures fabricated in Moorabbin, south-east Melbourne. Laser cut, powder coated and assembled — quotes within 24 hours.",
     path: "/products",
   },
   projects: {
