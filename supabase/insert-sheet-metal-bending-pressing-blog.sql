@@ -13,20 +13,20 @@ VALUES (
 
 Orion Metal Industries — 1A Bibby Ct, Moorabbin VIC 3189 — press brake work integrated with laser cutting, welding and powder coating.
 
-![Press brake bending](/images/services/sheet-metal-bending-press-brake.jpeg)
+![Press brake bending](/images/blog/press-brake-sheet-metal1.jpg)
 
 ## Typical parts
 
 Brackets, enclosure bodies, channels, kiosk frames and folded signage blanks.
 
-![Formed steel brackets](/images/projects/formed-steel-frame-brackets.jpeg)
+![Press brake forming sheet metal](/images/blog/press-brake-sheet-metal2.jpg)
 
 ## Quote in 24 hours
 
 Send DXF, DWG, STEP or PDF with material, thickness and quantity via [contact](/contact).
 
 Related: [custom electrical enclosures](/blog/custom-electrical-enclosures-melbourne) · [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide).$post$,
-  '/images/services/sheet-metal-bending-press-brake.jpeg',
+  '/images/blog/press-brake-sheet-metal1.jpg',
   ARRAY['sheet metal bending Melbourne','metal pressing Melbourne','press brake Moorabbin','sheet metal folding Melbourne'],
   'Sheet Metal Bending Melbourne | Press Brake Moorabbin',
   'Sheet metal bending and pressing in Moorabbin, south-east Melbourne — press brake work for brackets, enclosures and channels. Laser cutting and powder coating on site. 24-hour quotes.',

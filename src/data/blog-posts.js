@@ -672,7 +672,7 @@ Related guides: [custom sheet metal enclosures Melbourne](/blog/custom-sheet-met
 
 Orion Metal Industries fabricates electrical and control panel housings at **1A Bibby Ct, Moorabbin** — south-east Melbourne — with laser cutting, press brake bending, welding, in-house powder coating and assembly under one roof.
 
-![Custom electrical sheet metal enclosure — fabricated in Moorabbin Melbourne](/images/blog/custom-metal-enclosure-electrical.webp)
+![Custom electrical sheet metal enclosure — fabricated in Moorabbin Melbourne](/images/blog/custom-electrical-enclosure-1.webp)
 
 ## What counts as a custom electrical enclosure?
 
@@ -722,6 +722,8 @@ Send **DXF, DWG, STEP or PDF** with overall size, aperture list, door details, f
 
 Flat patterns and panels are cut on CNC fibre laser — fixing holes, vent patterns, lock cutouts and cable entry slots in the same program as the outer profile.
 
+![Industrial electrical control panel enclosure — laser cut sheet metal Melbourne](/images/blog/custom-electrical-enclosure-3.webp)
+
 ### 3. Press brake bending
 
 Panels are formed on our press brake to create the body, flanges, door returns and gland plates. See our guide on [sheet metal bending and pressing in Melbourne](/blog/sheet-metal-bending-pressing-melbourne-moorabbin).
@@ -734,7 +736,7 @@ Seams and brackets are welded or fastened. Doors, hinges, locks, handles and int
 
 Enclosures are powder coated in-house — gloss, satin or matt — to your colour reference.
 
-![Powder coated industrial electrical cabinet — Moorabbin sheet metal fabrication](/images/blog/cabinet-powder-coated-industrial.jpg)
+![Powder coated industrial electrical cabinet — Moorabbin sheet metal fabrication](/images/blog/custom-electrical-enclosure-2.jpg)
 
 ### 6. Delivery
 
@@ -763,7 +765,7 @@ Email [info@orionmetalindustries.com.au](mailto:info@orionmetalindustries.com.au
 
 **Orion Metal Industries Pty Ltd · 1A Bibby Ct, Moorabbin VIC 3189**  
 Phone: [0402 208 011](tel:+61402208011) · [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)`,
-    coverImage: "/images/blog/custom-metal-enclosure-electrical.webp",
+    coverImage: "/images/blog/custom-electrical-enclosure-1.webp",
     author: "Orion Metal Industries",
     tags: [
       "custom electrical enclosures Melbourne",
@@ -789,7 +791,7 @@ Phone: [0402 208 011](tel:+61402208011) · [Google Business Profile](https://map
 
 Orion Metal Industries operates a press brake alongside CNC laser cutting, welding, powder coating and assembly at **1A Bibby Ct, Moorabbin VIC 3189** — one workshop for south-east Melbourne commercial and industrial clients.
 
-![Press brake sheet metal bending at Orion Metal Industries Moorabbin Melbourne](/images/services/sheet-metal-bending-press-brake.jpeg)
+![Press brake sheet metal bending at Orion Metal Industries Moorabbin Melbourne](/images/blog/press-brake-sheet-metal1.jpg)
 
 ## Bending vs pressing — same idea, different words
 
@@ -809,7 +811,7 @@ We focus on **precision press brake bending** for commercial fabrication — enc
 - **Frame sections** for kiosks and wayfinding structures
 - **Folded signage blanks** before powder coating
 
-![Formed steel frame brackets — sheet metal bending Melbourne fabrication](/images/projects/formed-steel-frame-brackets.jpeg)
+![Press brake forming sheet metal — bending and pressing Melbourne](/images/blog/press-brake-sheet-metal2.jpg)
 
 ## How the process works
 
@@ -828,8 +830,6 @@ Parts are formed to the required angles — often multiple bends per part. First
 ### 4. Downstream work
 
 Bent parts may proceed to welding, hardware fitting, [powder coating](/blog/powder-coating-melbourne-moorabbin) and dispatch — without sending work to another supplier.
-
-![Laser cut mounting plates ready for bending — Moorabbin sheet metal workshop](/images/projects/laser-cut-mounting-plates.jpeg)
 
 ## Materials and thickness
 
@@ -867,7 +867,7 @@ Read more: [sheet metal fabrication near me — Moorabbin](/blog/sheet-metal-fab
 [Contact Orion Metal Industries](/contact) or email info@orionmetalindustries.com.au with your drawings.
 
 **1A Bibby Ct, Moorabbin VIC 3189** · Phone [0402 208 011](tel:+61402208011)`,
-    coverImage: "/images/services/sheet-metal-bending-press-brake.jpeg",
+    coverImage: "/images/blog/press-brake-sheet-metal1.jpg",
     author: "Orion Metal Industries",
     tags: [
       "sheet metal bending Melbourne",
