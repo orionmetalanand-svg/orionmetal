@@ -662,4 +662,225 @@ Related guides: [custom sheet metal enclosures Melbourne](/blog/custom-sheet-met
     publishedAt: "2026-10-08T00:00:00.000Z",
     isPublished: true,
   },
+  {
+    id: "custom-electrical-enclosures-melbourne",
+    slug: "custom-electrical-enclosures-melbourne",
+    title: "Custom Electrical Enclosures Melbourne: Cabinets, Control Panels & Switchgear Housings",
+    excerpt:
+      "How Melbourne electricians, OEMs and industrial buyers specify custom electrical enclosures — materials, apertures, cable entry, powder coating and what to send for a 24-hour quote from Moorabbin.",
+    content: `**Custom electrical enclosures** protect switchgear, PLCs, distribution boards, motor control centres and site equipment from dust, moisture and accidental contact. When a catalogue cabinet will not fit your layout, cutouts or finish, you need a **custom fabricated electrical enclosure** built to your drawing.
+
+Orion Metal Industries fabricates electrical and control panel housings at **1A Bibby Ct, Moorabbin** — south-east Melbourne — with laser cutting, press brake bending, welding, in-house powder coating and assembly under one roof.
+
+![Custom electrical sheet metal enclosure — fabricated in Moorabbin Melbourne](/images/blog/custom-metal-enclosure-electrical.webp)
+
+## What counts as a custom electrical enclosure?
+
+Common types we fabricate for Melbourne commercial and industrial clients:
+
+- **Main switchboard and distribution enclosures**
+- **PLC and automation control cabinets**
+- **Motor control and VSD housings**
+- **Site electrical kiosks and outdoor-rated cabinets**
+- **Sub-board and metering enclosures**
+- **Machine-mounted electrical boxes** with custom gland plates
+
+Each unit is made to your dimensions, wall thickness, door configuration and aperture layout — not adapted from a standard range.
+
+## When to specify custom instead of catalogue
+
+Buyers search for **custom electrical enclosures** when:
+
+- **Cable entry and gland positions** must match an existing slab, trench or cable ladder
+- **Door swing, hinges and lock type** are defined by site access or security
+- **Ventilation or IP rating** needs custom louvres, mesh or sealed construction
+- **Powder coat colour** must match project branding (Dulux, Interpon or RAL)
+- **Internal mounting rails or DIN channels** are at non-standard heights
+
+For general kiosk and display housings, see our guide on [custom sheet metal enclosures in Melbourne](/blog/custom-sheet-metal-enclosures-melbourne). For switchboards and PLC cabinets specifically, see [custom electrical enclosures Melbourne](/blog/custom-electrical-enclosures-melbourne).
+
+## Materials and thickness
+
+Typical choices for electrical enclosures in Victoria:
+
+| Application | Common material | Notes |
+|---|---|---|
+| Indoor control panels | Zincanneal or mild steel 1.6–2 mm | Powder coated finish |
+| General industrial | Mild steel 2–3 mm | Stiffness for larger doors |
+| Corrosive or wash-down areas | Stainless or galvanised | Specify grade with your drawing |
+| Lightweight OEM builds | Aluminium | Discuss bend radii at quote stage |
+
+We review material, bend allowances and earthing/grounding requirements when you send drawings.
+
+## Fabrication process at our Moorabbin workshop
+
+### 1. Drawing and brief
+
+Send **DXF, DWG, STEP or PDF** with overall size, aperture list, door details, finish and quantity. We return a quote within **24 hours**.
+
+### 2. Laser cutting
+
+Flat patterns and panels are cut on CNC fibre laser — fixing holes, vent patterns, lock cutouts and cable entry slots in the same program as the outer profile.
+
+### 3. Press brake bending
+
+Panels are formed on our press brake to create the body, flanges, door returns and gland plates. See our guide on [sheet metal bending and pressing in Melbourne](/blog/sheet-metal-bending-pressing-melbourne-moorabbin).
+
+### 4. Welding, hardware and assembly
+
+Seams and brackets are welded or fastened. Doors, hinges, locks, handles and internal mounting as specified.
+
+### 5. Powder coating
+
+Enclosures are powder coated in-house — gloss, satin or matt — to your colour reference.
+
+![Powder coated industrial electrical cabinet — Moorabbin sheet metal fabrication](/images/blog/cabinet-powder-coated-industrial.jpg)
+
+### 6. Delivery
+
+Dispatch across south-east Melbourne, greater Melbourne and Victoria.
+
+## What to include in your electrical enclosure brief
+
+- External dimensions (H × W × D) and wall thickness
+- Door size, hinge side, lock type and quantity of doors
+- All cutouts with positions (meters, switches, fans, displays)
+- Cable entry — bottom, top or side; gland plate layout if applicable
+- Finish colour and indoor/outdoor exposure
+- Quantity (prototype vs production) and required date
+
+**Compliance note:** We fabricate to your drawings. Final compliance with AS/NZS wiring rules, IP ratings and sign-off remain the responsibility of your electrical designer or installer unless agreed otherwise in writing.
+
+## Related services and guides
+
+- [Laser cutting Melbourne](/blog/laser-cutting-melbourne-guide) — panel and plate cutting
+- [Powder coating Moorabbin](/blog/powder-coating-melbourne-moorabbin) — durable cabinet finishes
+- [Sheet metal fabrication Moorabbin](/blog/sheet-metal-fabrication-moorabbin-guide) — full-service overview
+
+## Request a quote
+
+Email [info@orionmetalindustries.com.au](mailto:info@orionmetalindustries.com.au) or use our [contact form](/contact).
+
+**Orion Metal Industries Pty Ltd · 1A Bibby Ct, Moorabbin VIC 3189**  
+Phone: [0402 208 011](tel:+61402208011) · [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)`,
+    coverImage: "/images/blog/custom-metal-enclosure-electrical.webp",
+    author: "Orion Metal Industries",
+    tags: [
+      "custom electrical enclosures Melbourne",
+      "electrical enclosure fabrication Melbourne",
+      "control panel enclosure Melbourne",
+      "switchboard enclosure Melbourne",
+      "custom metal cabinets Melbourne",
+      "powder coated electrical cabinets",
+    ],
+    metaTitle: "Custom Electrical Enclosures Melbourne | 24-Hour Quotes",
+    metaDescription:
+      "Custom electrical enclosures in Moorabbin, south-east Melbourne — control panels, switchboards and cabinets laser cut, bent, welded and powder coated. Send drawings for a quote in 24 hours.",
+    publishedAt: "2026-10-17T00:00:00.000Z",
+    isPublished: true,
+  },
+  {
+    id: "sheet-metal-bending-pressing-melbourne-moorabbin",
+    slug: "sheet-metal-bending-pressing-melbourne-moorabbin",
+    title: "Sheet Metal Bending & Pressing Melbourne: Press Brake Work in Moorabbin",
+    excerpt:
+      "Press brake bending and sheet metal pressing for brackets, enclosures and channels — what Melbourne fabricators mean by bending, tolerances, materials and how to get a quote from our Moorabbin workshop.",
+    content: `**Sheet metal bending** (often called **pressing** or **folding**) turns flat laser-cut blanks into brackets, enclosure bodies, channels, trays and frame components. If you are comparing **metal pressing companies in Melbourne** or need **metal bending near Moorabbin**, this guide explains the process, typical parts and how to brief a job for a fast quote.
+
+Orion Metal Industries operates a press brake alongside CNC laser cutting, welding, powder coating and assembly at **1A Bibby Ct, Moorabbin VIC 3189** — one workshop for south-east Melbourne commercial and industrial clients.
+
+![Press brake sheet metal bending at Orion Metal Industries Moorabbin Melbourne](/images/services/sheet-metal-bending-press-brake.jpeg)
+
+## Bending vs pressing — same idea, different words
+
+In Australia you may see:
+
+- **Sheet metal bending** or **folding** — forming folds on a press brake
+- **Metal pressing** — often used broadly for forming; on thin sheet it usually means brake pressing, not heavy stamping dies
+- **Press brake work** — accurate angled bends with a punch and die
+
+We focus on **precision press brake bending** for commercial fabrication — enclosures, brackets, panels and structural profiles — integrated with laser cutting and finishing on site.
+
+## Typical parts we bend in Melbourne
+
+- **Brackets and mounting plates** with multiple folds
+- **Enclosure bodies and chassis** for [custom electrical enclosures](/blog/custom-electrical-enclosures-melbourne) and [sheet metal enclosures](/blog/custom-sheet-metal-enclosures-melbourne)
+- **Channels, trays and cable management**
+- **Frame sections** for kiosks and wayfinding structures
+- **Folded signage blanks** before powder coating
+
+![Formed steel frame brackets — sheet metal bending Melbourne fabrication](/images/projects/formed-steel-frame-brackets.jpeg)
+
+## How the process works
+
+### 1. Flat pattern from laser cutting
+
+Bends start as flat profiles cut on our fibre laser — including bend relief, notch positions and hole patterns where required.
+
+### 2. Press brake setup
+
+Operators select tooling for material thickness and bend radius. Bend allowances are checked against your drawing so finished dimensions match specification.
+
+### 3. Forming and inspection
+
+Parts are formed to the required angles — often multiple bends per part. First-off samples can be checked against drawing before production runs.
+
+### 4. Downstream work
+
+Bent parts may proceed to welding, hardware fitting, [powder coating](/blog/powder-coating-melbourne-moorabbin) and dispatch — without sending work to another supplier.
+
+![Laser cut mounting plates ready for bending — Moorabbin sheet metal workshop](/images/projects/laser-cut-mounting-plates.jpeg)
+
+## Materials and thickness
+
+We commonly bend:
+
+- Mild steel and zincanneal
+- Galvanised sheet (discuss coating damage at folds at quote stage)
+- Aluminium (thickness and alloy affect minimum bend radius)
+- Stainless steel (selected grades and thicknesses)
+
+Send material type, thickness and bend count with your enquiry.
+
+## What to send for a bending / pressing quote
+
+1. **Drawing** — DXF, DWG, STEP or PDF with bend angles and dimensions
+2. **Material and thickness**
+3. **Quantity** — one-off prototype or batch
+4. **Finish** — raw, deburred, powder coat colour if coating is required
+5. **Delivery location** — Moorabbin pickup or Melbourne / Victoria freight
+
+Quotes returned within **24 hours** for standard work.
+
+## Why use a Moorabbin fabricator for bending
+
+South-east Melbourne clients choose a local workshop to:
+
+- **Combine cutting and bending** in one program — fewer tolerance stack-ups
+- **Approve first articles** in person before batch production
+- **Add powder coating and assembly** without extra freight between suppliers
+
+Read more: [sheet metal fabrication near me — Moorabbin](/blog/sheet-metal-fabrication-near-me-moorabbin) · [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide).
+
+## Request a quote
+
+[Contact Orion Metal Industries](/contact) or email info@orionmetalindustries.com.au with your drawings.
+
+**1A Bibby Ct, Moorabbin VIC 3189** · Phone [0402 208 011](tel:+61402208011)`,
+    coverImage: "/images/services/sheet-metal-bending-press-brake.jpeg",
+    author: "Orion Metal Industries",
+    tags: [
+      "sheet metal bending Melbourne",
+      "metal pressing Melbourne",
+      "metal pressing companies Melbourne",
+      "press brake Moorabbin",
+      "sheet metal folding Melbourne",
+      "metal bending south east Melbourne",
+    ],
+    metaTitle: "Sheet Metal Bending Melbourne | Press Brake Moorabbin",
+    metaDescription:
+      "Sheet metal bending and pressing in Moorabbin, south-east Melbourne — press brake work for brackets, enclosures and channels. Laser cutting and powder coating on site. 24-hour quotes.",
+    publishedAt: "2026-10-17T00:00:00.000Z",
+    isPublished: true,
+  },
 ];

@@ -80,11 +80,11 @@ export const services = [
     slug: "sheet-metal-bending",
     name: "Sheet Metal Bending",
     shortDescription:
-      "Precision folding with advanced press brake technology for accurate results.",
+      "Press brake sheet metal bending in Moorabbin, south-east Melbourne — brackets, enclosures and channels. 24-hour quotes.",
     overview:
       "Our sheet metal bending service uses press brake technology to form accurate folds, channels, and profiles. We deliver consistent angles and dimensions for brackets, enclosures, frames, and structural components.",
     description:
-      "Precision bending transforms flat sheet metal into functional three-dimensional components. Our press brake capabilities handle a range of material thicknesses and bend configurations, ensuring your parts meet exact dimensional requirements.",
+      "Precision bending transforms flat sheet metal into functional three-dimensional components. Our press brake capabilities handle a range of material thicknesses and bend configurations, ensuring your parts meet exact dimensional requirements. Read our guide on [sheet metal bending and pressing in Melbourne](/blog/sheet-metal-bending-pressing-melbourne-moorabbin).",
     image: "/images/services/sheet-metal-bending-press-brake.jpeg",
     localImage: "/images/services/sheet-metal-bending-press-brake.jpeg",
     applications: [
