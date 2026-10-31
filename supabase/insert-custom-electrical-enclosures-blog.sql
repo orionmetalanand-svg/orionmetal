@@ -30,7 +30,7 @@ Drawing review (24-hour quote), laser cutting, press brake bending, welding and 
 [Contact us](/contact) or email info@orionmetalindustries.com.au. Related: [custom sheet metal enclosures](/blog/custom-sheet-metal-enclosures-melbourne) · [sheet metal bending Melbourne](/blog/sheet-metal-bending-pressing-melbourne-moorabbin).$post$,
   '/images/blog/custom-electrical-enclosure-1.webp',
   ARRAY['custom electrical enclosures Melbourne','electrical enclosure fabrication Melbourne','control panel enclosure Melbourne','switchboard enclosure Melbourne'],
-  'Custom Electrical Enclosures Melbourne | 24-Hour Quotes',
+  'Custom Electrical Enclosures Melbourne | Control Panels Moorabbin',
   'Custom electrical enclosures in Moorabbin, south-east Melbourne — control panels, switchboards and cabinets laser cut, bent, welded and powder coated. Send drawings for a quote in 24 hours.',
   TRUE,
   '2026-10-17T00:00:00.000Z'

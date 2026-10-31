@@ -142,6 +142,21 @@ export default async function BlogPostPage({ params }) {
             <p className="mt-6 text-[15px] leading-[1.75] text-brand-muted sm:text-[17.5px]">
               {post.excerpt}
             </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Button href="/contact" variant="primary" size="md" className="w-full sm:w-auto">
+                Send drawings — quote in 24 hours
+              </Button>
+              <Button
+                href={getWhatsAppUrl()}
+                variant="secondary"
+                size="md"
+                external
+                className="w-full sm:w-auto"
+              >
+                WhatsApp Us
+              </Button>
+            </div>
           </div>
         </header>
 

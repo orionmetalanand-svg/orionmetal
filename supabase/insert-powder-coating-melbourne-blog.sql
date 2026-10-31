@@ -97,8 +97,8 @@ Bring a drawing or send files through the [contact form](/contact). If you found
     'custom metal enclosures',
     'sheet metal fabrication'
   ],
-  'Powder Coating Melbourne | Moorabbin Workshop | Orion',
-  'In-house powder coating in Moorabbin, Melbourne. Orion Metal Industries at 1A Bibby Ct coats enclosures, frames and fabricated parts. Quote from drawings.',
+  'Powder Coating Moorabbin Melbourne | In-House Workshop',
+  'Powder coating in Moorabbin, south-east Melbourne — Dulux, Interpon and RAL colours on enclosures, frames and fabricated parts. In-house booth. Quotes within 24 hours.',
   TRUE,
   NOW()
 )

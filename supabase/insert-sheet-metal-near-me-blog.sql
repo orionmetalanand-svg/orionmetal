@@ -59,7 +59,7 @@ Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)
 Related guides: [custom sheet metal enclosures Melbourne](/blog/custom-sheet-metal-enclosures-melbourne) · [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide) · [powder coating Moorabbin](/blog/powder-coating-melbourne-moorabbin)$post$,
   '/images/blog/sheet-metal-fabrication-moorabbin.jpeg',
   ARRAY['sheet metal fabrication near me','sheet metal fabrication south east Melbourne','metal fabrication Moorabbin','sheet metal fabrication Melbourne','local metal fabricator Melbourne'],
-  'Sheet Metal Fabrication Near Me | South-East Melbourne | Moorabbin VIC',
+  'Sheet Metal Fabrication Near Me | Moorabbin South-East Melbourne',
   'Looking for sheet metal fabrication near you in south-east Melbourne? Orion Metal Industries in Moorabbin offers laser cutting, bending, powder coating and assembly. 24-hour quotes.',
   TRUE,
   '2026-10-08T00:00:00.000Z'

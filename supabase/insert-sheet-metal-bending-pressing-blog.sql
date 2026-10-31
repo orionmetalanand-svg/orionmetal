@@ -28,7 +28,7 @@ Send DXF, DWG, STEP or PDF with material, thickness and quantity via [contact](/
 Related: [custom electrical enclosures](/blog/custom-electrical-enclosures-melbourne) · [laser cutting Melbourne](/blog/laser-cutting-melbourne-guide).$post$,
   '/images/blog/press-brake-sheet-metal1.jpg',
   ARRAY['sheet metal bending Melbourne','metal pressing Melbourne','press brake Moorabbin','sheet metal folding Melbourne'],
-  'Sheet Metal Bending Melbourne | Press Brake Moorabbin',
+  'Sheet Metal Bending & Folding Melbourne | Press Brake Moorabbin',
   'Sheet metal bending and pressing in Moorabbin, south-east Melbourne — press brake work for brackets, enclosures and channels. Laser cutting and powder coating on site. 24-hour quotes.',
   TRUE,
   '2026-10-17T00:00:00.000Z'
