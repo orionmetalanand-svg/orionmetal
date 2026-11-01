@@ -883,4 +883,100 @@ Read more: [sheet metal fabrication near me — Moorabbin](/blog/sheet-metal-fab
     publishedAt: "2026-10-17T00:00:00.000Z",
     isPublished: true,
   },
+  {
+    id: "sheet-metal-fabrication-dandenong-south-east-melbourne",
+    slug: "sheet-metal-fabrication-dandenong-south-east-melbourne",
+    title: "Sheet Metal Fabrication for Dandenong, Keysborough and Melbourne's South-East",
+    excerpt:
+      "Dandenong, Keysborough, Carrum Downs and Braeside manufacturers looking for laser cutting, bending and powder coating — how a Moorabbin full-service workshop covers the south-east corridor without interstate freight.",
+    content: `If you search **metal fabrication Dandenong**, **laser cutting Dandenong** or **sheet metal fabrication south east Melbourne**, you are usually trying to keep cutting, bending and finishing close to the job — not send parts across town twice.
+
+Orion Metal Industries fabricates at **1A Bibby Ct, Moorabbin VIC 3189**. That workshop sits in Melbourne's south-east industrial corridor, so Dandenong, Keysborough, Springvale, Braeside, Carrum Downs, Clayton and Cheltenham are regular local runs — not long-haul freight.
+
+![Sheet metal fabrication workshop serving Dandenong and south-east Melbourne from Moorabbin](/images/blog/industrial-workshop-interior-metal.webp)
+
+## Why south-east Melbourne jobs care about location
+
+Sheet metal work is not one delivery. Drawings change. First-off samples get checked. Powder coat colour is approved. Then a batch is dispatched.
+
+When the fabricator is in the same corridor as the plant or site:
+
+- **Local pickup and delivery** reduce damage risk on enclosures, doors and formed frames
+- **First-article checks** can happen before a production run, not after a two-week wait
+- **Revisions** (a moved gland, a tighter flange) turn around without interstate handling
+
+Moorabbin is a short run to Dandenong and Keysborough via EastLink / South Road industrial precincts — closer for many south-east plants than a north or west Melbourne shop.
+
+## Suburbs and jobs we regularly quote
+
+We quote and dispatch for commercial and industrial clients in:
+
+- **Dandenong** and **Dandenong South** — laser-cut plates, brackets, equipment covers
+- **Keysborough** and **Springvale** — enclosure batches and powder-coated cabinets
+- **Braeside** and **Moorabbin** — local pickup
+- **Carrum Downs** and **Bayside** — formed frames and kiosk housings
+- **Clayton** and **Cheltenham** — control panels and custom sheet metal
+
+Victoria-wide dispatch is available when the drawing is ready. The advantage for the south-east is simply **fewer kilometres between workshop and dock**.
+
+![Metal fabrication factory — Melbourne south-east industrial corridor](/images/blog/fabrication-factory-melbourne.jpg)
+
+## What “full-service” means for a Dandenong-area buyer
+
+A laser-only shop still needs a bender and a coater. Each extra supplier adds a purchase order and a tolerance stack.
+
+Under one roof in Moorabbin we do:
+
+| Process | Typical south-east jobs |
+|---|---|
+| [CNC laser cutting](/blog/laser-cutting-melbourne-guide) | Plates, flanges, bracket blanks, vent patterns |
+| [Press brake bending](/blog/sheet-metal-bending-pressing-melbourne-moorabbin) | Enclosure bodies, channels, mounting plates |
+| Welding and assembly | Cabinets, frames, hardware |
+| [In-house powder coating](/blog/powder-coating-melbourne-moorabbin) | Dulux, Interpon, RAL on finished parts |
+| [Custom enclosures](/blog/custom-sheet-metal-enclosures-melbourne) | Electrical cabinets, kiosk housings, covers |
+
+That is the same process whether the delivery address is Dandenong South or Moorabbin.
+
+## File types and quote time
+
+Send **DXF, DWG, STEP or PDF** with material, thickness, quantity, finish and delivery suburb. We aim to return a quote within **24 hours** for standard work.
+
+Include:
+
+- Material (mild steel, zincanneal, stainless, aluminium, galvanised)
+- Thickness and any critical bend radii
+- Powder coat colour code if coating is required
+- Prototype vs production quantity
+- Required date and whether pickup from Moorabbin is possible
+
+## Local vs “near me” searches
+
+Queries such as **metal fabrication near me**, **steel fabrication Moorabbin** and **laser cutting Dandenong** all point at the same need: a workshop that can visit, inspect and deliver in the south-east.
+
+Read more: [sheet metal fabrication near me — Moorabbin](/blog/sheet-metal-fabrication-near-me-moorabbin).
+
+## Request a quote
+
+[Contact Orion Metal Industries](/contact) or email [info@orionmetalindustries.com.au](mailto:info@orionmetalindustries.com.au).
+
+**Orion Metal Industries Pty Ltd**  
+**1A Bibby Ct, Moorabbin VIC 3189**  
+Phone: [0402 208 011](tel:+61402208011)  
+Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)`,
+    coverImage: "/images/blog/industrial-workshop-interior-metal.webp",
+    author: "Orion Metal Industries",
+    tags: [
+      "metal fabrication Dandenong",
+      "laser cutting Dandenong",
+      "sheet metal fabrication south east Melbourne",
+      "sheet metal fabrication Keysborough",
+      "metal fabrication Carrum Downs",
+      "sheet metal fabrication Braeside",
+    ],
+    metaTitle: "Sheet Metal Fabrication Dandenong | South-East Melbourne Moorabbin",
+    metaDescription:
+      "Sheet metal fabrication for Dandenong, Keysborough, Carrum Downs and Braeside — laser cutting, bending and powder coating from our Moorabbin workshop. Quotes within 24 hours.",
+    publishedAt: "2026-11-01T00:00:00.000Z",
+    isPublished: true,
+  },
 ];
