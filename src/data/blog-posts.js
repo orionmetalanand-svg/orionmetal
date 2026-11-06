@@ -979,4 +979,179 @@ Maps: [Google Business Profile](https://maps.app.goo.gl/MPaKN8kjunEFjmin8)`,
     publishedAt: "2026-11-01T00:00:00.000Z",
     isPublished: true,
   },
+  {
+    id: "benefits-of-sheet-metal-fabrication",
+    slug: "benefits-of-sheet-metal-fabrication",
+    title: "What Are the Benefits of Sheet Metal Fabrication?",
+    excerpt:
+      "Why commercial and industrial buyers choose sheet metal fabrication — speed, accuracy, strength-to-weight, finishes and local production in Moorabbin, south-east Melbourne.",
+    content: `**Sheet metal fabrication** turns flat sheet (steel, zincanneal, stainless or aluminium) into brackets, enclosures, panels and frames. For Melbourne commercial buyers the benefits are practical: parts match a drawing, batches repeat, and cutting, bending, welding and coating can sit in one workshop.
+
+This guide answers the question **what are the benefits of sheet metal fabrication?** — then explains when it is the right process versus machining a solid block or buying a catalogue box.
+
+![Sheet metal fabrication workshop — laser cutting, bending and finishing in Moorabbin Melbourne](/images/blog/industrial-workshop-interior-metal.webp)
+
+## 1. High strength at a low weight
+
+Folded and welded sheet creates stiff structures without machining a solid billet. Enclosures, kiosk housings and equipment covers get rigidity from **bends, flanges and seams**, not from extra millimetres of plate everywhere.
+
+That matters for wall-mounted electrical cabinets, transportable kiosks and panels that installers have to lift on site.
+
+## 2. Accuracy and repeatability
+
+CNC [laser cutting](/blog/laser-cutting-melbourne-guide) holds hole and profile positions tightly. [Press brake bending](/blog/sheet-metal-bending-pressing-melbourne-moorabbin) repeats angles across a batch. Once the program and first-off are approved, production parts match the sample — which is why OEMs and electrical contractors use fabrication for repeat jobs.
+
+## 3. Faster path from drawing to part
+
+With DXF, DWG, STEP or PDF you skip tooling for most one-off and short-run work. A full-service shop can cut, bend, weld, [powder coat](/blog/powder-coating-melbourne-moorabbin) and assemble without waiting on dies. At Orion Metal Industries in **Moorabbin** we aim to return a **quote within 24 hours**.
+
+## 4. Design flexibility
+
+Apertures, louvres, gland plates, branding cutouts and door returns are cut in the same program as the outer profile. That is the core benefit of **[custom sheet metal enclosures](/blog/custom-sheet-metal-enclosures-melbourne)** versus a catalogue cabinet that almost fits.
+
+## 5. Efficient use of material
+
+Nesting on a laser sheet uses more of the plate than cutting parts from bar. Offcuts from one job often feed smaller brackets on the next. Less waste, more consistent cost on commercial batches.
+
+## 6. Range of metals and finishes
+
+Mild steel, zincanneal, galvanised, stainless and aluminium can share the same process chain. Finish can be raw, deburred, or powder coated to Dulux, Interpon or RAL — useful when the part is both structural and visible.
+
+## 7. One supplier for the full chain
+
+The hidden benefit is fewer handovers. If laser, bend, weld and coat sit in different postcodes, tolerances and colour only get checked at the end. Under one roof at **1A Bibby Ct, Moorabbin VIC 3189** we cover the south-east corridor (Dandenong, Keysborough, Clayton, Cheltenham, Braeside, Carrum Downs) with local pickup or short-run delivery.
+
+![Metal fabrication for Melbourne commercial clients — formed and finished sheet metal parts](/images/blog/fabrication-factory-melbourne.jpg)
+
+## When fabrication is the better choice
+
+Choose sheet metal fabrication when you need:
+
+- Enclosures, covers, brackets, trays or frames from a drawing
+- Short to medium production with the option to revise the file
+- Powder coat colour and hardware fitted before dispatch
+- Local Melbourne / Victoria delivery without import lead times
+
+Machining a solid block is better for very thick, highly 3D parts. Catalogue boxes are cheaper only when dimensions and cutouts already match.
+
+## How to get those benefits on your job
+
+Send material, thickness, quantity, finish and files to [info@orionmetalindustries.com.au](mailto:info@orionmetalindustries.com.au) or the [contact form](/contact).
+
+Related: [sheet metal fabrication near me — Moorabbin](/blog/sheet-metal-fabrication-near-me-moorabbin) · [fabrication for Dandenong and the south-east](/blog/sheet-metal-fabrication-dandenong-south-east-melbourne).
+
+**Orion Metal Industries Pty Ltd · 1A Bibby Ct, Moorabbin VIC 3189**  
+Phone: [0402 208 011](tel:+61402208011)`,
+    coverImage: "/images/blog/industrial-workshop-interior-metal.webp",
+    author: "Orion Metal Industries",
+    tags: [
+      "benefits of sheet metal fabrication",
+      "sheet metal fabrication Melbourne",
+      "sheet metal fabrication Moorabbin",
+      "custom fabrication Victoria",
+    ],
+    metaTitle: "Benefits of Sheet Metal Fabrication | Melbourne Moorabbin",
+    metaDescription:
+      "Benefits of sheet metal fabrication for commercial buyers — strength, accuracy, speed and in-house powder coating from Orion Metal Industries, Moorabbin south-east Melbourne. 24-hour quotes.",
+    publishedAt: "2026-11-06T00:00:00.000Z",
+    isPublished: true,
+  },
+  {
+    id: "flap-discs-metal-finishing-fabrication",
+    slug: "flap-discs-metal-finishing-fabrication",
+    title: "How Industrial Flap Discs Improve Metal Finishing and Fabrication Results",
+    excerpt:
+      "What flap discs do in a fabrication shop — weld blending, deburring and surface prep before powder coating — and how grit and backing affect enclosure and bracket quality in Melbourne.",
+    content: `Industrial **flap discs** are abrasive discs made of overlapping cloth flaps on a backing plate. On a fabrication job they sit between welding and paint: they blend welds, knock off laser burrs and leave a surface that powder coat can hold.
+
+They are a **finishing tool**, not a replacement for laser cutting or press brake work. Used well, they improve how a part looks, how it fits and how the coating lasts. Used poorly, they dish a face, undercut a weld or leave swirl that shows through gloss powder.
+
+This is how flap discs improve **metal finishing and fabrication results** in a commercial workshop such as ours in **Moorabbin, south-east Melbourne**.
+
+![Welded and finished sheet metal fabrication — surface prep before powder coating](/images/services/metal-fabrication-welding.jpeg)
+
+## What a flap disc does that a grinding wheel does not
+
+A depressed-centre grinding wheel removes metal fast and runs hot. It is for heavy stock removal, not a show face.
+
+A flap disc:
+
+- Cuts cooler and with more control
+- Follows contours on welds and corners better
+- Leaves a more even scratch pattern for coating
+- Wears the flaps down instead of glazing as quickly on light work
+
+For [custom enclosures](/blog/custom-sheet-metal-enclosures-melbourne) and brackets that will be [powder coated](/blog/powder-coating-melbourne-moorabbin), that control is the point.
+
+## Grit and backing — the two decisions that change the result
+
+**Grit (typical use in fabrication)**
+
+| Grit | Use |
+|---|---|
+| 40–60 | Heavy weld blend, mill scale, thick spatter |
+| 80–120 | General deburr after laser cut, light weld dress |
+| 180+ | Pre-coat finish on visible faces |
+
+Start coarse only where you must. Jumping from 40 grit straight to powder coat on a door face leaves scratches that telegraph through gloss.
+
+**Backing**
+
+- **Fibreglass / plastic backing** — common, rigid, good on flats
+- **Trimmable / softer backing** — better on tight inside corners of boxes
+- **Type 27 (flat) vs Type 29 (conical)** — 29 is more aggressive on welds; 27 is flatter on panels you must not dish
+
+Match disc diameter and speed to the grinder. Overspeed is a safety issue, not a finish trick.
+
+## Where flap discs sit in our process
+
+1. [Laser cutting](/blog/laser-cutting-melbourne-guide) — profile and holes  
+2. [Press brake](/blog/sheet-metal-bending-pressing-melbourne-moorabbin) — folds  
+3. Welding / hardware  
+4. **Flap disc (and related abrasives)** — burrs, weld blend, edge break  
+5. Prep and powder coat  
+6. Assembly and dispatch  
+
+If step 4 is skipped, powder coat highlights every burr and undercut. If step 4 is too aggressive, wall thickness on a 1.6 mm door becomes uneven and the door oils-can.
+
+![Powder coated metal cabinet — finish quality depends on weld blend and deburr](/images/blog/cabinet-powder-coated-industrial.jpg)
+
+## Results you can specify on a drawing
+
+You do not need to write “use a flap disc”. You do need to specify the outcome:
+
+- **Weld finish** — as-welded, dressed flush, or ground blend
+- **Visible faces** — coating will show grind marks unless grit is fine enough
+- **Edges** — broken vs sharp (safety and paint wrap)
+- **Stainless** — contamination from carbon-steel discs will rust; use dedicated stainless abrasives
+
+We interpret those notes at quote stage. Send the drawing with material, thickness and finish.
+
+## What flap discs will not fix
+
+- Wrong bend allowance or holes too close to a fold  
+- A catalogue enclosure with the wrong cutouts  
+- Powder coat colour not matching a physical chip  
+
+Finishing improves a correctly fabricated part. It does not replace [full-service fabrication](/blog/benefits-of-sheet-metal-fabrication) in one workshop.
+
+## Quote from Moorabbin
+
+Orion Metal Industries fabricates and finishes commercial sheet metal at **1A Bibby Ct, Moorabbin VIC 3189**. Send DXF, DWG, STEP or PDF via [contact](/contact) — quotes within **24 hours**.
+
+**Phone:** [0402 208 011](tel:+61402208011)`,
+    coverImage: "/images/services/metal-fabrication-welding.jpeg",
+    author: "Orion Metal Industries",
+    tags: [
+      "flap discs metal finishing",
+      "metal fabrication finishing",
+      "weld blending sheet metal",
+      "powder coat surface prep Melbourne",
+    ],
+    metaTitle: "Flap Discs in Metal Fabrication | Finishing Moorabbin Melbourne",
+    metaDescription:
+      "How industrial flap discs improve weld blending, deburring and powder-coat prep in sheet metal fabrication. Practical grit and backing notes from Orion Metal Industries, Moorabbin.",
+    publishedAt: "2026-11-06T00:00:00.000Z",
+    isPublished: true,
+  },
 ];
